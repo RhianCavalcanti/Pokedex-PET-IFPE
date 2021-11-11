@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a4SFHMOCx19YjiiUXleI+LJhl95N1dIfxRu+sIuMz0k7iKM38cplrctaltp5xIVjQJtv4+8oFY0AYMAJzg3QvA==",
+  "dgSpecHash": "raehfq8e2v6eHEUPHR5M0HIXcH1Fe4uZqAaADYEEKKPppWtzsMi0sncg5fb4kNCuTowhN5NlYJSAvQyPr0xTCA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Adan\\Desktop\\PROJETO SIDI POKEDEX\\POKEDEX-SiDi\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj",
+  "projectFilePath": "C:\\Users\\Nilo Sandes\\source\\repos\\RhianCavalcanti\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.10-rel-29722-00\\microsoft.net.native.compiler.2.2.10-rel-29722-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.12\\microsoft.net.uwpcoreruntimesdk.2.2.12.nupkg.sha512",

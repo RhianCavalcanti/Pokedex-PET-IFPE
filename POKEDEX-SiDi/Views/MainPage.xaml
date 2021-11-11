@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="POKEDEX_SiDi.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:POKEDEX_SiDi.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="DarkRed">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+            <!--Pesquisar se estes elementos abaixo talvez devam ficar dentro de um StackPanel-->
+            <Rectangle HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1418" Fill="#FFECEC8F"/>
+            <!--imagem do pokemon-->
+            <Rectangle Grid.Row="0" HorizontalAlignment="Left" Height="190" Margin="90,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="190"/>
+            <Image Grid.Row="0" Margin="90,40,1160,40"/>
+            <!--Texto com informações do pokémon-->
+            <TextBlock Grid.Row="0" x:Name="Nome" Margin="320,0,119,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="191" Foreground="Black" FocusVisualPrimaryBrush="Black" FontSize="24"><Run Text="Nome do Pokémon aqui!"/></TextBlock>
+            <TextBlock Grid.Row="0" x:Name="Infos" Foreground="Black" FontSize="20" Margin="320,77,78,43">
+                    Informações do Pokemon
+            </TextBlock>
+
+            <Rectangle Grid.Row="1" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1418" Fill="#FFECEC8F"/>
+            <Rectangle Grid.Row="1" HorizontalAlignment="Left" Height="192" Margin="89,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="192"/>
+
+            <Rectangle Grid.Row="2" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1418" Fill="#FFECEC8F"/>
+            <Rectangle Grid.Row="2" HorizontalAlignment="Left" Height="192" Margin="89,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="192"/>
+
+            <Rectangle Grid.Row="3" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1418" Fill="#FFECEC8F"/>
+            <Rectangle Grid.Row="3" HorizontalAlignment="Left" Height="192" Margin="89,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="192"/>
+
+
+
+
+        </Grid>
+    </Grid>
+</Page>
