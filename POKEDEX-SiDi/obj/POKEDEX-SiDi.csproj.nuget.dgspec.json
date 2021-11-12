@@ -1,25 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nilo Sandes\\source\\repos\\RhianCavalcanti\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj": {}
+    "C:\\Users\\rhian\\source\\repos\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nilo Sandes\\source\\repos\\RhianCavalcanti\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj": {
+    "C:\\Users\\rhian\\source\\repos\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nilo Sandes\\source\\repos\\RhianCavalcanti\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj",
+        "projectUniqueName": "C:\\Users\\rhian\\source\\repos\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj",
         "projectName": "POKEDEX-SiDi",
-        "projectPath": "C:\\Users\\Nilo Sandes\\source\\repos\\RhianCavalcanti\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj",
-        "packagesPath": "C:\\Users\\Nilo Sandes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nilo Sandes\\source\\repos\\RhianCavalcanti\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\obj\\",
+        "projectPath": "C:\\Users\\rhian\\source\\repos\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj",
+        "packagesPath": "C:\\Users\\rhian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rhian\\source\\repos\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "E:\\Arquivos de programas\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Nilo Sandes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rhian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -42,6 +42,10 @@
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",
               "version": "[6.2.12, )"
+            },
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.115.5, )"
             }
           },
           "imports": [

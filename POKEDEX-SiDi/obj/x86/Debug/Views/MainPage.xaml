@@ -24,7 +24,7 @@
 
             </Grid.RowDefinitions>
             <!--Pesquisar se estes elementos abaixo talvez devam ficar dentro de um StackPanel-->
-            <Rectangle Grid.Row="0" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1342"/>
+            <Rectangle HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1418" Fill="#FFECEC8F"/>
             <!--imagem do pokemon-->
             <Rectangle Grid.Row="0" HorizontalAlignment="Left" Height="190" Margin="90,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="190"/>
             <Image Grid.Row="0" Margin="90,40,1160,40"/>
@@ -34,13 +34,13 @@
                     Informações do Pokemon
             </TextBlock>
 
-            <Rectangle Grid.Row="1" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1342"/>
+            <Rectangle Grid.Row="1" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1418" Fill="#FFECEC8F"/>
             <Rectangle Grid.Row="1" HorizontalAlignment="Left" Height="192" Margin="89,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="192"/>
 
-            <Rectangle Grid.Row="2" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1342"/>
+            <Rectangle Grid.Row="2" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1418" Fill="#FFECEC8F"/>
             <Rectangle Grid.Row="2" HorizontalAlignment="Left" Height="192" Margin="89,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="192"/>
 
-            <Rectangle Grid.Row="3" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1342"/>
+            <Rectangle Grid.Row="3" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1418" Fill="#FFECEC8F"/>
             <Rectangle Grid.Row="3" HorizontalAlignment="Left" Height="192" Margin="89,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="192"/>
 
 
