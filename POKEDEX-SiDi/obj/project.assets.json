@@ -306,6 +306,45 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "Stub.System.Data.SQLite.Core.NetStandard/1.0.115.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Data.SQLite.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "System.Data.SQLite/1.0.115.5": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "[1.0.115.5]"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.115.5": {
+        "type": "package",
+        "dependencies": {
+          "Stub.System.Data.SQLite.Core.NetStandard": "[1.0.115.5]"
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-arm": {
@@ -791,6 +830,27 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "Stub.System.Data.SQLite.Core.NetStandard/1.0.115.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Data.SQLite.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.115.5": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "[1.0.115.5]"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.115.5": {
+        "type": "package",
+        "dependencies": {
+          "Stub.System.Data.SQLite.Core.NetStandard": "[1.0.115.5]"
         }
       }
     },
@@ -1279,6 +1339,27 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "Stub.System.Data.SQLite.Core.NetStandard/1.0.115.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Data.SQLite.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.115.5": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "[1.0.115.5]"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.115.5": {
+        "type": "package",
+        "dependencies": {
+          "Stub.System.Data.SQLite.Core.NetStandard": "[1.0.115.5]"
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-arm64-aot": {
@@ -1766,6 +1847,27 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "Stub.System.Data.SQLite.Core.NetStandard/1.0.115.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Data.SQLite.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.115.5": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "[1.0.115.5]"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.115.5": {
+        "type": "package",
+        "dependencies": {
+          "Stub.System.Data.SQLite.Core.NetStandard": "[1.0.115.5]"
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x64": {
@@ -2251,6 +2353,30 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "Stub.System.Data.SQLite.Core.NetStandard/1.0.115.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Data.SQLite.dll": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/SQLite.Interop.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.115.5": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "[1.0.115.5]"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.115.5": {
+        "type": "package",
+        "dependencies": {
+          "Stub.System.Data.SQLite.Core.NetStandard": "[1.0.115.5]"
         }
       }
     },
@@ -2739,6 +2865,30 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "Stub.System.Data.SQLite.Core.NetStandard/1.0.115.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Data.SQLite.dll": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/SQLite.Interop.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.115.5": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "[1.0.115.5]"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.115.5": {
+        "type": "package",
+        "dependencies": {
+          "Stub.System.Data.SQLite.Core.NetStandard": "[1.0.115.5]"
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x86": {
@@ -3224,6 +3374,30 @@
         },
         "native": {
           "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll": {}
+        }
+      },
+      "Stub.System.Data.SQLite.Core.NetStandard/1.0.115.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Data.SQLite.dll": {}
+        },
+        "native": {
+          "runtimes/win-x86/native/SQLite.Interop.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.115.5": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "[1.0.115.5]"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.115.5": {
+        "type": "package",
+        "dependencies": {
+          "Stub.System.Data.SQLite.Core.NetStandard": "[1.0.115.5]"
         }
       }
     },
@@ -3711,6 +3885,30 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "Stub.System.Data.SQLite.Core.NetStandard/1.0.115.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Data.SQLite.dll": {}
+        },
+        "native": {
+          "runtimes/win-x86/native/SQLite.Interop.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.115.5": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "[1.0.115.5]"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.115.5": {
+        "type": "package",
+        "dependencies": {
+          "Stub.System.Data.SQLite.Core.NetStandard": "[1.0.115.5]"
         }
       }
     }
@@ -8150,34 +8348,78 @@
         "runtimes/win10-x86/lib/uap10.0.15138/netstandard.dll",
         "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
+    },
+    "Stub.System.Data.SQLite.Core.NetStandard/1.0.115.5": {
+      "sha512": "WfrqQg6WL+r4H1sVKTenNj6ERLXUukUxqcjH1rqPqXadeIWccTVpydESieD7cZ/NWQVSKLYIHuoBX5du+BFhIQ==",
+      "type": "package",
+      "path": "stub.system.data.sqlite.core.netstandard/1.0.115.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/System.Data.SQLite.dll",
+        "lib/netstandard2.0/System.Data.SQLite.dll.altconfig",
+        "lib/netstandard2.0/System.Data.SQLite.xml",
+        "lib/netstandard2.1/System.Data.SQLite.dll",
+        "lib/netstandard2.1/System.Data.SQLite.dll.altconfig",
+        "lib/netstandard2.1/System.Data.SQLite.xml",
+        "runtimes/linux-x64/native/SQLite.Interop.dll",
+        "runtimes/osx-x64/native/SQLite.Interop.dll",
+        "runtimes/win-x64/native/SQLite.Interop.dll",
+        "runtimes/win-x86/native/SQLite.Interop.dll",
+        "stub.system.data.sqlite.core.netstandard.1.0.115.5.nupkg.sha512",
+        "stub.system.data.sqlite.core.netstandard.nuspec"
+      ]
+    },
+    "System.Data.SQLite/1.0.115.5": {
+      "sha512": "zo5xzYAVkmREKM4ImeiEatwa9D6Bc1KvnmX+VFysJ4sf89yZVdz4uf7A351hZhqBbHsX4ZeULmYocokOPCOcKw==",
+      "type": "package",
+      "path": "system.data.sqlite/1.0.115.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "system.data.sqlite.1.0.115.5.nupkg.sha512",
+        "system.data.sqlite.nuspec"
+      ]
+    },
+    "System.Data.SQLite.Core/1.0.115.5": {
+      "sha512": "vADIqqgpxaC5xR6qOV8/KMZkQeSDCfmmWpVOtQx0oEr3Yjq2XdTxX7+jfE4+oO2xPovAbYiz6Q5cLRbSsDkq6Q==",
+      "type": "package",
+      "path": "system.data.sqlite.core/1.0.115.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "system.data.sqlite.core.1.0.115.5.nupkg.sha512",
+        "system.data.sqlite.core.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.17763": [
-      "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.12"
+      "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.12",
+      "System.Data.SQLite >= 1.0.115.5"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nilo Sandes\\.nuget\\packages\\": {},
-    "E:\\Arquivos de programas\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Users\\rhian\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nilo Sandes\\Source\\Repos\\RhianCavalcanti\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj",
+      "projectUniqueName": "C:\\Users\\rhian\\source\\repos\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj",
       "projectName": "POKEDEX-SiDi",
-      "projectPath": "C:\\Users\\Nilo Sandes\\Source\\Repos\\RhianCavalcanti\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj",
-      "packagesPath": "C:\\Users\\Nilo Sandes\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nilo Sandes\\Source\\Repos\\RhianCavalcanti\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\obj\\",
+      "projectPath": "C:\\Users\\rhian\\source\\repos\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj",
+      "packagesPath": "C:\\Users\\rhian\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rhian\\source\\repos\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "E:\\Arquivos de programas\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Nilo Sandes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rhian\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8200,6 +8442,10 @@
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.2.12, )"
+          },
+          "System.Data.SQLite": {
+            "target": "Package",
+            "version": "[1.0.115.5, )"
           }
         },
         "imports": [

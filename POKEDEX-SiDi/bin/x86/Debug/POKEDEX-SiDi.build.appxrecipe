@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-R3MH7RQ</Machine>
-    <WindowsUser>Nilo Sandes</WindowsUser>
+    <Machine>LAPTOP-8O6R3SLQ</Machine>
+    <WindowsUser>rhian</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,79 +10,85 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>ea48f7c7-9f92-4902-8911-52d4f1c94e47</PackageIdentityName>
     <PackageIdentityPublisher>CN=Adan</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\rhian\source\repos\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
-    <WindowsSdkPath>E:\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\AppX</LayoutDir>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>C:\Users\rhian\source\repos\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\rhian\source\repos\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\POKEDEX-SiDi.exe">
+    <AppxPackagedFile Include="C:\Users\rhian\source\repos\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\POKEDEX-SiDi.exe">
       <PackagePath>entrypoint\POKEDEX-SiDi.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
+    <AppxPackagedFile Include="C:\Users\rhian\.nuget\packages\stub.system.data.sqlite.core.netstandard\1.0.115.5\runtimes\win-x86\native\SQLite.Interop.dll">
+      <PackagePath>SQLite.Interop.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rhian\.nuget\packages\stub.system.data.sqlite.core.netstandard\1.0.115.5\lib\netstandard2.0\System.Data.SQLite.dll">
+      <PackagePath>System.Data.SQLite.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\rhian\source\repos\Pokedex-PET-IFPE\POKEDEX-SiDi\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rhian\source\repos\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rhian\source\repos\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rhian\source\repos\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rhian\source\repos\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\rhian\source\repos\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\rhian\source\repos\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rhian\source\repos\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\POKEDEX-SiDi.xr.xml">
+    <AppxPackagedFile Include="C:\Users\rhian\source\repos\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\POKEDEX-SiDi.xr.xml">
       <PackagePath>POKEDEX-SiDi.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\rhian\source\repos\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\rhian\source\repos\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\rhian\source\repos\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\rhian\source\repos\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Core\POKEDEX-SiDi.exe">
+    <AppxPackagedFile Include="C:\Users\rhian\source\repos\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Core\POKEDEX-SiDi.exe">
       <PackagePath>POKEDEX-SiDi.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
