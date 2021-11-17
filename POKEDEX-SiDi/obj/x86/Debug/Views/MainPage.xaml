@@ -17,36 +17,44 @@
 
         <Grid Grid.Column="1" Background="White">
             <Grid.RowDefinitions>
+                <RowDefinition Height="0.45*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
 
             </Grid.RowDefinitions>
+            <!--Header-->
+
+            <StackPanel  Background="#FF0E6B8B" Margin="-300,0,-300,0">
+
+            </StackPanel>
+            <Button x:ConnectionId='2' x:Name="Pesquisa" Background="#FF0E6B8B" Content="Search" HorizontalAlignment="Right" Margin="0,0,10,0" Height="63"/>
             <!--Pesquisar se estes elementos abaixo talvez devam ficar dentro de um StackPanel-->
-            <Rectangle Grid.Row="0" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1342"/>
+            <Rectangle Grid.Row="1" HorizontalAlignment="Center" Height="150" VerticalAlignment="Center" Width="1418" Fill="#FFECEC8F"/>
             <!--imagem do pokemon-->
-            <Rectangle Grid.Row="0" HorizontalAlignment="Left" Height="190" Margin="90,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="190"/>
-            <Image Grid.Row="0" Margin="90,40,1160,40"/>
+            <Rectangle Grid.Row="1" HorizontalAlignment="Left" Height="140" Margin="115,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="140"/>
+            <Image Grid.Row="1" Margin="115,14,1284,13" Height="140" Width="140"/>
             <!--Texto com informações do pokémon-->
-            <TextBlock x:ConnectionId='2' Grid.Row="0" x:Name="Nome" Margin="320,0,119,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="191" Foreground="Black" FocusVisualPrimaryBrush="Black" FontSize="24"><Run Text="Nome do Pokémon aqui!"/></TextBlock>
-            <TextBlock x:ConnectionId='3' Grid.Row="0" x:Name="Infos" Foreground="Black" FontSize="20" Margin="320,77,78,43">
-                    Informações do Pokemon
-            </TextBlock>
-
-            <Rectangle Grid.Row="1" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1342"/>
-            <Rectangle Grid.Row="1" HorizontalAlignment="Left" Height="192" Margin="89,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="192"/>
-
-            <Rectangle Grid.Row="2" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1342"/>
+            <TextBlock x:ConnectionId='3' Grid.Row="1" x:Name="Nome" Margin="308,13,22,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Foreground="Black" FocusVisualPrimaryBrush="Black" FontSize="20"><Run Text="Nome do Pokémon aqui!"/></TextBlock>
+            <TextBlock x:ConnectionId='4' Grid.Row="1" x:Name="Infos" Foreground="Black" FontSize="14" Margin="308,40,570,78"><Run Text="Tipo "/><Run Text="do Pokemon "/><LineBreak/><Run Text="A"/><Run Text="taque"/></TextBlock>
+            <!--Número do pokemon no Índice-->
+            <TextBlock x:ConnectionId='5' Grid.Row="1" x:Name="Numero" HorizontalAlignment="Right" Margin="0,20,95,0" Text="#01" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" FontWeight="Bold" FontSize="15"/>
+<!--
+            <Rectangle Grid.Row="2" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1418" Fill="#FFECEC8F"/>
             <Rectangle Grid.Row="2" HorizontalAlignment="Left" Height="192" Margin="89,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="192"/>
 
-            <Rectangle Grid.Row="3" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1342"/>
+            <Rectangle Grid.Row="3" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1418" Fill="#FFECEC8F"/>
             <Rectangle Grid.Row="3" HorizontalAlignment="Left" Height="192" Margin="89,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="192"/>
 
-
-
+            <Rectangle Grid.Row="4" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1418" Fill="#FFECEC8F"/>
+            <Rectangle Grid.Row="4" HorizontalAlignment="Left" Height="192" Margin="89,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="192"/>
+-->
 
         </Grid>
+        <ScrollBar Grid.Column="2" HorizontalAlignment="Left" Margin="176,0,0,0" VerticalAlignment="Center" Height="1080" Background="Black"/>
     </Grid>
 </Page>
 
