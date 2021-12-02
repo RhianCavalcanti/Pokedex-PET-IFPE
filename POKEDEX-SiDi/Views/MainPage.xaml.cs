@@ -26,5 +26,47 @@ namespace POKEDEX_SiDi.Views
         {
             this.InitializeComponent();
         }
+
+        private void Pesquisar_Click(object sender, RoutedEventArgs e)
+        {
+            //String visivel = Barra_pesquisa.Visibility;
+            //if(visivel.Equals("Collapsed"))
+            //{
+            //    visivel = 
+            //}
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            if (MyFrame.CanGoBack)
+            {
+                MyFrame.GoBack();
+            }
+        }
+
+        private void PreviousPokemon_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NextPokemon_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BarraPesquisa_TextChanged(object sender, TextChangedEventArgs e)
+        { 
+            //Frame.Navigate(typeof(SearchPage), BarraPesquisa.Text);
+        }
+
+        private void VerDetalhes(object sender, PointerRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(PokemonDetalhado));
+        }
+
+        private void PointerEnteredPokemon(object sender, PointerRoutedEventArgs e)
+        {
+            
+        }
     }
 }
