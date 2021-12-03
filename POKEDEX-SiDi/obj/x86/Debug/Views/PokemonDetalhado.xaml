@@ -11,8 +11,24 @@
     <RelativePanel Background="DarkRed">
         <StackPanel x:ConnectionId='2' x:Name="PokemonDetalhes" Background="White" MinWidth="1400" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
 
-            <StackPanel x:ConnectionId='3' x:Name="Pokelist" Orientation="Vertical">
-                <Button x:ConnectionId='4' Content="Ce tá doido" HorizontalAlignment="Center" VerticalAlignment="Center"                     />
+            <StackPanel x:ConnectionId='3' x:Name="Pokelist" Orientation="Vertical" MinWidth="800" MaxWidth="800"> <!--Aqui talvez seja um relative panel e dentro este stack-->
+                <RelativePanel>
+                    
+                    <Button x:ConnectionId='8' Content="Ce tá doido" HorizontalAlignment="Center" VerticalAlignment="Center"                     />
+                    <Rectangle x:ConnectionId='9' x:Name="imgPokemon" Fill="#7F000000" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Height="530" Width="520"/>
+                    
+                </RelativePanel>
+                <StackPanel Orientation="Horizontal" Width="1000">
+                    <TextBlock x:ConnectionId='6' Name="Nome" Text="Nome:" FontSize="24"/>
+                    <TextBlock x:ConnectionId='7' x:Name="namePokemon" Text="Nome aqui" FontSize="24" RelativePanel.AlignLeftWith="Nome" Margin="10,0,0,0"/>
+                    <RelativePanel>
+                    </RelativePanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:ConnectionId='4' x:Name="Ataque" Text="Ataque:" FontSize="24"/>
+                    <TextBlock x:ConnectionId='5' x:Name="atkPokemon" Text="Nome do ataque aqui" FontSize="24" RelativePanel.AlignLeftWith="Nome" Margin="10,0,0,0"/>
+                </StackPanel>
+
             </StackPanel>
         </StackPanel>
     </RelativePanel>

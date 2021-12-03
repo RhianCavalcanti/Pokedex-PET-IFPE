@@ -43,6 +43,8 @@
       <RootMethod Name="SetRightOf" />
       <RootMethod Name="GetLeftOf" />
       <RootMethod Name="SetLeftOf" />
+      <RootMethod Name="GetAlignLeftWith" />
+      <RootMethod Name="SetAlignLeftWith" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Frame">
       <RootProperty Name="Background" />
@@ -55,6 +57,8 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="MinWidth" />
       <RootProperty Name="Background" />
+      <RootProperty Name="MaxWidth" />
+      <RootProperty Name="Width" />
       <RootEvent Name="PointerPressed" />
       <RootEvent Name="PointerEntered" />
     </RootType>
@@ -69,6 +73,7 @@
       <RootProperty Name="FocusVisualPrimaryBrush" />
       <RootProperty Name="SelectionHighlightColor" />
       <RootProperty Name="Inlines" />
+      <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Margin" />
@@ -81,9 +86,13 @@
       <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="FontFamily" />
       <RootProperty Name="Content" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
       <RootProperty Name="MinHeight" />
+      <RootProperty Name="MinWidth" />
       <RootProperty Name="Background" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="HorizontalAlignment" />
@@ -95,9 +104,15 @@
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="MinWidth" />
       <RootProperty Name="MinHeight" />
+      <RootProperty Name="BorderBrush" />
       <RootEvent Name="TextChanged" />
     </RootType>
     <RootType FullName="POKEDEX_SiDi.Views.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
+      <RootProperty Name="Fill" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+    </RootType>
     <RootType FullName="POKEDEX_SiDi.Views.PokemonDetalhado" />
   </Roots.RootTypes>
 </Roots>

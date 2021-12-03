@@ -113,3 +113,16 @@ C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\PokemonDetalhado.g.cs
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\PokemonDetalhado.xaml
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\PokemonDetalhado.xbf
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\POKEDEX-SiDi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Refit.dll
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\System.Net.Http.Json.dll
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\System.Text.Encodings.Web.dll
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\System.Text.Json.dll
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\FxResources.System.Net.Http.Json.SR.resw
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\FxResources.System.Text.Encodings.Web.SR.resw
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\FxResources.System.Text.Json.SR.resw
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\resources.en-us.resfiles
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\resources.en-us.resfiles.intermediate
