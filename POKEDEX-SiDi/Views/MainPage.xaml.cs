@@ -66,6 +66,18 @@ namespace POKEDEX_SiDi.Views
 
         private void PointerEnteredPokemon(object sender, PointerRoutedEventArgs e)
         {
+            // Pointer. = Cursors.;
+            //StackPanel.StyleProperty;
+            //mainImage.Cursor = Cursor;
+        }
+
+        private void Click_Logo(object sender, PointerRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
+
+        private void Organizacao_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
             
         }
     }

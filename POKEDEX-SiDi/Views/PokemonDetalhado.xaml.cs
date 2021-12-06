@@ -27,9 +27,42 @@ namespace POKEDEX_SiDi.Views
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e) //Botão de teste, depois será removido
         {
             Frame.Navigate(typeof(MainPage));
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+            }
+        }
+
+        private void logo_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
+
+        private void NextPokemon_Click(object sender, RoutedEventArgs e)
+        {
+            //vai acessar o próximo pokémon na lista do BD (dependendo do modo de organização escolhido)
+        }
+
+        private void PreviousPokemon_Click(object sender, RoutedEventArgs e)
+        {
+            //vai acessar o pokémon anterior na lista do BD (dependendo do modo de organização escolhido)
+        }
+
+        private void BarraPesquisa_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Pesquisar_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

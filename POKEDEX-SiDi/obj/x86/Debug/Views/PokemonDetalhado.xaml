@@ -6,33 +6,56 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Light">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <RelativePanel Background="DarkRed">
-        <StackPanel x:ConnectionId='2' x:Name="PokemonDetalhes" Background="White" MinWidth="1400" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
 
-            <StackPanel x:ConnectionId='3' x:Name="Pokelist" Orientation="Vertical" MinWidth="800" MaxWidth="800"> <!--Aqui talvez seja um relative panel e dentro este stack-->
-                <RelativePanel>
-                    
-                    <Button x:ConnectionId='8' Content="Ce tá doido" HorizontalAlignment="Center" VerticalAlignment="Center"                     />
-                    <Rectangle x:ConnectionId='9' x:Name="imgPokemon" Fill="#7F000000" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Height="530" Width="520"/>
-                    
-                </RelativePanel>
-                <StackPanel Orientation="Horizontal" Width="1000">
-                    <TextBlock x:ConnectionId='6' Name="Nome" Text="Nome:" FontSize="24"/>
-                    <TextBlock x:ConnectionId='7' x:Name="namePokemon" Text="Nome aqui" FontSize="24" RelativePanel.AlignLeftWith="Nome" Margin="10,0,0,0"/>
-                    <RelativePanel>
-                    </RelativePanel>
+
+
+    <Frame>
+        <Grid Background="DarkRed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="6*"/>
+            </Grid.RowDefinitions>
+            <RelativePanel Grid.Row="0" Background="#FF0E6B8B" MinHeight="70">
+                <Button x:ConnectionId='10' x:Name="Back" FontFamily="Segoe MDL2 Assets" Content="&#xE0A6;" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="10,0,9,0"  Height="40" Width="40"                   />
+                <TextBlock x:ConnectionId='11' x:Name="logo" Text="Pokédex" Margin="0,0,0,0" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.RightOf="Back" FontSize="22"                                     />
+                <!--Hyperlink a logo para voltar a MainPage quando clicar nela-->
+                <Button x:ConnectionId='12' x:Name="NextPokemon" FontFamily="Segoe MDL2 Assets" Content="&#xE00f;" RelativePanel.AlignVerticalCenterWithPanel="True"  RelativePanel.LeftOf="BarraPesquisa" Margin="0,0,20,0" MinHeight="40" MinWidth="40"                          />
+                <Button x:ConnectionId='13' x:Name="PreviousPokemon" FontFamily="Segoe MDL2 Assets" Content="&#xE00E;" RelativePanel.AlignVerticalCenterWithPanel="True"  RelativePanel.LeftOf="NextPokemon" Margin="0,0,6,0" MinHeight="40" MinWidth="40"                              />
+                <TextBox x:ConnectionId='14' x:Name="BarraPesquisa" FontSize="22" RelativePanel.LeftOf="Pesquisar" RelativePanel.AlignVerticalCenterWithPanel="True" MaxWidth="280" MinWidth="180" MinHeight="40"                                         BorderBrush="#19FFFFFF"/>
+                <Button x:ConnectionId='15' x:Name="Pesquisar" FontFamily="Segoe MDL2 Assets" Background="#FF0E6B8B" Content="&#xE1A3;" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="5,0,10,0" MinHeight="40" MinWidth="40" BorderBrush="#992B85A4"                        />
+                <!-- Pode ser um ícone de busca-->
+            </RelativePanel>
+            <RelativePanel Grid.Row="1" Background="DarkRed">
+                <StackPanel x:ConnectionId='2' x:Name="PokemonDetalhes" Background="White" MinWidth="1400" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
+
+                    <StackPanel x:ConnectionId='3' x:Name="Pokelist" Orientation="Vertical" MinWidth="800" MaxWidth="800">
+                        <!--Aqui talvez seja um relative panel e dentro este stack-->
+                        <RelativePanel>
+
+                            <Button x:ConnectionId='8' Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center"                     />
+                            <!--Imagem do pokémon aqui-->
+                            <Rectangle x:ConnectionId='9' x:Name="imgPokemon" Fill="#7F000000" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Height="530" Width="520"/>
+
+                        </RelativePanel>
+                        <StackPanel Orientation="Horizontal" Width="1000">
+                            <TextBlock x:ConnectionId='6' Name="Nome" Text="Nome:" FontSize="24" Foreground="Black"/>
+                            <TextBlock x:ConnectionId='7' x:Name="namePokemon" Text="Nome aqui" FontSize="24" RelativePanel.AlignLeftWith="Nome" Margin="10,0,0,0" Foreground="Black"/>
+                            <!--<RelativePanel>
+                            </RelativePanel>-->
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock x:ConnectionId='4' x:Name="Ataque" Text="Ataque:" FontSize="24" Foreground="Black"/>
+                            <TextBlock x:ConnectionId='5' x:Name="atkPokemon" Text="Nome do ataque aqui" FontSize="24" RelativePanel.AlignLeftWith="Nome" Margin="10,0,0,0" Foreground="Black"/>
+                        </StackPanel>
+
+                    </StackPanel>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock x:ConnectionId='4' x:Name="Ataque" Text="Ataque:" FontSize="24"/>
-                    <TextBlock x:ConnectionId='5' x:Name="atkPokemon" Text="Nome do ataque aqui" FontSize="24" RelativePanel.AlignLeftWith="Nome" Margin="10,0,0,0"/>
-                </StackPanel>
 
-            </StackPanel>
-        </StackPanel>
-    </RelativePanel>
+            </RelativePanel>
+        </Grid>
+    </Frame>
     
-
 </Page>
 
