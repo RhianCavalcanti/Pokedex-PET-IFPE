@@ -3,9 +3,8 @@
     "",
     "\\POKEDEX-SiDi",
     "\\POKEDEX-SiDi\\Model",
-    "\\POKEDEX-SiDi\\ViewModel",
-    "\\POKEDEX-SiDi\\Views"
+    "\\POKEDEX-SiDi\\ViewModel"
   ],
-  "SelectedNode": "\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj",
+  "SelectedNode": "\\POKEDEX-SiDi.sln",
   "PreviewInSolutionExplorer": false
 }

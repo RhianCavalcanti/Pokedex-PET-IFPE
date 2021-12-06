@@ -24,9 +24,7 @@ namespace POKEDEX_SiDi.ViewModel
 
 
             }
-
-
-
         }
     }
 }
+ 
