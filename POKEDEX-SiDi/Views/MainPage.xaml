@@ -62,14 +62,13 @@
 
                         </ComboBox>
                     </RelativePanel>
-
-                    <RelativePanel x:Name="singlePokemon">
+                    <RelativePanel x:Name="singlePokemon" Margin="0,0,0,10" Background="LightGoldenrodYellow">
 
                         <!--Lista que puxa do BD os primeiros pokémons-->
 
                         <!--Cada campo deste será um pokémon exibido na lista-->
-                        <StackPanel x:Name="List_pokemon" Orientation="Horizontal" Height="150" Margin="0,0,0,10" MinWidth="1400" Background="LightGoldenrodYellow" PointerPressed="VerDetalhes" PointerEntered="PointerEnteredPokemon">
-                            <!--<StackPanel.Style>
+                        <!--<StackPanel x:Name="List_pokemon" Orientation="Vertical" MinWidth="1400" PointerPressed="VerDetalhes" PointerEntered="PointerEnteredPokemon" Height="140">-->
+                        <!--<StackPanel.Style>
                                 <Style TargetType="StackPanel">
                                     <Setter Property="Visibility" Value="Collapsed"/>
                                     <Style.Triggers>
@@ -81,49 +80,249 @@
                                     </Style.Triggers>
                                 </Style>
                             </StackPanel.Style>-->
-                            <RelativePanel x:Name="ItemListPokemon">
-                                <!--imagem do pokemon-->
-                                <Image x:Name="photo" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="15,0,10,0" Height="140" Width="140" FocusVisualPrimaryBrush="Black" FocusVisualSecondaryBrush="Black"/>
-                                <StackPanel x:Name="Details" Orientation="Vertical" MinWidth="1250" RelativePanel.RightOf="photo">
-                                    <!--Texto com informações do pokémon-->
-                                    <TextBlock x:Name="Nome" Margin="10,10,0,0" TextWrapping="Wrap" Height="37" Foreground="Black" FocusVisualPrimaryBrush="Black" FontSize="20" SelectionHighlightColor="Black"><Run Text="Nome do Pokémon aqui!"/></TextBlock>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock x:Name="TipoPokemon" Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Tipo do Pokemon: "/>
-                                        <!--Print/return tipo pokemon-->
-                                        <TextBlock x:Name="TipoPokemonOut" Foreground="Black" TextWrapping="Wrap" MinWidth="50" Text="teste"/>
-                                    </StackPanel>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock x:Name="AtkPokemon" Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Ataque: "/>
-                                        <!--Print/return ataque pokemon-->
-                                        <TextBlock x:Name="AtkPokemonOut" Foreground="Black" TextWrapping="Wrap" Text="teste"/>
-                                    </StackPanel>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock x:Name="Habilidades" Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Habilidades: "/>
-                                        <!--Print/return habilidades do pokemon-->
-                                        <TextBlock x:Name="HabilidadesOut" Foreground="Black" TextWrapping="Wrap" Text="teste"/>
-                                    </StackPanel>
+
+                        <!--imagem do pokemon-->
+                        <Image x:Name="photo" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="15,0,10,0" Height="140" Width="140" FocusVisualPrimaryBrush="Black" FocusVisualSecondaryBrush="Black"/>
+
+                        <StackPanel x:Name="Details" Orientation="Vertical" MinWidth="1250" RelativePanel.RightOf="photo">
+                            <!--Texto com informações do pokémon-->
+                            <TextBlock x:Name="Nome" Margin="10,10,0,0" TextWrapping="Wrap" Height="37" Foreground="Black" FocusVisualPrimaryBrush="Black" FontSize="20" SelectionHighlightColor="Black"><Run Text="Nome do Pokémon aqui!"/></TextBlock>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock x:Name="TipoPokemon" Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Tipo do Pokemon: "/>
+                                <!--Print/return tipo pokemon-->
+                                <TextBlock x:Name="TipoPokemonOut" Foreground="Black" TextWrapping="Wrap" MinWidth="50" Text="teste"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock x:Name="AtkPokemon" Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Ataque: "/>
+                                <!--Print/return ataque pokemon-->
+                                <TextBlock x:Name="AtkPokemonOut" Foreground="Black" TextWrapping="Wrap" Text="teste"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock x:Name="Habilidades" Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Habilidades: "/>
+                                <!--Print/return habilidades do pokemon-->
+                                <TextBlock x:Name="HabilidadesOut" Foreground="Black" TextWrapping="Wrap" Text="teste"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <TextBlock x:Name="Num" RelativePanel.AlignRightWithPanel="True" Margin="0,20,20,0" Text="#01" TextWrapping="Wrap" Foreground="Black" FontWeight="Bold" FontSize="15"/>
+                    </RelativePanel>
 
 
+                    <!--#02-->
+                    <RelativePanel Background="LightGoldenrodYellow" Margin="0,0,0,10">
+                        <!--imagem do pokemon-->
+                            <Image x:Name="phota" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="15,0,10,0" Height="140" Width="140" FocusVisualPrimaryBrush="Black" FocusVisualSecondaryBrush="Black"/>
+                            <StackPanel x:Name="Detalhes" Orientation="Vertical" MinWidth="1250" RelativePanel.RightOf="phota">
+                                <!--Texto com informações do pokémon-->
+                                <TextBlock x:Name="Nomes" Margin="10,10,0,0" TextWrapping="Wrap" Height="37" Foreground="Black" FocusVisualPrimaryBrush="Black" FontSize="20"><Run Text="Nome do Pokémon aqui!"/></TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock x:Name="TiposPokemon" Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Tipo do Pokemon: "/>
+                                    <!--Print/return tipo pokemon-->
+                                    <TextBlock x:Name="TiposPokemonOut" Foreground="Black" TextWrapping="Wrap" MinWidth="50" Text="teste"/>
                                 </StackPanel>
-                            </RelativePanel>
-                            <!--<RelativePanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock x:Name="AtksPokemon" Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Ataque: "/>
+                                    <!--Print/return ataque pokemon-->
+                                    <TextBlock x:Name="AtksPokemonOut" Foreground="Black" TextWrapping="Wrap" Text="teste"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock x:Name="Habilidadess" Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Habilidades: "/>
+                                    <!--Print/return habilidades do pokemon-->
+                                    <TextBlock x:Name="HabilidadessOut" Foreground="Black" TextWrapping="Wrap" Text="teste"/>
+                                </StackPanel>
+                            </StackPanel>
+                        <TextBlock x:Name="Numero" RelativePanel.AlignRightWithPanel="True" Margin="0,20,20,0" Text="#02" TextWrapping="Wrap" Foreground="Black" FontWeight="Bold" FontSize="15"/>
+                    </RelativePanel>
+
+                    <!--#03-->
+                    <RelativePanel Background="LightGoldenrodYellow" Margin="0,0,0,10">
+                        <!--imagem do pokemon-->
+                        <Image x:Name="photi" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="15,0,10,0" Height="140" Width="140" FocusVisualPrimaryBrush="Black" FocusVisualSecondaryBrush="Black"/>
+                        <StackPanel Orientation="Vertical" MinWidth="1250" RelativePanel.RightOf="photi">
+                            <!--Texto com informações do pokémon-->
+                            <TextBlock Margin="10,10,0,0" TextWrapping="Wrap" Height="37" Foreground="Black" FocusVisualPrimaryBrush="Black" FontSize="20"><Run Text="Nome do Pokémon aqui!"/></TextBlock>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Tipo do Pokemon: "/>
+                                <!--Print/return tipo pokemon-->
+                                <TextBlock Foreground="Black" TextWrapping="Wrap" MinWidth="50" Text="teste"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Ataque: "/>
+                                <!--Print/return ataque pokemon-->
+                                <TextBlock Foreground="Black" TextWrapping="Wrap" Text="teste"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Habilidades: "/>
+                                <!--Print/return habilidades do pokemon-->
+                                <TextBlock Foreground="Black" TextWrapping="Wrap" Text="teste"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <TextBlock x:Name="Numer" RelativePanel.AlignRightWithPanel="True" Margin="0,20,20,0" Text="#03" TextWrapping="Wrap" Foreground="Black" FontWeight="Bold" FontSize="15"/>
+                    </RelativePanel>
+
+
+                    <!--#04-->
+                    <RelativePanel Background="LightGoldenrodYellow" Margin="0,0,0,10">
+                        <!--imagem do pokemon-->
+                        <Image x:Name="phote" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="15,0,10,0" Height="140" Width="140" FocusVisualPrimaryBrush="Black" FocusVisualSecondaryBrush="Black"/>
+                        <StackPanel Orientation="Vertical" MinWidth="1250" RelativePanel.RightOf="phote">
+                            <!--Texto com informações do pokémon-->
+                            <TextBlock Margin="10,10,0,0" TextWrapping="Wrap" Height="37" Foreground="Black" FocusVisualPrimaryBrush="Black" FontSize="20"><Run Text="Nome do Pokémon aqui!"/></TextBlock>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Tipo do Pokemon: "/>
+                                <!--Print/return tipo pokemon-->
+                                <TextBlock Foreground="Black" TextWrapping="Wrap" MinWidth="50" Text="teste"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Ataque: "/>
+                                <!--Print/return ataque pokemon-->
+                                <TextBlock Foreground="Black" TextWrapping="Wrap" Text="teste"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Habilidades: "/>
+                                <!--Print/return habilidades do pokemon-->
+                                <TextBlock Foreground="Black" TextWrapping="Wrap" Text="teste"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <TextBlock RelativePanel.AlignRightWithPanel="True" Margin="0,20,20,0" Text="#04" TextWrapping="Wrap" Foreground="Black" FontWeight="Bold" FontSize="15"/>
+                    </RelativePanel>
+
+
+                    <!--#05-->
+                    <RelativePanel Background="LightGoldenrodYellow" Margin="0,0,0,10">
+                        <!--imagem do pokemon-->
+                        <Image x:Name="photu" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="15,0,10,0" Height="140" Width="140" FocusVisualPrimaryBrush="Black" FocusVisualSecondaryBrush="Black"/>
+                        <StackPanel Orientation="Vertical" MinWidth="1250" RelativePanel.RightOf="photu">
+                            <!--Texto com informações do pokémon-->
+                            <TextBlock Margin="10,10,0,0" TextWrapping="Wrap" Height="37" Foreground="Black" FocusVisualPrimaryBrush="Black" FontSize="20"><Run Text="Nome do Pokémon aqui!"/></TextBlock>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Tipo do Pokemon: "/>
+                                <!--Print/return tipo pokemon-->
+                                <TextBlock Foreground="Black" TextWrapping="Wrap" MinWidth="50" Text="teste"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Ataque: "/>
+                                <!--Print/return ataque pokemon-->
+                                <TextBlock Foreground="Black" TextWrapping="Wrap" Text="teste"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Habilidades: "/>
+                                <!--Print/return habilidades do pokemon-->
+                                <TextBlock Foreground="Black" TextWrapping="Wrap" Text="teste"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <TextBlock RelativePanel.AlignRightWithPanel="True" Margin="0,20,20,0" Text="#05" TextWrapping="Wrap" Foreground="Black" FontWeight="Bold" FontSize="15"/>
+                    </RelativePanel>
+
+
+                    <!--#06-->
+                    <RelativePanel Background="LightGoldenrodYellow" Margin="0,0,0,10">
+                        <!--imagem do pokemon-->
+                        <Image x:Name="photr" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="15,0,10,0" Height="140" Width="140" FocusVisualPrimaryBrush="Black" FocusVisualSecondaryBrush="Black"/>
+                        <StackPanel Orientation="Vertical" MinWidth="1250" RelativePanel.RightOf="photr">
+                            <!--Texto com informações do pokémon-->
+                            <TextBlock Margin="10,10,0,0" TextWrapping="Wrap" Height="37" Foreground="Black" FocusVisualPrimaryBrush="Black" FontSize="20"><Run Text="Nome do Pokémon aqui!"/></TextBlock>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Tipo do Pokemon: "/>
+                                <!--Print/return tipo pokemon-->
+                                <TextBlock Foreground="Black" TextWrapping="Wrap" MinWidth="50" Text="teste"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Ataque: "/>
+                                <!--Print/return ataque pokemon-->
+                                <TextBlock Foreground="Black" TextWrapping="Wrap" Text="teste"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Habilidades: "/>
+                                <!--Print/return habilidades do pokemon-->
+                                <TextBlock Foreground="Black" TextWrapping="Wrap" Text="teste"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <TextBlock RelativePanel.AlignRightWithPanel="True" Margin="0,20,20,0" Text="#06" TextWrapping="Wrap" Foreground="Black" FontWeight="Bold" FontSize="15"/>
+                    </RelativePanel>
+
+
+                    <!--#07-->
+                    <RelativePanel Background="LightGoldenrodYellow" Margin="0,0,0,10">
+                        <!--imagem do pokemon-->
+                        <Image x:Name="phot" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="15,0,10,0" Height="140" Width="140" FocusVisualPrimaryBrush="Black" FocusVisualSecondaryBrush="Black"/>
+                        <StackPanel Orientation="Vertical" MinWidth="1250" RelativePanel.RightOf="phot">
+                            <!--Texto com informações do pokémon-->
+                            <TextBlock Margin="10,10,0,0" TextWrapping="Wrap" Height="37" Foreground="Black" FocusVisualPrimaryBrush="Black" FontSize="20"><Run Text="Nome do Pokémon aqui!"/></TextBlock>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Tipo do Pokemon: "/>
+                                <!--Print/return tipo pokemon-->
+                                <TextBlock Foreground="Black" TextWrapping="Wrap" MinWidth="50" Text="teste"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Ataque: "/>
+                                <!--Print/return ataque pokemon-->
+                                <TextBlock Foreground="Black" TextWrapping="Wrap" Text="teste"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Habilidades: "/>
+                                <!--Print/return habilidades do pokemon-->
+                                <TextBlock Foreground="Black" TextWrapping="Wrap" Text="teste"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <TextBlock RelativePanel.AlignRightWithPanel="True" Margin="0,20,20,0" Text="#07" TextWrapping="Wrap" Foreground="Black" FontWeight="Bold" FontSize="15"/>
+                    </RelativePanel>
+
+
+                    <!--#08-->
+                    <RelativePanel Background="LightGoldenrodYellow" Margin="0,0,0,10">
+                        <!--imagem do pokemon-->
+                        <Image x:Name="photl" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="15,0,10,0" Height="140" Width="140" FocusVisualPrimaryBrush="Black" FocusVisualSecondaryBrush="Black"/>
+                        <StackPanel Orientation="Vertical" MinWidth="1250" RelativePanel.RightOf="photl">
+                            <!--Texto com informações do pokémon-->
+                            <TextBlock Margin="10,10,0,0" TextWrapping="Wrap" Height="37" Foreground="Black" FocusVisualPrimaryBrush="Black" FontSize="20"><Run Text="Nome do Pokémon aqui!"/></TextBlock>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Tipo do Pokemon: "/>
+                                <!--Print/return tipo pokemon-->
+                                <TextBlock Foreground="Black" TextWrapping="Wrap" MinWidth="50" Text="teste"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Ataque: "/>
+                                <!--Print/return ataque pokemon-->
+                                <TextBlock Foreground="Black" TextWrapping="Wrap" Text="teste"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Habilidades: "/>
+                                <!--Print/return habilidades do pokemon-->
+                                <TextBlock Foreground="Black" TextWrapping="Wrap" Text="teste"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <TextBlock RelativePanel.AlignRightWithPanel="True" Margin="0,20,20,0" Text="#08" TextWrapping="Wrap" Foreground="Black" FontWeight="Bold" FontSize="15"/>
+                    </RelativePanel>
+
+
+
+
+
+                    <!--Lista que puxa do BD os primeiros pokémons-->
+
+                                <!--Cada campo deste será um pokémon exibido na lista-->
+                                <!--<StackPanel Orientation="Horizontal" Height="140" Margin="0,0,0,0" MinWidth="1400" Background="LightGoldenrodYellow" PointerPressed="VerDetalhes" PointerEntered="PointerEnteredPokemon">
+                                    
+
+                                    --><!--<RelativePanel>
                                 <StackPanel x:Name="Details" Orientation="Vertical" MinWidth="1150" RelativePanel.AlignRightWithPanel="True"> o termo correto era RightOf
                                     -->
-                            <!--Texto com informações do pokémon-->
-                            <!--
+                                    <!--Texto com informações do pokémon-->
+                                    <!--
                                     <TextBlock x:Name="Nome" Margin="10,10,0,0" TextWrapping="Wrap" Height="37" Foreground="Black" FocusVisualPrimaryBrush="Black" FontSize="20" SelectionHighlightColor="Black"><Run Text="Nome do Pokémon aqui!"/></TextBlock>
                                     <TextBlock x:Name="TipoPokemon" Foreground="Black" FontSize="14" Margin="20,0,0,0"><Run Text="Tipo do Pokemon: "/></TextBlock>
                                     <TextBlock x:Name="AtkPokemon" Foreground="Black" FontSize="14" Margin="20,0,0,0"><Run Text="Ataque: "/></TextBlock>
                                 </StackPanel>                               
-                            </RelativePanel>-->
-                        </StackPanel>
-                        <!--Número do pokemon no Índice-->
-                        <TextBlock x:Name="Numero" RelativePanel.AlignRightWithPanel="True" Margin="0,20,20,0" Text="#01" TextWrapping="Wrap" Foreground="Black" FontWeight="Bold" FontSize="15"/>
-                    </RelativePanel>
+                            </RelativePanel>--><!--
+                                </StackPanel>-->
+                                <!--Número do pokemon no Índice-->
+                                
 
+                        <!--</StackPanel>-->
                 </StackPanel>
-
+                
             </Frame>
+            <ScrollBar RelativePanel.AlignRightWithPanel="True" Margin="0,0,0,0" Height="1080" Background="Black" BorderBrush="White" FocusVisualSecondaryBrush="Black"/>
         </RelativePanel>
 
 
@@ -173,7 +372,7 @@
             <Rectangle Grid.Row="4" HorizontalAlignment="Left" Height="192" Margin="89,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="192"/> -->
         <!--
 
-        </Grid>
-        <ScrollBar HorizontalAlignment="Right" Margin="176,0,0,0" VerticalAlignment="Center" Height="1080" Background="Black" BorderBrush="White" FocusVisualSecondaryBrush="Black"/>-->
+        </Grid> -->
+        
     </Grid>
 </Page>

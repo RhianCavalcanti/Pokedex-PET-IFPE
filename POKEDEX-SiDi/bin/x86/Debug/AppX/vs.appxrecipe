@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-06T23:03:21.336</Modified>
+      <Modified>2021-12-07T00:53:00.774</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\POKEDEX-SiDi.exe">
       <PackagePath>entrypoint\POKEDEX-SiDi.exe</PackagePath>
-      <Modified>2021-12-06T23:03:20.340</Modified>
+      <Modified>2021-12-07T00:53:00.360</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\.nuget\packages\microsoft.bcl.asyncinterfaces\5.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
       <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
@@ -122,7 +122,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\POKEDEX-SiDi.xr.xml">
       <PackagePath>POKEDEX-SiDi.xr.xml</PackagePath>
-      <Modified>2021-12-06T23:03:20.168</Modified>
+      <Modified>2021-12-07T00:53:00.269</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
@@ -134,7 +134,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2021-12-06T23:03:20.230</Modified>
+      <Modified>2021-12-07T00:53:00.282</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\PokemonDetalhado.xbf">
       <PackagePath>Views\PokemonDetalhado.xbf</PackagePath>
@@ -150,7 +150,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Core\POKEDEX-SiDi.exe">
       <PackagePath>POKEDEX-SiDi.exe</PackagePath>
-      <Modified>2021-12-06T23:03:21.330</Modified>
+      <Modified>2021-12-07T00:53:00.770</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
