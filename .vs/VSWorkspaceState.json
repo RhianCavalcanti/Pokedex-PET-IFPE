@@ -1,9 +1,13 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
     "",
     "\\POKEDEX-SiDi",
     "\\POKEDEX-SiDi\\Model",
     "\\POKEDEX-SiDi\\ViewModel"
+=======
+    ""
+>>>>>>> 9b7d2a2e2f0400009efd30a7a0886ea9403e5ac9
   ],
   "SelectedNode": "\\POKEDEX-SiDi.sln",
   "PreviewInSolutionExplorer": false

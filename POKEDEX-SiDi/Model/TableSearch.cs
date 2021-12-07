@@ -17,6 +17,7 @@ namespace POKEDEX_SiDi.Model
     {
         public static long id { get; set; }
         public static string name { get; set; }
+        public static long H { get; set; }
 
         public static async Task GetRequerimentPokemonInApi(string namePokemon)
         {
@@ -27,6 +28,8 @@ namespace POKEDEX_SiDi.Model
             id = poke.Id;
 
             name = poke.Name;
+
+            H = poke.Height;
         }
     }
 }

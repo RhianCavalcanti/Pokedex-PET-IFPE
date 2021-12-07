@@ -9,51 +9,171 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="DarkRed">
-        <Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+
+        <RelativePanel Grid.Row="0" Background="#FF0E6B8B" MinHeight="70">
+            <Button x:Name="Back" FontFamily="Segoe MDL2 Assets" Content="&#xE0A6;" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="10,0,9,0"  Height="40" Width="40" Click="Back_Click" Background="Transparent" BorderBrush="#19FFFFFF"/>
+            <TextBlock x:Name="logo" Text="Pokédex" Margin="0,0,0,0" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.RightOf="Back" FontSize="22" PointerPressed="Click_Logo"/>
+            <!--Hyperlink a logo para voltar a MainPage quando clicar nela-->
+            <Button x:Name="NextPokemon" FontFamily="Segoe MDL2 Assets" Content="&#xE00f;" RelativePanel.AlignVerticalCenterWithPanel="True"  RelativePanel.LeftOf="BarraPesquisa" Margin="0,0,20,0" MinHeight="40" MinWidth="40" Click="NextPokemon_Click"/>
+            <Button x:Name="PreviousPokemon" FontFamily="Segoe MDL2 Assets" Content="&#xE00E;" RelativePanel.AlignVerticalCenterWithPanel="True"  RelativePanel.LeftOf="NextPokemon" Margin="0,0,6,0" MinHeight="40" MinWidth="40" Click="PreviousPokemon_Click"/>
+            <TextBox x:Name="BarraPesquisa" FontSize="22" RelativePanel.LeftOf="Pesquisar" RelativePanel.AlignVerticalCenterWithPanel="True" MaxWidth="280" MinWidth="180" MinHeight="40" TextChanged="BarraPesquisa_TextChanged" BorderBrush="#66000000"/>
+            <Button x:Name="Pesquisar" FontFamily="Segoe MDL2 Assets" Background="#66000000" Content="&#xE1A3;" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,10,0" MinHeight="40" MinWidth="40" BorderBrush="#01000000" Click="Pesquisar_Click" Height="42"/>
+            <!-- Pode ser um ícone de busca-->
+        </RelativePanel>
+
+        <RelativePanel Grid.Row="1">
+            <Frame x:Name="MyFrame" Background="White" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
+                <!--<StackPanel>
+                    
+                </StackPanel>-->
+
+                <!--<Grid>
+                    <Grid.ColumnDefinitions>
+                        -->
+                <!--<ColumnDefinition Width="*"/>-->
+                <!--
+                        <ColumnDefinition Width="*"/>
+                        -->
+                <!--<ColumnDefinition Width="*"/>-->
+                <!--
+                    </Grid.ColumnDefinitions>
+                    -->
+                <!--<Rectangle Fill="DarkRed"></Rectangle>
+                    <Rectangle Grid.Column="2" Fill="DarkRed"></Rectangle>-->
+                <!--
+
+                    
+                </Grid>-->
+
+                <StackPanel x:Name="Pokelist" Orientation="Vertical" MinWidth="600">
+                    <RelativePanel>
+                        <!--Opcional-->
+                        <TextBlock x:Name="PageName" Text="Lista dos Pokémons" FontSize="20" Foreground="Black" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="10"/>
+                        <TextBlock x:Name="TextOrganizar" Text="Organizar por: " Foreground="Black" RelativePanel.LeftOf="Organizacao" Margin="5" RelativePanel.AlignVerticalCenterWithPanel="True"/>
+                        <ComboBox x:Name="Organizacao" UseLayoutRounding="True" SelectionChanged="Organizacao_SelectionChanged" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,5,0">
+                            <ComboBoxItem Content="Número" IsSelected="True"/>
+                            <ComboBoxItem Content="Nome"/>
+                            <ComboBoxItem Content="Tipo"/>
+                            <!--<ComboBoxItem Content="Pelo"/>-->
+
+                        </ComboBox>
+                    </RelativePanel>
+
+                    <RelativePanel x:Name="singlePokemon">
+
+                        <!--Lista que puxa do BD os primeiros pokémons-->
+
+                        <!--Cada campo deste será um pokémon exibido na lista-->
+                        <StackPanel x:Name="List_pokemon" Orientation="Horizontal" Height="150" Margin="0,0,0,10" MinWidth="1400" Background="LightGoldenrodYellow" PointerPressed="VerDetalhes" PointerEntered="PointerEnteredPokemon">
+                            <!--<StackPanel.Style>
+                                <Style TargetType="StackPanel">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=Button1, Path=IsEnabled}" 
+                             Value="False">
+                                            <Setter Property="Cursor" Value="Hand"/>
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </StackPanel.Style>-->
+                            <RelativePanel x:Name="ItemListPokemon">
+                                <!--imagem do pokemon-->
+                                <Image x:Name="photo" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="15,0,10,0" Height="140" Width="140" FocusVisualPrimaryBrush="Black" FocusVisualSecondaryBrush="Black"/>
+                                <StackPanel x:Name="Details" Orientation="Vertical" MinWidth="1250" RelativePanel.RightOf="photo">
+                                    <!--Texto com informações do pokémon-->
+                                    <TextBlock x:Name="Nome" Margin="10,10,0,0" TextWrapping="Wrap" Height="37" Foreground="Black" FocusVisualPrimaryBrush="Black" FontSize="20" SelectionHighlightColor="Black"><Run Text="Nome do Pokémon aqui!"/></TextBlock>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock x:Name="TipoPokemon" Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Tipo do Pokemon: "/>
+                                        <!--Print/return tipo pokemon-->
+                                        <TextBlock x:Name="TipoPokemonOut" Foreground="Black" TextWrapping="Wrap" MinWidth="50" Text="teste"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock x:Name="AtkPokemon" Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Ataque: "/>
+                                        <!--Print/return ataque pokemon-->
+                                        <TextBlock x:Name="AtkPokemonOut" Foreground="Black" TextWrapping="Wrap" Text="teste"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock x:Name="Habilidades" Foreground="Black" FontSize="14" Margin="20,0,5,0" Text="Habilidades: "/>
+                                        <!--Print/return habilidades do pokemon-->
+                                        <TextBlock x:Name="HabilidadesOut" Foreground="Black" TextWrapping="Wrap" Text="teste"/>
+                                    </StackPanel>
+
+
+                                </StackPanel>
+                            </RelativePanel>
+                            <!--<RelativePanel>
+                                <StackPanel x:Name="Details" Orientation="Vertical" MinWidth="1150" RelativePanel.AlignRightWithPanel="True"> o termo correto era RightOf
+                                    -->
+                            <!--Texto com informações do pokémon-->
+                            <!--
+                                    <TextBlock x:Name="Nome" Margin="10,10,0,0" TextWrapping="Wrap" Height="37" Foreground="Black" FocusVisualPrimaryBrush="Black" FontSize="20" SelectionHighlightColor="Black"><Run Text="Nome do Pokémon aqui!"/></TextBlock>
+                                    <TextBlock x:Name="TipoPokemon" Foreground="Black" FontSize="14" Margin="20,0,0,0"><Run Text="Tipo do Pokemon: "/></TextBlock>
+                                    <TextBlock x:Name="AtkPokemon" Foreground="Black" FontSize="14" Margin="20,0,0,0"><Run Text="Ataque: "/></TextBlock>
+                                </StackPanel>                               
+                            </RelativePanel>-->
+                        </StackPanel>
+                        <!--Número do pokemon no Índice-->
+                        <TextBlock x:Name="Numero" RelativePanel.AlignRightWithPanel="True" Margin="0,20,20,0" Text="#01" TextWrapping="Wrap" Foreground="Black" FontWeight="Bold" FontSize="15"/>
+                    </RelativePanel>
+
+                </StackPanel>
+
+            </Frame>
+        </RelativePanel>
+
+
+        <!--<Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="8*"/>
             <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>-->
 
-        <Grid Grid.Column="1" Background="White">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.45*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
 
-            </Grid.RowDefinitions>
-            <!--Header-->
-
-            <StackPanel  Background="#FF0E6B8B" Margin="-300,0,-300,0">
-
+        <!--Body-->
+        <!--
+            <StackPanel Orientation="Vertical" x:Name="Lista_pokemons" Grid.Row="1">
+                -->
+        <!--Provavelmente aqui deverá ser um grid com 3 colunas: uma para a foto, outra para os dados e a última para o número. Assim nada some se a janela não estiver maximizada-->
+        <!--
+                <StackPanel x:Name="dados_pokemon" Orientation="Horizontal" Height="150" Margin="0,0,0,10" Background="LightGoldenrodYellow">
+                    -->
+        <!--imagem do pokemon-->
+        <!--
+                    <Image x:Name="photo" Grid.Row="1" Margin="115,0,10,0" Height="140" Width="140" FocusVisualPrimaryBrush="Black" FocusVisualSecondaryBrush="Black"/>
+                    <StackPanel x:Name="Details" Orientation="Vertical" Width="1000">
+                        -->
+        <!--Texto com informações do pokémon-->
+        <!--
+                        <TextBlock x:Name="Nome" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Height="37" Foreground="Black" FocusVisualPrimaryBrush="Black" FontSize="20" SelectionHighlightColor="Black"><Run Text="Nome do Pokémon aqui!"/></TextBlock>
+                        <TextBlock x:Name="Infos" Foreground="Black" FontSize="14" Margin="20,0,0,0"><Run Text="Tipo do Pokemon"/><LineBreak/><Run Text="Ataque"/></TextBlock>
+                    </StackPanel>
+                    -->
+        <!--Número do pokemon no Índice-->
+        <!--
+                    <TextBlock x:Name="Numero" HorizontalAlignment="Right" Margin="0,20,0,0" Text="#01" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" FontWeight="Bold" FontSize="15"/>
+                </StackPanel>
             </StackPanel>
-            <Button x:Name="Pesquisa" Background="#FF0E6B8B" Content="Search" HorizontalAlignment="Right" Margin="0,0,10,0" Height="63"/>
-            <!--Pesquisar se estes elementos abaixo talvez devam ficar dentro de um StackPanel-->
-            <Rectangle Grid.Row="1" HorizontalAlignment="Center" Height="150" VerticalAlignment="Center" Width="1418" Fill="#FFECEC8F"/>
-            <!--imagem do pokemon-->
-            <Rectangle Grid.Row="1" HorizontalAlignment="Left" Height="140" Margin="115,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="140"/>
-            <Image Grid.Row="1" Margin="115,14,1284,13" Height="140" Width="140"/>
-            <!--Texto com informações do pokémon-->
-            <TextBlock Grid.Row="1" x:Name="Nome" Margin="308,13,22,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Foreground="Black" FocusVisualPrimaryBrush="Black" FontSize="20"><Run Text="Nome do Pokémon aqui!"/></TextBlock>
-            <TextBlock Grid.Row="1" x:Name="Infos" Foreground="Black" FontSize="14" Margin="308,40,570,78"><Run Text="Tipo "/><Run Text="do Pokemon "/><LineBreak/><Run Text="A"/><Run Text="taque"/></TextBlock>
-            <!--Número do pokemon no Índice-->
-            <TextBlock Grid.Row="1" x:Name="Numero" HorizontalAlignment="Right" Margin="0,20,95,0" Text="#01" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" FontWeight="Bold" FontSize="15"/>
-<!--
+
+            -->
+        <!--Pesquisar se estes elementos abaixo talvez devam ficar dentro de um StackPanel-->
+
+
+        <!--
             <Rectangle Grid.Row="2" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1418" Fill="#FFECEC8F"/>
             <Rectangle Grid.Row="2" HorizontalAlignment="Left" Height="192" Margin="89,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="192"/>
-
             <Rectangle Grid.Row="3" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1418" Fill="#FFECEC8F"/>
             <Rectangle Grid.Row="3" HorizontalAlignment="Left" Height="192" Margin="89,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="192"/>
 
             <Rectangle Grid.Row="4" HorizontalAlignment="Center" Height="232" Stroke="Black" VerticalAlignment="Center" Width="1418" Fill="#FFECEC8F"/>
-            <Rectangle Grid.Row="4" HorizontalAlignment="Left" Height="192" Margin="89,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="192"/>
--->
+            <Rectangle Grid.Row="4" HorizontalAlignment="Left" Height="192" Margin="89,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="192"/> -->
+        <!--
 
         </Grid>
-        <ScrollBar Grid.Column="2" HorizontalAlignment="Left" Margin="176,0,0,0" VerticalAlignment="Center" Height="1080" Background="Black"/>
+        <ScrollBar HorizontalAlignment="Right" Margin="176,0,0,0" VerticalAlignment="Center" Height="1080" Background="Black" BorderBrush="White" FocusVisualSecondaryBrush="Black"/>-->
     </Grid>
 </Page>

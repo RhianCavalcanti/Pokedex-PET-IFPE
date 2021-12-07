@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,9 @@ namespace POKEDEX_SiDi.Model
 
         public static SQLiteConnection ConnectionDb()
         {
-            conection = new SQLiteConnection("Data Source=C:Caminho do banco de dados");
+            string diretorioatual = Directory.GetCurrentDirectory(); //Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string caminhobanco = "\\dbfortest\\db_pokemon.db";
+            conection = new SQLiteConnection("Data Source="+diretorioatual+caminhobanco);
             conection.Open();
             return conection;
         }

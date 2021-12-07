@@ -17,24 +17,33 @@ namespace POKEDEX_SiDi.Model
         //public Uri BackDefault { get; set; }
 
         //[JsonProperty("back_female")]
-        //public Uri BackFemale { get; set; }
+        //public object BackFemale { get; set; }
 
         //[JsonProperty("back_shiny")]
         //public Uri BackShiny { get; set; }
 
         //[JsonProperty("back_shiny_female")]
-        //public Uri BackShinyFemale { get; set; }
+        //public object BackShinyFemale { get; set; }
 
         [JsonProperty("front_default")]
         public Uri FrontDefault { get; set; }
 
         //[JsonProperty("front_female")]
-        //public Uri FrontFemale { get; set; }
+        //public object FrontFemale { get; set; }
 
         //[JsonProperty("front_shiny")]
         //public Uri FrontShiny { get; set; }
 
         //[JsonProperty("front_shiny_female")]
-        //public Uri FrontShinyFemale { get; set; }
+        //public object FrontShinyFemale { get; set; }
+
+        //[JsonProperty("other", NullValueHandling = NullValueHandling.Ignore)]
+        //public Other Other { get; set; }
+
+        //[JsonProperty("versions", NullValueHandling = NullValueHandling.Ignore)]
+        //public Versions Versions { get; set; }
+
+        //[JsonProperty("animated", NullValueHandling = NullValueHandling.Ignore)]
+        //public Sprites Animated { get; set; }
     }
 }
