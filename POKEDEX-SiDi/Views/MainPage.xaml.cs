@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +26,9 @@ namespace POKEDEX_SiDi.Views
         public MainPage()
         {
             this.InitializeComponent();
+            MyFrame.Navigate(typeof(ListaPokemons));
+            //BackButton.Visibility = Visibility.Collapsed;
+            //Visibility_Back_Click();
         }
 
         private void Pesquisar_Click(object sender, RoutedEventArgs e)
@@ -36,11 +40,28 @@ namespace POKEDEX_SiDi.Views
             //}
         }
 
+        //protected void Visibility_Back_Click()
+        //{
+        //    if (!MyFrame.Content.GetType().Equals("ListaPokemon"))
+        //    {
+        //        BackButton.Visibility = Visibility.Visible;
+        //    }
+        //    else
+        //    {
+        //        BackButton.Visibility = Visibility.Collapsed;
+        //    }
+        //}
+
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             if (MyFrame.CanGoBack)
             {
+                //Visibility_Back_Click();
                 MyFrame.GoBack();
+            }
+            else
+            {
+                //Visibility_Back_Click();
             }
         }
 
@@ -55,12 +76,14 @@ namespace POKEDEX_SiDi.Views
         }
 
         private void BarraPesquisa_TextChanged(object sender, TextChangedEventArgs e)
-        { 
+        {
             //Frame.Navigate(typeof(SearchPage), BarraPesquisa.Text);
         }
 
         private void VerDetalhes(object sender, PointerRoutedEventArgs e)
         {
+            BackButton.Visibility = Visibility.Visible;
+            //Visibility_Back_Click();
             Frame.Navigate(typeof(PokemonDetalhado));
         }
 
@@ -74,11 +97,12 @@ namespace POKEDEX_SiDi.Views
         private void Click_Logo(object sender, PointerRoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));
+            //BackButton.Visibility = Visibility.Collapsed;
         }
 
         private void Organizacao_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+
         }
     }
 }

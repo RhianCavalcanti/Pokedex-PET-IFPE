@@ -8,6 +8,9 @@ Assets\Wide310x150Logo.scale-200.png
 App.xbf
 MainPage.xbf
 POKEDEX-SiDi.xr.xml
+Views\AddPokemon.xbf
+Views\ListaPokemons.xbf
+Views\ListViewTest.xbf
 Views\MainPage.xbf
 Views\PokemonDetalhado.xbf
 Properties\Default.rd.xml
