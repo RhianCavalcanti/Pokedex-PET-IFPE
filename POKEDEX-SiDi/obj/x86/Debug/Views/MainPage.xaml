@@ -15,21 +15,45 @@
         </Grid.RowDefinitions>
 
         <RelativePanel Grid.Row="0" Background="#FF0E6B8B" MinHeight="70">
-            <Button x:ConnectionId='3' x:Name="BackButton" FontFamily="Segoe MDL2 Assets" Content="&#xE0A6;" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="10,0,9,0"  Height="40" Width="40"                    Background="Transparent" BorderBrush="#19FFFFFF"/>
+            <Button x:ConnectionId='7' x:Name="HambuguerButton"
+                    FontFamily="Segoe MDL2 Assets" 
+                    Content="&#xE700;" 
+                    FontSize="24"
+                    RelativePanel.AlignVerticalCenterWithPanel="True"
+                    Height="40"
+                    Width="40"
+                    Margin="0,0,0,0"
+                                                 
+                    Background="Transparent" 
+                    BorderBrush="#19FFFFFF">
+            </Button>
+            <Button x:ConnectionId='8' x:Name="BackButton" 
+                    FontFamily="Segoe MDL2 Assets" 
+                    Content="&#xE0A6;" 
+                    RelativePanel.AlignVerticalCenterWithPanel="True" 
+                    Margin="5,0,9,0" 
+                    RelativePanel.RightOf="HambuguerButton"
+                    Height="40" 
+                    Width="40" 
+                                       
+                    Background="Transparent" 
+                    BorderBrush="#19FFFFFF"/>
             <!-- FEITO:         Hyperlink a logo para voltar a MainPage quando clicar nela-->
-            <TextBlock x:ConnectionId='4' x:Name="logo" Text="Pokédex" Margin="0,0,0,0" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.RightOf="BackButton" FontSize="22"                            />
-            <Button x:ConnectionId='5' x:Name="NextPokemon" FontFamily="Segoe MDL2 Assets" Content="&#xE00f;" RelativePanel.AlignVerticalCenterWithPanel="True"  RelativePanel.LeftOf="BarraPesquisa" Margin="0,0,20,0" MinHeight="40" MinWidth="40"                          />
-            <Button x:ConnectionId='6' x:Name="PreviousPokemon" FontFamily="Segoe MDL2 Assets" Content="&#xE00E;" RelativePanel.AlignVerticalCenterWithPanel="True"  RelativePanel.LeftOf="NextPokemon" Margin="0,0,6,0" MinHeight="40" MinWidth="40"                              />
+            <TextBlock x:ConnectionId='9' x:Name="logo" Text="Pokédex" Margin="0,0,0,0" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.RightOf="BackButton" FontSize="22"                            />
+            <Button x:ConnectionId='10' x:Name="NextPokemon" FontFamily="Segoe MDL2 Assets" Content="&#xE00f;" RelativePanel.AlignVerticalCenterWithPanel="True"  RelativePanel.LeftOf="BarraPesquisa" Margin="0,0,20,0" MinHeight="40" MinWidth="40"                          />
+            <Button x:ConnectionId='11' x:Name="PreviousPokemon" FontFamily="Segoe MDL2 Assets" Content="&#xE00E;" RelativePanel.AlignVerticalCenterWithPanel="True"  RelativePanel.LeftOf="NextPokemon" Margin="0,0,6,0" MinHeight="40" MinWidth="40"                              />
             
             <!-- Aqui pode ser um autosuggest que acessa os pokemons já salvos no BD para mostrar as sugestões -->
-            <TextBox x:ConnectionId='7' x:Name="BarraPesquisa" FontSize="22" RelativePanel.LeftOf="Pesquisar" RelativePanel.AlignVerticalCenterWithPanel="True" MaxWidth="280" MinWidth="180" MinHeight="40"                                         BorderBrush="#66000000"/>
+            <TextBox x:ConnectionId='12' x:Name="BarraPesquisa" FontSize="22" RelativePanel.LeftOf="Pesquisar" RelativePanel.AlignVerticalCenterWithPanel="True" MaxWidth="280" MinWidth="180" MinHeight="40"                                         BorderBrush="#66000000"/>
             
             <!-- FEITO      Pode ser um ícone de busca-->
-            <Button x:ConnectionId='8' x:Name="Pesquisar" FontFamily="Segoe MDL2 Assets" Background="#66000000" Content="&#xE1A3;" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,10,0" MinHeight="40" MinWidth="40" BorderBrush="#01000000"                         Height="42"/>
+            <Button x:ConnectionId='13' x:Name="Pesquisar" FontFamily="Segoe MDL2 Assets" Background="#66000000" Content="&#xE1A3;" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,10,0" MinHeight="40" MinWidth="40" BorderBrush="#01000000"                         Height="42"/>
         </RelativePanel>
 
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Visible">
-            <RelativePanel Grid.Row="1">
+            
+            <RelativePanel>
+                
                 <Frame x:ConnectionId='2' x:Name="MyFrame" Background="White" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
                 <!--<StackPanel>
                     
@@ -56,7 +80,28 @@
 
 
             </Frame>
-            <ScrollBar RelativePanel.AlignRightWithPanel="True" Margin="0,0,0,0" Height="1080" Background="Black" BorderBrush="White" FocusVisualSecondaryBrush="Black"/>
+                <SplitView x:ConnectionId='3' x:Name="MySplitView"
+                           DisplayMode="Inline"
+                           OpenPaneLength="250">
+                    <SplitView.Pane>
+                        <ListBox x:ConnectionId='4' SelectionMode="Single" 
+                                                                            >
+                            <ListBoxItem x:ConnectionId='5' Name="Lista" IsSelected="True">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Lista de Pokémons"
+                                               FontSize="20"/>
+                                </StackPanel>
+                            </ListBoxItem>
+                            <ListBoxItem x:ConnectionId='6' Name="Add" >
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Adicionar Novo Pokémon"
+                                               FontSize="20"/>
+                                </StackPanel>
+                            </ListBoxItem>
+                        </ListBox>
+                    </SplitView.Pane>
+                </SplitView>
+            <!--<ScrollBar RelativePanel.AlignRightWithPanel="True" Margin="0,0,0,0" Height="1080" Background="Black" BorderBrush="White" FocusVisualSecondaryBrush="Black"/>-->
             </RelativePanel>
         </ScrollViewer>
 

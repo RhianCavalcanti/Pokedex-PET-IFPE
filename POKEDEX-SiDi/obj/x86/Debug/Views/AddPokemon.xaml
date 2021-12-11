@@ -8,8 +8,26 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Frame Background="DarkRed">
+        <StackPanel Orientation="Vertical" Background="White">
+            <RelativePanel>
+                <TextBlock x:ConnectionId='4' x:Name="PageName" Text="Adicionar Novo Pokémon" FontSize="20" Foreground="Black" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="10"/>
+            </RelativePanel>
+            <RelativePanel>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:ConnectionId='3' x:Name="Name" VerticalAlignment="Center" Text="Nome: " Foreground="Black" Margin="20,0,0,0"/>
+                        <TextBox PlaceholderText="Nome do Novo Pokémon" TextWrapping="Wrap" Margin="10,0,0,0" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:ConnectionId='2' x:Name="Ataque" VerticalAlignment="Center" Text="Ataque: " Foreground="Black" Margin="20,0,0,0"/>
+                        <TextBox PlaceholderText="Ataque" TextWrapping="Wrap" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+                
+            </RelativePanel>
+        </StackPanel>
 
-    </Grid>
+    </Frame>
 </Page>
 

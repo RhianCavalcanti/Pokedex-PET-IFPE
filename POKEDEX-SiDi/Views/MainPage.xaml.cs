@@ -27,7 +27,7 @@ namespace POKEDEX_SiDi.Views
         {
             this.InitializeComponent();
             MyFrame.Navigate(typeof(ListaPokemons));
-            //BackButton.Visibility = Visibility.Collapsed;
+            BackButton.Visibility = Visibility.Collapsed;
             //Visibility_Back_Click();
         }
 
@@ -58,6 +58,7 @@ namespace POKEDEX_SiDi.Views
             {
                 //Visibility_Back_Click();
                 MyFrame.GoBack();
+                Lista.IsSelected = true;
             }
             else
             {
@@ -103,6 +104,26 @@ namespace POKEDEX_SiDi.Views
         private void Organizacao_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void HambuguerButton_Click(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (Lista.IsSelected)
+            {
+                BackButton.Visibility = Visibility.Collapsed;
+                MyFrame.Navigate(typeof(ListaPokemons));
+            }
+            else if (Add.IsSelected)
+            {
+                BackButton.Visibility = Visibility.Visible;
+                MyFrame.Navigate(typeof(AddPokemon));
+
+            }
         }
     }
 }

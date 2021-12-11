@@ -8,7 +8,30 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Frame Background="DarkRed">
+        <StackPanel Orientation="Vertical" Background="White" MinWidth="1400">
+            <RelativePanel>
+                <TextBlock x:Name="PageName" Text="Adicionar Novo Pokémon" FontSize="20" Foreground="Black" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="10"/>
+            </RelativePanel>
+            
+            <RelativePanel>
+                <StackPanel Orientation="Vertical"> <!--talvez um grid para os textos e campos ficarem alinhados corretamente-->
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:Name="Name" VerticalAlignment="Center" Text="Nome: " FontSize="20" Foreground="Black" Margin="20,0,0,0"/>
+                        <TextBox PlaceholderText="Nome do Novo Pokémon" TextWrapping="Wrap" FontSize="16" Margin="10,0,0,0" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:Name="Ataque" VerticalAlignment="Center" Text="Ataque: " FontSize="20" Foreground="Black" Margin="20,0,0,0"/>
+                        <TextBox PlaceholderText="Ataque" TextWrapping="NoWrap" FontSize="16" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:Name="Especie" VerticalAlignment="Center" Text="Espécie: " FontSize="20" Foreground="Black" Margin="20,0,0,0"/>
+                        <TextBox PlaceholderText="" TextWrapping="NoWrap" FontSize="16" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+                
+            </RelativePanel>
+        </StackPanel>
 
-    </Grid>
+    </Frame>
 </Page>

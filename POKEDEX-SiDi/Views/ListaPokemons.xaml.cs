@@ -50,12 +50,22 @@ namespace POKEDEX_SiDi.Views
 
         }
 
+        private void ListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Frame.Navigate(typeof(PokemonDetalhado));
+        }
+
+        private void LoadMore_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
 
         //protected override void OnNavigatedTo(NavigationEventArgs e)
         //{
         //    //base.OnNavigatingFrom(e);
         //    MainPage.FrameProperty.GetType();
-            
+
         //    BackButton.Visibility = Visibility.Visible;
         //    //if (!MyFrame.Content.GetType().Equals("ListaPokemon"))
         //    //{
