@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-11T02:47:53.956</Modified>
+      <Modified>2021-12-16T03:36:56.496</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\POKEDEX-SiDi.exe">
       <PackagePath>entrypoint\POKEDEX-SiDi.exe</PackagePath>
-      <Modified>2021-12-11T02:47:53.525</Modified>
+      <Modified>2021-12-16T03:36:55.743</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\.nuget\packages\microsoft.bcl.asyncinterfaces\5.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
       <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
@@ -122,35 +122,35 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\POKEDEX-SiDi.xr.xml">
       <PackagePath>POKEDEX-SiDi.xr.xml</PackagePath>
-      <Modified>2021-12-11T02:47:53.425</Modified>
+      <Modified>2021-12-16T03:36:55.605</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-12-11T02:47:53.444</Modified>
+      <Modified>2021-12-16T03:36:55.641</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-12-11T02:47:53.445</Modified>
+      <Modified>2021-12-16T03:36:55.641</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\AddPokemon.xbf">
       <PackagePath>Views\AddPokemon.xbf</PackagePath>
-      <Modified>2021-12-11T02:47:53.445</Modified>
+      <Modified>2021-12-16T03:36:55.642</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\ListaPokemons.xbf">
       <PackagePath>Views\ListaPokemons.xbf</PackagePath>
-      <Modified>2021-12-11T02:47:53.440</Modified>
+      <Modified>2021-12-16T03:36:55.636</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\ListViewTest.xbf">
       <PackagePath>Views\ListViewTest.xbf</PackagePath>
-      <Modified>2021-12-11T02:47:53.445</Modified>
+      <Modified>2021-12-16T03:36:55.642</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2021-12-11T02:47:53.445</Modified>
+      <Modified>2021-12-16T03:36:55.642</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\PokemonDetalhado.xbf">
       <PackagePath>Views\PokemonDetalhado.xbf</PackagePath>
-      <Modified>2021-12-11T02:47:53.445</Modified>
+      <Modified>2021-12-16T03:36:55.642</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -162,7 +162,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Core\POKEDEX-SiDi.exe">
       <PackagePath>POKEDEX-SiDi.exe</PackagePath>
-      <Modified>2021-12-11T02:47:53.952</Modified>
+      <Modified>2021-12-16T03:36:56.490</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

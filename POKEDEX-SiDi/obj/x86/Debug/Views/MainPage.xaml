@@ -40,14 +40,52 @@
                     BorderBrush="#19FFFFFF"/>
             <!-- FEITO:         Hyperlink a logo para voltar a MainPage quando clicar nela-->
             <TextBlock x:ConnectionId='9' x:Name="logo" Text="Pokédex" Margin="0,0,0,0" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.RightOf="BackButton" FontSize="22"                            />
-            <Button x:ConnectionId='10' x:Name="NextPokemon" FontFamily="Segoe MDL2 Assets" Content="&#xE00f;" RelativePanel.AlignVerticalCenterWithPanel="True"  RelativePanel.LeftOf="BarraPesquisa" Margin="0,0,20,0" MinHeight="40" MinWidth="40"                          />
-            <Button x:ConnectionId='11' x:Name="PreviousPokemon" FontFamily="Segoe MDL2 Assets" Content="&#xE00E;" RelativePanel.AlignVerticalCenterWithPanel="True"  RelativePanel.LeftOf="NextPokemon" Margin="0,0,6,0" MinHeight="40" MinWidth="40"                              />
+            <!--<Button x:Name="NextPokemon" 
+                    FontFamily="Segoe MDL2 Assets" 
+                    Content="&#xE00f;"
+                    RelativePanel.AlignVerticalCenterWithPanel="True" 
+                    Margin="0,0,20,0" 
+                    MinHeight="40" 
+                    MinWidth="40" 
+                    Click="NextPokemon_Click"/>
+            
+            <Button x:Name="PreviousPokemon"
+                    FontFamily="Segoe MDL2 Assets" 
+                    Content="&#xE00E;" 
+                    RelativePanel.AlignVerticalCenterWithPanel="True"  
+                    RelativePanel.LeftOf="NextPokemon" 
+                    Margin="0,0,6,0"
+                    MinHeight="40"
+                    MinWidth="40" 
+                    Click="PreviousPokemon_Click"/>-->
             
             <!-- Aqui pode ser um autosuggest que acessa os pokemons já salvos no BD para mostrar as sugestões -->
-            <TextBox x:ConnectionId='12' x:Name="BarraPesquisa" FontSize="22" RelativePanel.LeftOf="Pesquisar" RelativePanel.AlignVerticalCenterWithPanel="True" MaxWidth="280" MinWidth="180" MinHeight="40"                                         BorderBrush="#66000000"/>
+            <!--<TextBox x:Name="BarraPesquisa" 
+                     FontSize="22" 
+                     RelativePanel.LeftOf="Pesquisar" 
+                     RelativePanel.AlignVerticalCenterWithPanel="True" 
+                     MaxWidth="280" 
+                     MinWidth="180" 
+                     MinHeight="40" 
+                     TextChanged="BarraPesquisa_TextChanged" 
+                     BorderBrush="#66000000"/>-->
+            
+            <AutoSuggestBox x:ConnectionId='10' x:Name="MyAutoSuggestBox" 
+                            MaxWidth="280" 
+                            MinWidth="180" 
+                            MinHeight="40" 
+                            FontSize="22" 
+                            RelativePanel.AlignVerticalCenterWithPanel="True" 
+                            RelativePanel.AlignRightWithPanel="True"
+                            Margin="0,0,20,0"
+                            QueryIcon="Find" 
+                            PlaceholderText="Procurar" 
+                                                                      
+                                                                                
+                                                                            />
             
             <!-- FEITO      Pode ser um ícone de busca-->
-            <Button x:ConnectionId='13' x:Name="Pesquisar" FontFamily="Segoe MDL2 Assets" Background="#66000000" Content="&#xE1A3;" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,10,0" MinHeight="40" MinWidth="40" BorderBrush="#01000000"                         Height="42"/>
+            <!--<Button x:Name="Pesquisar" FontFamily="Segoe MDL2 Assets" Background="#66000000" Content="&#xE1A3;" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,10,0" MinHeight="40" MinWidth="40" BorderBrush="#01000000" Click="Pesquisar_Click" Height="42"/>-->
         </RelativePanel>
 
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Visible">

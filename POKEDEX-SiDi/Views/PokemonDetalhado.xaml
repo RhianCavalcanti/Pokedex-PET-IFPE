@@ -32,31 +32,114 @@
         <!--
             </RelativePanel>
             <RelativePanel Grid.Row="1" Background="DarkRed">-->
-        <StackPanel x:Name="PokemonDetalhes" Background="White" MinWidth="1400" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
+        <StackPanel x:Name="PokemonDetalhes" Orientation="Vertical" Background="White" MinWidth="1400" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
 
-            <StackPanel x:Name="Pokelist" Orientation="Vertical" MinWidth="800" MaxWidth="800">
+            <Grid x:Name="Pokelist">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
                 <!--Aqui talvez seja um relative panel e dentro este stack-->
-                <RelativePanel>
-                    <Button Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click"/>
+                <StackPanel Orientation="Vertical" Grid.ColumnSpan="2">
+                    <!--<Button Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click" RequestedTheme="Light"/>-->
                     <!--Imagem do pokémon aqui-->
-                    <Rectangle x:Name="imgPokemon" Fill="#7F000000" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Height="530" Width="520"/>
 
-                </RelativePanel>
-                <StackPanel Orientation="Horizontal" Width="1000">
-                    <TextBlock Name="Nome" Text="Nome:" FontSize="24" Foreground="Black"/>
-                    <TextBlock x:Name="namePokemon" Text="Nome aqui" FontSize="24" RelativePanel.AlignLeftWith="Nome" Margin="10,0,0,0" Foreground="Black"/>
-                    <!--<RelativePanel>
-                        </RelativePanel>-->
+                    <!--<Image />-->
+                    <ListView x:Name="ListaPokemonsD" 
+                              SelectionMode="Single" 
+                              ItemsSource="selococachorreira123456"
+                              IsItemClickEnabled="True"
+                              ItemClick="ListaPokemonsD_ItemClick"
+                              ScrollViewer.HorizontalScrollMode="Enabled"
+                              ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                              ScrollViewer.IsHorizontalRailEnabled="True"
+                              ScrollViewer.VerticalScrollMode="Disabled">
+                        <ListView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal" Height="150" Margin="0,0,0,10"/>
+                            </ItemsPanelTemplate>
+                        </ListView.ItemsPanel>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <Rectangle Fill="DarkGray" Height="130" Width="100"/>
+                                    <TextBlock Text="{Binding}" RequestedTheme="Light" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+
+                    <!--<ListView x:Name="lvwMovieWatchlist" Grid.Row="1" Margin="0,5,0,3" ItemsSource="MovieViewModel"
+                          ScrollViewer.HorizontalScrollMode="Enabled"
+                          ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                          ScrollViewer.IsHorizontalRailEnabled="True"
+                          ScrollViewer.VerticalScrollMode="Disabled" RequestedTheme="Light">
+
+                        <ListView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal" Height="250" />
+                            </ItemsPanelTemplate>
+                        </ListView.ItemsPanel>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ListViewItem Margin="0,0,5,0" Tag="{Binding ID}">
+                                    <Image Source="{Binding FormattedPosterUri}" Width="92" />
+                                </ListViewItem>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView> -->
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock x:Name="Ataque" Text="Ataque:" FontSize="24" Foreground="Black"/>
-                    <TextBlock x:Name="atkPokemon" Text="Nome do ataque aqui" FontSize="24" RelativePanel.AlignLeftWith="Nome" Margin="10,0,0,0" Foreground="Black"/>
+
+
+
+
+                <StackPanel Orientation="Vertical" Grid.Row="1" Background="LightYellow" Width="auto" Margin="20">
+                    <Rectangle x:Name="imgPokemon" Fill="#7F000000" Height="350" Width="350"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="PreviousPokemon"
+                                FontFamily="Segoe MDL2 Assets" 
+                                Content="&#xE00E;" 
+                                RelativePanel.AlignHorizontalCenterWithPanel="True"  
+                                RelativePanel.LeftOf="NextPokemon" 
+                                Margin="0,10,6,5"
+                                MinHeight="40"
+                                MinWidth="40" 
+                                Click="PreviousPokemon_Click" RequestedTheme="Light"/>
+                        <Button x:Name="NextPokemon" 
+                                FontFamily="Segoe MDL2 Assets" 
+                                Content="&#xE00f;"
+                                HorizontalAlignment="Right"
+                                Margin="0,10,0,5" 
+                                MinHeight="40" 
+                                MinWidth="40" 
+                                Click="NextPokemon_Click" RequestedTheme="Light"/>
+                    </StackPanel>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock x:Name="Especie" Text="Espécie: " FontSize="24" Foreground="Black" TextWrapping="Wrap"/>
-                    <TextBlock x:Name="EspeciePokemon" Text="Nome da espécie aqui" FontSize="24" RelativePanel.AlignLeftWith="Especie" Margin="10,0,0,0" Foreground="Black"/>
+                
+                <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1" Margin="10,20,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Name="Nome" Text="Nome:" FontSize="24" Foreground="Black"/>
+                        <TextBlock x:Name="namePokemon" Text="Nome aqui" FontSize="24" RelativePanel.AlignLeftWith="Nome" Margin="10,0,0,0" Foreground="Black"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:Name="Ataque" Text="Ataque:" FontSize="24" Foreground="Black"/>
+                        <TextBlock x:Name="atkPokemon" Text="Nome do ataque aqui" FontSize="24" RelativePanel.AlignLeftWith="Nome" Margin="10,0,0,0" Foreground="Black"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:Name="Especie" Text="Espécie: " FontSize="24" Foreground="Black" TextWrapping="Wrap"/>
+                        <TextBlock x:Name="EspeciePokemon" Text="Nome da espécie aqui" FontSize="24" RelativePanel.AlignLeftWith="Especie" Margin="10,0,0,0" Foreground="Black"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Mais detalhes e observações: " FontSize="24" RequestedTheme="Light"/>
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
+                
+            </Grid>
         </StackPanel>
     </Frame>
 </Page>

@@ -51,7 +51,13 @@
                 </Page.Resources>-->
 
 
-                <ListView x:Name="ListaPokemonsView" ItemsSource="0123456789" SelectionMode="None" IsItemClickEnabled="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" ItemClick="ListView_ItemClick">
+                <ListView x:Name="ListaPokemonsView" 
+                          ItemsSource="0123456789" 
+                          SelectionMode="None" 
+                          IsItemClickEnabled="True" 
+                          RelativePanel.AlignLeftWithPanel="True" 
+                          RelativePanel.AlignRightWithPanel="True" 
+                          ItemClick="ListView_ItemClick">
                     <!--Model.Pokemon para testar-->
                     <!--ListView ItemsSource="{Binding Source=Form}"-->
                     <ListView.ItemTemplate>

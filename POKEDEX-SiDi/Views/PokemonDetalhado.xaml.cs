@@ -40,11 +40,6 @@ namespace POKEDEX_SiDi.Views
             }
         }
 
-        private void logo_PointerPressed(object sender, PointerRoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MainPage));
-        }
-
         private void NextPokemon_Click(object sender, RoutedEventArgs e)
         {
             //vai acessar o próximo pokémon na lista do BD (dependendo do modo de organização escolhido)
@@ -55,12 +50,7 @@ namespace POKEDEX_SiDi.Views
             //vai acessar o pokémon anterior na lista do BD (dependendo do modo de organização escolhido)
         }
 
-        private void BarraPesquisa_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Pesquisar_Click(object sender, RoutedEventArgs e)
+        private void ListaPokemonsD_ItemClick(object sender, ItemClickEventArgs e)
         {
 
         }

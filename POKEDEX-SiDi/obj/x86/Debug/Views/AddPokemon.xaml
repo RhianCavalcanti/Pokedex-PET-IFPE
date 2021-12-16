@@ -9,22 +9,43 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Frame Background="DarkRed">
-        <StackPanel Orientation="Vertical" Background="White">
+        <StackPanel Orientation="Vertical" Background="White" MinWidth="1400">
             <RelativePanel>
-                <TextBlock x:ConnectionId='4' x:Name="PageName" Text="Adicionar Novo Pokémon" FontSize="20" Foreground="Black" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="10"/>
+                <TextBlock x:ConnectionId='7' x:Name="PageName" Text="Adicionar Novo Pokémon" FontSize="20" Foreground="Black" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="10"/>
             </RelativePanel>
-            <RelativePanel>
-                <StackPanel Orientation="Vertical">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock x:ConnectionId='3' x:Name="Name" VerticalAlignment="Center" Text="Nome: " Foreground="Black" Margin="20,0,0,0"/>
-                        <TextBox PlaceholderText="Nome do Novo Pokémon" TextWrapping="Wrap" Margin="10,0,0,0" />
+            
+            <RelativePanel VerticalAlignment="Center">
+                <Grid Margin="20"> <!--talvez um grid para os textos e campos ficarem alinhados corretamente-->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock x:ConnectionId='2' x:Name="Name" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Nome: " FontSize="20" Foreground="Black" Margin="0,0,0,0"/>
+                    <TextBox Grid.Column="1" PlaceholderText="Nome do Novo Pokémon" TextWrapping="Wrap" FontSize="16" Margin="10,0,10,0" HorizontalAlignment="Right"/>
+
+                    <TextBlock x:ConnectionId='3' x:Name="Ataque" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ataque: " FontSize="20" Foreground="Black" Margin="0,0,0,0"/>
+                    <TextBox PlaceholderText="Ataque" Grid.Row="1" Grid.Column="1" TextWrapping="NoWrap" FontSize="16" Margin="10,0,10,0"/>
+
+                    <TextBlock x:ConnectionId='4' x:Name="Especie" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Espécie: " FontSize="20" Foreground="Black" Margin="0,0,0,0"/>
+                    <TextBox PlaceholderText="Espécie" Grid.Row="2" Grid.Column="1" TextWrapping="NoWrap" FontSize="16" Margin="10,0,10,0"/>
+
+                    <TextBlock x:ConnectionId='5' x:Name="AddSprite" Grid.Row="3" HorizontalAlignment="Center" Text="Adicionar Imagem: " FontSize="20" Margin="10,0,10,0" RequestedTheme="Light"/>
+                    <!--Botão pra adicionar arquivo-->
+
+                    <StackPanel Orientation="Horizontal" Grid.Row="3">
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock x:ConnectionId='2' x:Name="Ataque" VerticalAlignment="Center" Text="Ataque: " Foreground="Black" Margin="20,0,0,0"/>
-                        <TextBox PlaceholderText="Ataque" TextWrapping="Wrap" Margin="10,0,0,0"/>
-                    </StackPanel>
-                </StackPanel>
-                
+                    <Button x:ConnectionId='6' x:Name="SalvarNovoPokemon" Grid.Row="4" Grid.Column="1" Content="Salvar" Foreground="Black" RequestedTheme="Light" Margin="10" RelativePanel.AlignTopWith="Especie" HorizontalAlignment="Right"/>
+
+                </Grid>
+
             </RelativePanel>
         </StackPanel>
 
