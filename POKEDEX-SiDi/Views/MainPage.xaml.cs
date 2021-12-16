@@ -23,6 +23,7 @@ namespace POKEDEX_SiDi.Views
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private string[] selectionItems = new string[] { "Ferdinand", "Frank", "Frida", "Nigel", "Tag", "Tanya", "Tanner", "Todd" };
         public MainPage()
         {
             this.InitializeComponent();
@@ -56,13 +57,13 @@ namespace POKEDEX_SiDi.Views
         {
             if (MyFrame.CanGoBack)
             {
-                //Visibility_Back_Click();
+                BackButton.IsEnabled = false;
                 MyFrame.GoBack();
                 Lista.IsSelected = true;
             }
             else
             {
-                //Visibility_Back_Click();
+                BackButton.IsEnabled = true;
             }
         }
 
@@ -83,8 +84,7 @@ namespace POKEDEX_SiDi.Views
 
         private void VerDetalhes(object sender, PointerRoutedEventArgs e)
         {
-            BackButton.Visibility = Visibility.Visible;
-            //Visibility_Back_Click();
+            BackButton.IsEnabled = true;
             Frame.Navigate(typeof(PokemonDetalhado));
         }
 
@@ -124,6 +124,23 @@ namespace POKEDEX_SiDi.Views
                 MyFrame.Navigate(typeof(AddPokemon));
 
             }
+        }
+
+        private void MyAutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            var autoSuggestBox = (AutoSuggestBox)sender;
+            var filtered = selectionItems.Where(p => p.StartsWith(autoSuggestBox.Text)).ToArray();
+            autoSuggestBox.ItemsSource = filtered;
+        }
+
+        private void MyAutoSuggestBox_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
+        {
+            sender.Text = args.SelectedItem.ToString();
+        }
+
+        private void MyAutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
+        {
+
         }
     }
 }
