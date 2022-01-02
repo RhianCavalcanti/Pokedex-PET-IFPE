@@ -14,7 +14,10 @@
             <RowDefinition Height="6*"/>
         </Grid.RowDefinitions>
 
+        <!--Barra de Navegação-->
         <RelativePanel Grid.Row="0" Background="#FF0E6B8B" MinHeight="70">
+            <!--FF256378-->
+            <!--FF0E6B8B-->
             <Button x:Name="HambuguerButton"
                     FontFamily="Segoe MDL2 Assets" 
                     Content="&#xE700;" 
@@ -22,7 +25,7 @@
                     RelativePanel.AlignVerticalCenterWithPanel="True"
                     Height="40"
                     Width="40"
-                    Margin="0,0,0,0"
+                    Margin="0,0,10,0"
                     Click="HambuguerButton_Click"
                     Background="Transparent" 
                     BorderBrush="#19FFFFFF">
@@ -31,15 +34,21 @@
                     FontFamily="Segoe MDL2 Assets" 
                     Content="&#xE0A6;" 
                     RelativePanel.AlignVerticalCenterWithPanel="True" 
-                    Margin="5,0,9,0" 
+                    Margin="0,0,9,0" 
                     RelativePanel.RightOf="HambuguerButton"
                     Height="40" 
                     Width="40" 
                     Click="Back_Click" 
                     Background="Transparent" 
                     BorderBrush="#19FFFFFF"/>
-            <!-- FEITO:         Hyperlink a logo para voltar a MainPage quando clicar nela-->
-            <TextBlock x:Name="logo" Text="Pokédex" Margin="0,0,0,0" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.RightOf="BackButton" FontSize="22" PointerPressed="Click_Logo"/>
+            <!-- FEITO: Hyperlink a logo para voltar a MainPage quando clicar nela-->
+            <Image x:Name="logo" Source="/Assets/pokedex-icon-15.jpg"
+                   Stretch="Uniform"
+                   Width="45"
+                   Margin="0,0,0,0" 
+                   RelativePanel.AlignVerticalCenterWithPanel="True" 
+                   RelativePanel.RightOf="BackButton" 
+                   PointerPressed="Click_Logo"/>
             <!--<Button x:Name="NextPokemon" 
                     FontFamily="Segoe MDL2 Assets" 
                     Content="&#xE00f;"
@@ -69,7 +78,13 @@
                      MinHeight="40" 
                      TextChanged="BarraPesquisa_TextChanged" 
                      BorderBrush="#66000000"/>-->
-            
+
+            <TextBlock Text="Buscar por: " RelativePanel.LeftOf="BuscaPor" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,5,0"/>
+            <ComboBox x:Name="BuscaPor" RelativePanel.LeftOf="MyAutoSuggestBox" SelectionChanged="BuscaPor_SelectionChanged" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,10,0" Height="40">
+                <ComboBoxItem x:Name="PorNome" Content="Nome" IsSelected="True"/>
+                <ComboBoxItem x:Name="PorTipo" Content="Tipo"/>
+                <ComboBoxItem x:Name="PorNumero" Content="Número"/>
+            </ComboBox>
             <AutoSuggestBox x:Name="MyAutoSuggestBox" 
                             MaxWidth="280" 
                             MinWidth="180" 
@@ -79,7 +94,7 @@
                             RelativePanel.AlignRightWithPanel="True"
                             Margin="0,0,20,0"
                             QueryIcon="Find" 
-                            PlaceholderText="Procurar" 
+                            PlaceholderText="Procurar"
                             TextChanged="MyAutoSuggestBox_TextChanged"
                             SuggestionChosen="MyAutoSuggestBox_SuggestionChosen"
                             QuerySubmitted="MyAutoSuggestBox_QuerySubmitted"/>
@@ -92,7 +107,13 @@
             
             <RelativePanel>
                 
-                <Frame x:Name="MyFrame" Background="White" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
+                <Frame x:Name="MyFrame" 
+                       Background="White" 
+                       RelativePanel.AlignHorizontalCenterWithPanel="True" 
+                       RelativePanel.AlignTopWithPanel="True" 
+                       RelativePanel.AlignBottomWithPanel="True"
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True">
                 <!--<StackPanel>
                     
                 </StackPanel>-->
@@ -130,9 +151,15 @@
                                                FontSize="20"/>
                                 </StackPanel>
                             </ListBoxItem>
-                            <ListBoxItem Name="Add" >
+                            <ListBoxItem Name="Add">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="Adicionar Novo Pokémon"
+                                               FontSize="20"/>
+                                </StackPanel>
+                            </ListBoxItem>
+                            <ListBoxItem Name="Details">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Pokémon"
                                                FontSize="20"/>
                                 </StackPanel>
                             </ListBoxItem>

@@ -160,6 +160,11 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\4099.jpg" />
+    <Content Include="Assets\pokedex-icon-15.jpg" />
+    <Content Include="Assets\pokedex-png - Cópia .png" />
+    <Content Include="Assets\pokedex-png.png" />
+    <Content Include="Assets\Pikachu-com-Fundo-Transparente-1024x919.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

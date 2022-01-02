@@ -9,6 +9,23 @@ namespace POKEDEX_SiDi.ViewModel
 {
     class Operations
     {
+        public static String Nome = "Carlos";
+        public static String Choque()
+        {
+            return "Choque do trovão!!!";
+        }
+        public static String Spec()
+        {
+            return "Voador";
+        }
+        public static int barraAtk()
+        {
+            return 300;
+        }
+        public String getNome()
+        {
+            return Nome;
+        }
         public static async void RegisterPokemon(string name)
         {
             await TableSearch.GetRequerimentPokemonInApi(name);

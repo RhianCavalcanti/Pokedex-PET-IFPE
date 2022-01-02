@@ -26,5 +26,17 @@ namespace POKEDEX_SiDi.Views
         {
             this.InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            saveFly.Hide();
+            //Método pra salvar pokemon
+
+            NameBox.Text = "";
+            AtkBox.Text = "";
+            EspecieBox.Text = "";
+            hpValue.Text = "";
+            defValue.Text = "";
+        }
     }
 }

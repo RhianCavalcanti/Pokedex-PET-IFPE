@@ -8,46 +8,208 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Frame Background="DarkRed">
-        <StackPanel Orientation="Vertical" Background="White" MinWidth="1400">
-            <RelativePanel>
-                <TextBlock x:ConnectionId='7' x:Name="PageName" Text="Adicionar Novo Pokémon" FontSize="20" Foreground="Black" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="10"/>
-            </RelativePanel>
-            
-            <RelativePanel VerticalAlignment="Center">
-                <Grid Margin="20"> <!--talvez um grid para os textos e campos ficarem alinhados corretamente-->
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+    <Page.Resources>
+        <Style TargetType="TextBlock" x:Key="TextAdd">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <Style TargetType="TextBox" x:Key="Values">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="Margin" Value="10,0,10,0"/>
+        </Style>
+    </Page.Resources>
 
-                    <TextBlock x:ConnectionId='2' x:Name="Name" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Nome: " FontSize="20" Foreground="Black" Margin="0,0,0,0"/>
-                    <TextBox Grid.Column="1" PlaceholderText="Nome do Novo Pokémon" TextWrapping="Wrap" FontSize="16" Margin="10,0,10,0" HorizontalAlignment="Right"/>
+    <Frame Background="#FF73DE73">
+        <RelativePanel>
+            <Grid RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" MinWidth="520"/>
+                    <ColumnDefinition Width="1.5*" MinWidth="700"/>
+                </Grid.ColumnDefinitions>
 
-                    <TextBlock x:ConnectionId='3' x:Name="Ataque" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ataque: " FontSize="20" Foreground="Black" Margin="0,0,0,0"/>
-                    <TextBox PlaceholderText="Ataque" Grid.Row="1" Grid.Column="1" TextWrapping="NoWrap" FontSize="16" Margin="10,0,10,0"/>
-
-                    <TextBlock x:ConnectionId='4' x:Name="Especie" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Espécie: " FontSize="20" Foreground="Black" Margin="0,0,0,0"/>
-                    <TextBox PlaceholderText="Espécie" Grid.Row="2" Grid.Column="1" TextWrapping="NoWrap" FontSize="16" Margin="10,0,10,0"/>
-
-                    <TextBlock x:ConnectionId='5' x:Name="AddSprite" Grid.Row="3" HorizontalAlignment="Center" Text="Adicionar Imagem: " FontSize="20" Margin="10,0,10,0" RequestedTheme="Light"/>
-                    <!--Botão pra adicionar arquivo-->
-
-                    <StackPanel Orientation="Horizontal" Grid.Row="3">
+                <RelativePanel Grid.ColumnSpan="2">
+                    <StackPanel Orientation="Vertical" 
+                                RelativePanel.AlignLeftWithPanel="True" 
+                                RelativePanel.AlignRightWithPanel="True" 
+                                Background="#FF408BA4">
+                        <TextBlock x:ConnectionId='25' x:Name="PageName" Text="Novo Pokémon" FontSize="20" Foreground="White" HorizontalAlignment="Center" Margin="10"/>
                     </StackPanel>
-                    <Button x:ConnectionId='6' x:Name="SalvarNovoPokemon" Grid.Row="4" Grid.Column="1" Content="Salvar" Foreground="Black" RequestedTheme="Light" Margin="10" RelativePanel.AlignTopWith="Especie" HorizontalAlignment="Right"/>
+                </RelativePanel>
 
-                </Grid>
+                <!--<RelativePanel Background="White">
+                    </RelativePanel>-->
 
-            </RelativePanel>
-        </StackPanel>
+                <RelativePanel Grid.Row="1">
+                    <Rectangle x:ConnectionId='6' x:Name="background" 
+                           Fill="White"
+                           Margin="60,80,30,0"
+                           RelativePanel.AlignLeftWithPanel="True" 
+                           RelativePanel.AlignRightWithPanel="True" 
+                           RelativePanel.AlignTopWithPanel="True"
+                           RelativePanel.AlignBottomWithPanel="False"
+                           Height="500"
+                           RadiusX="45"
+                           RadiusY="45"
+                           />
+                    <Grid RelativePanel.AlignHorizontalCenterWith="background" RelativePanel.AlignVerticalCenterWith="background">
+                        <!--talvez um grid para os textos e campos ficarem alinhados corretamente-->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock x:ConnectionId='7' x:Name="Names" Style="{StaticResource TextAdd}" Text="Nome: "/>
+                        <TextBox x:ConnectionId='8' x:Name="NameBox" Grid.Column="1" PlaceholderText="Nome do Novo Pokémon" Style="{StaticResource Values}" TextWrapping="Wrap"/>
+
+                        <TextBlock x:ConnectionId='9' x:Name="Ataque" Grid.Row="1" Style="{StaticResource TextAdd}" Text="Ataque: "/>
+                        <TextBox x:ConnectionId='10' x:Name="AtkBox" PlaceholderText="Ataque" Grid.Row="1" Grid.Column="1" Style="{StaticResource Values}"/>
+
+                        <TextBlock x:ConnectionId='11' x:Name="Especie" Grid.Row="2" Style="{StaticResource TextAdd}" Text="Espécie: "/>
+                        <TextBox x:ConnectionId='12' x:Name="EspecieBox" PlaceholderText="Espécie" Grid.Row="2" Grid.Column="1" Style="{StaticResource Values}"/>
+
+                        <TextBlock x:ConnectionId='13' x:Name="AddSprite" Grid.Row="3" Style="{StaticResource TextAdd}" Text="Adicionar Imagem: " Margin="0,0,10,0"/>
+                        <!--Botão pra adicionar arquivo-->
+                        <Button x:ConnectionId='14' x:Name="file" Content="Adicionar imagem" Grid.Row="3" Grid.Column="1" RequestedTheme="Light" HorizontalAlignment="Center"/>
+
+                        <!--<StackPanel Orientation="Horizontal" Grid.Row="3">
+                        </StackPanel>-->
+
+                        <TextBlock x:ConnectionId='15' x:Name="hpText" Grid.Row="4" Style="{StaticResource TextAdd}" Text="HP: "/>
+                        <TextBox x:ConnectionId='16' x:Name="hpValue" Grid.Row="4" Grid.Column="1" PlaceholderText="HP" Style="{StaticResource Values}"/>
+
+                        <TextBlock x:ConnectionId='17' x:Name="defText" Grid.Row="5" Style="{StaticResource TextAdd}" Text="Defesa: "/>
+                        <TextBox x:ConnectionId='18' x:Name="defValue" Grid.Row="5" Grid.Column="1" PlaceholderText="Defesa" Style="{StaticResource Values}"/>
+
+                        <!--<Ellipse RelativePanel.AlignLeftWith="check"
+                                 Grid.Column="0"
+                                 Grid.Row="6"
+                                 Width="50"
+                                 Height="50" 
+                                 StrokeThickness="4" 
+                                 Stroke="#FF665252"
+                                 />-->
+                        <Button x:ConnectionId='19' x:Name="SalvarNovoPokemon"
+                            Grid.Row="6"
+                            Grid.Column="1" 
+                            Content="Salvar" 
+                            Foreground="Black" 
+                            RequestedTheme="Light" 
+                            Margin="10" 
+                            RelativePanel.AlignTopWith="Especie" 
+                            HorizontalAlignment="Right"
+                            >
+                            <Button.Flyout>
+                                <Flyout x:ConnectionId='20' x:Name="saveFly">
+                                    <StackPanel Orientation="Vertical" Width="400" Height="400">
+                                        <!--<Rectangle Width="400" Height="300" Fill="Gray"/>-->
+                                        <RelativePanel>
+                                            <Image x:ConnectionId='22' x:Name="miniPokedex"
+                                                   Source="/Assets/pokedex-png - Cópia .png"
+                                                   Stretch="Uniform"/>
+                                            <Ellipse RelativePanel.AlignHorizontalCenterWith="registrado"
+                                                     RelativePanel.AlignVerticalCenterWith="check"
+                                                     Grid.Column="0"
+                                                     Grid.Row="6"
+                                                     Width="40"
+                                                     Height="40" 
+                                                     StrokeThickness="3"
+                                                     Margin="38,-2,0,0"
+                                                     Stroke="White"
+                                                     />
+                                            <TextBlock x:ConnectionId='23' x:Name="check" RelativePanel.Above="registrado"
+                                                       RelativePanel.AlignHorizontalCenterWith="registrado"
+                                                       Canvas.ZIndex="2"
+                                                       FontWeight="ExtraBold"
+                                                       FontSize="18"
+                                                       FontFamily="Segoe MDL2 Assets"
+                                                       Text="&#xF78C;"
+                                                       Foreground="White"
+                                                       Margin="40,0,0,0"/>
+                                            <TextBlock x:ConnectionId='24' x:Name="registrado" Text="Pokémon registrado!"
+                                                       FontSize="12"
+                                                       FontWeight="Bold"
+                                                       Foreground="White"
+                                                       RelativePanel.AlignVerticalCenterWith="miniPokedex"
+                                                       Margin="40,15,0,0"/>
+                                        </RelativePanel>
+                                        
+                                        <TextBlock Text="Parabéns, você registrou este Pokémon!"/>
+                                        <Button x:ConnectionId='21' Content="OK" HorizontalAlignment="Right"                     />
+                                    </StackPanel>
+                                </Flyout>
+                            </Button.Flyout>
+                        </Button>
+                    </Grid>
+                </RelativePanel>
+                <RelativePanel Grid.Row="1" Grid.Column="1">
+                    <Image x:ConnectionId='2' x:Name="pokedexImg"
+                           Source="/Assets/pokedex-png.png"
+                           Stretch="Uniform" 
+                           Width="auto"
+                           MaxWidth="1000"
+                           MinWidth="500"
+                           Canvas.ZIndex="1"
+                           RelativePanel.AlignHorizontalCenterWithPanel="True"
+                           RelativePanel.AlignVerticalCenterWithPanel="False"
+                           Margin="0,50,0,0"
+                       />
+                    <!--<Rectangle x:Name="screen"
+                               MaxHeight="200"
+                               Height="200"
+                               MinHeight="100"
+                               Width="320"
+                               MinWidth="200"
+                               Fill="#FF5FC480"
+                               RelativePanel.AlignVerticalCenterWith="pokedexImg"
+                               RelativePanel.AlignHorizontalCenterWith="pokedexImg"
+                               Margin="-450,0,0,0"
+                               />-->
+                    <ProgressRing x:ConnectionId='3' Name="MyProgressRing"
+                                  MinWidth="60"
+                                  MinHeight="60"
+                                  Margin="135,0,0,-100"
+                                  RelativePanel.Above="loadingText"
+                                  RelativePanel.AlignHorizontalCenterWith="loadingText"
+                                  Canvas.ZIndex="2"
+                                  IsActive="True"
+                                  Foreground="Red"
+                                  />
+                    <TextBlock x:ConnectionId='4' x:Name="loadingText"
+                               Text="Carregando novo Pokémon" 
+                               FontSize="18"
+                               TextWrapping="WrapWholeWords"
+                               Canvas.ZIndex="2"
+                               FontWeight="SemiBold"
+                               RelativePanel.LeftOf="invisble"
+                               RelativePanel.AlignVerticalCenterWith="pokedexImg"
+                               Margin="135,100,0,0"
+                               />
+                    <Rectangle x:ConnectionId='5' x:Name="invisble"
+                               RelativePanel.AlignVerticalCenterWith="pokedexImg"
+                               RelativePanel.AlignHorizontalCenterWith="pokedexImg"
+                               MaxWidth="270"
+                               Width="300"
+                               MinWidth="110"/>
+                </RelativePanel>
+            </Grid>
+        </RelativePanel>
+
 
     </Frame>
 </Page>

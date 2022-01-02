@@ -17,12 +17,13 @@
                 <TextBlock x:Name="PageName" Text="Lista dos Pokémons" FontSize="20" Foreground="Black" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="10"/>
                 <TextBlock x:Name="TextOrganizar" Text="Organizar por: " Foreground="Black" RelativePanel.LeftOf="Organizacao" Margin="5" RelativePanel.AlignVerticalCenterWithPanel="True"/>
                 <ComboBox x:Name="Organizacao" UseLayoutRounding="True" SelectionChanged="Organizacao_SelectionChanged" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,5,0">
-                    <ComboBoxItem Content="Número" IsSelected="True"/>
-                    <ComboBoxItem Content="Nome"/>
-                    <ComboBoxItem Content="Tipo"/>
+                    <ComboBoxItem x:Name="OrgNum" Content="Número" IsSelected="True"/>
+                    <ComboBoxItem x:Name="OrgNome" Content="Nome"/>
+                    <ComboBoxItem x:Name="OrgTipo" Content="Tipo"/>
                     <!--<ComboBoxItem Content="Pelo"/>-->
 
                 </ComboBox>
+                <TextBlock x:Name="ComboBoxResult" RelativePanel.LeftOf="TextOrganizar" RelativePanel.AlignVerticalCenterWithPanel="True"/>
             </RelativePanel>
             <RelativePanel x:Name="singlePokemon" Margin="0,0,0,10" Background="LightGoldenrodYellow"><!--PointerPressed="VerDetalhes">-->
 

@@ -47,7 +47,26 @@ namespace POKEDEX_SiDi.Views
 
         private void Organizacao_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //if (ComboBoxResult == null) return;
 
+            //var combo = (ComboBox)sender;
+            //var item = combo.SelectedItem;
+            //if (item..Equals("OrgNum"))
+            //{
+            //    //                MyFrame.Navigate(typeof(ListaPokemons));
+            //    //Select from BD organizando por ID(chave primária)
+            //    ComboBoxResult.Text = "Número";
+            //}
+            //else if (item.Name.Equals("OrgNome"))
+            //{
+            //    //Select from BD organizando pelo Nome
+            //    ComboBoxResult.Text = "Nome";
+            //}
+            //else if (item.Name.Equals("OrgTipo"))
+            //{
+            //    //Select from BD organizando pelo Tipo
+            //    ComboBoxResult.Text = "Tipo";
+            //}
         }
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)

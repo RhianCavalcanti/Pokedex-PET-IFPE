@@ -14,8 +14,11 @@
             <RowDefinition Height="6*"/>
         </Grid.RowDefinitions>
 
+        <!--Barra de Navegação-->
         <RelativePanel Grid.Row="0" Background="#FF0E6B8B" MinHeight="70">
-            <Button x:ConnectionId='7' x:Name="HambuguerButton"
+            <!--FF256378-->
+            <!--FF0E6B8B-->
+            <Button x:ConnectionId='8' x:Name="HambuguerButton"
                     FontFamily="Segoe MDL2 Assets" 
                     Content="&#xE700;" 
                     FontSize="24"
@@ -27,7 +30,7 @@
                     Background="Transparent" 
                     BorderBrush="#19FFFFFF">
             </Button>
-            <Button x:ConnectionId='8' x:Name="BackButton" 
+            <Button x:ConnectionId='9' x:Name="BackButton" 
                     FontFamily="Segoe MDL2 Assets" 
                     Content="&#xE0A6;" 
                     RelativePanel.AlignVerticalCenterWithPanel="True" 
@@ -38,8 +41,14 @@
                                        
                     Background="Transparent" 
                     BorderBrush="#19FFFFFF"/>
-            <!-- FEITO:         Hyperlink a logo para voltar a MainPage quando clicar nela-->
-            <TextBlock x:ConnectionId='9' x:Name="logo" Text="Pokédex" Margin="0,0,0,0" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.RightOf="BackButton" FontSize="22"                            />
+            <!-- FEITO: Hyperlink a logo para voltar a MainPage quando clicar nela-->
+            <Image x:ConnectionId='10' x:Name="logo" Source="/Assets/pokedex-icon-15.jpg"
+                   Stretch="Uniform"
+                   Width="45"
+                   Margin="0,0,0,0" 
+                   RelativePanel.AlignVerticalCenterWithPanel="True" 
+                   RelativePanel.RightOf="BackButton" 
+                                              />
             <!--<Button x:Name="NextPokemon" 
                     FontFamily="Segoe MDL2 Assets" 
                     Content="&#xE00f;"
@@ -69,8 +78,14 @@
                      MinHeight="40" 
                      TextChanged="BarraPesquisa_TextChanged" 
                      BorderBrush="#66000000"/>-->
-            
-            <AutoSuggestBox x:ConnectionId='10' x:Name="MyAutoSuggestBox" 
+
+            <TextBlock Text="Buscar por: " RelativePanel.LeftOf="BuscaPor" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,5,0"/>
+            <ComboBox x:ConnectionId='11' x:Name="BuscaPor" RelativePanel.LeftOf="MyAutoSuggestBox"                                              RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,10,0" Height="40">
+                <ComboBoxItem x:ConnectionId='13' x:Name="PorNome" Content="Nome" IsSelected="True"/>
+                <ComboBoxItem x:ConnectionId='14' x:Name="PorTipo" Content="Tipo"/>
+                <ComboBoxItem x:ConnectionId='15' x:Name="PorNumero" Content="Número"/>
+            </ComboBox>
+            <AutoSuggestBox x:ConnectionId='12' x:Name="MyAutoSuggestBox" 
                             MaxWidth="280" 
                             MinWidth="180" 
                             MinHeight="40" 
@@ -79,7 +94,7 @@
                             RelativePanel.AlignRightWithPanel="True"
                             Margin="0,0,20,0"
                             QueryIcon="Find" 
-                            PlaceholderText="Procurar" 
+                            PlaceholderText="Procurar"
                                                                       
                                                                                 
                                                                             />
@@ -88,11 +103,17 @@
             <!--<Button x:Name="Pesquisar" FontFamily="Segoe MDL2 Assets" Background="#66000000" Content="&#xE1A3;" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,10,0" MinHeight="40" MinWidth="40" BorderBrush="#01000000" Click="Pesquisar_Click" Height="42"/>-->
         </RelativePanel>
 
-        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Visible">
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
             
             <RelativePanel>
                 
-                <Frame x:ConnectionId='2' x:Name="MyFrame" Background="White" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
+                <Frame x:ConnectionId='2' x:Name="MyFrame" 
+                       Background="White" 
+                       RelativePanel.AlignHorizontalCenterWithPanel="True" 
+                       RelativePanel.AlignTopWithPanel="True" 
+                       RelativePanel.AlignBottomWithPanel="True"
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True">
                 <!--<StackPanel>
                     
                 </StackPanel>-->
@@ -130,9 +151,15 @@
                                                FontSize="20"/>
                                 </StackPanel>
                             </ListBoxItem>
-                            <ListBoxItem x:ConnectionId='6' Name="Add" >
+                            <ListBoxItem x:ConnectionId='6' Name="Add">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="Adicionar Novo Pokémon"
+                                               FontSize="20"/>
+                                </StackPanel>
+                            </ListBoxItem>
+                            <ListBoxItem x:ConnectionId='7' Name="Details">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Pokémon"
                                                FontSize="20"/>
                                 </StackPanel>
                             </ListBoxItem>
