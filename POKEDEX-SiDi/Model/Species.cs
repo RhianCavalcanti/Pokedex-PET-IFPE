@@ -8,6 +8,9 @@ namespace POKEDEX_SiDi.Model
         [JsonProperty("name")]
         public string Name { get; set; }
 
+        [JsonProperty("url")]
+        public Uri Url { get; set; }
+
     }
 }
 

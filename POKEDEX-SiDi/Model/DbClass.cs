@@ -17,14 +17,12 @@ namespace POKEDEX_SiDi.Model
 
         public static SQLiteConnection ConnectionDb()
         {
-            string diretorioatual = Directory.GetCurrentDirectory(); //Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string caminhobanco = "\\dbfortest\\db_pokemon.db";
-            conection = new SQLiteConnection("Data Source="+diretorioatual+caminhobanco);
+            conection = new SQLiteConnection("Data Source= C:\\Users\\Adan\\Desktop\\pokedex\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\DataBase\\pokemon.db");
             conection.Open();
             return conection;
         }
 
-        public static DataTable GetPokemon()
+        public static DataTable GetPokemon(int number)
         {
             SQLiteDataAdapter da = null;
             DataTable dt = new DataTable();
@@ -32,7 +30,7 @@ namespace POKEDEX_SiDi.Model
             {
                 using (var cmd = ConnectionDb().CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM pokemon";
+                    cmd.CommandText = "SELECT * FROM pokemon LIMIT 10 OFFSET "+number;
                     da = new SQLiteDataAdapter(cmd.CommandText, ConnectionDb());
                     da.Fill(dt);
                     ConnectionDb().Close();
@@ -69,16 +67,25 @@ namespace POKEDEX_SiDi.Model
 
         }
 
-        //public static void Add(TableSearch tableSearch)
-        public static void Add(long id, string name)
+        public static void Add(PokemonDb pokemon)
         {
             try
             {
                 using (var cmd = ConnectionDb().CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO pokemon(NAME, IDENTIFICATION) values (@name, @identification)";
-                    cmd.Parameters.AddWithValue("@Name", name);
-                    cmd.Parameters.AddWithValue("@Identification", id);
+                    cmd.CommandText = "INSERT INTO pokemon(id_pokemon, name, type, hp, attack, defense, special_attack, special_defense, speed, height, weight, image) values (@id_pokemon, @name, @type, @hp, @attack, @defense, @special_attack, @special_defense, @speed, @height, @weight, @image)";
+                    cmd.Parameters.AddWithValue("@id_pokemon", pokemon.Id);
+                    cmd.Parameters.AddWithValue("@name", pokemon.Name);
+                    cmd.Parameters.AddWithValue("@type", pokemon.Types);
+                    cmd.Parameters.AddWithValue("@hp", pokemon.Hp);
+                    cmd.Parameters.AddWithValue("@attack", pokemon.Attack);
+                    cmd.Parameters.AddWithValue("@defense", pokemon.Defense);
+                    cmd.Parameters.AddWithValue("@special_attack", pokemon.SpecialAttack);
+                    cmd.Parameters.AddWithValue("@special_defense", pokemon.SpecialDefense);
+                    cmd.Parameters.AddWithValue("@speed", pokemon.Speed);
+                    cmd.Parameters.AddWithValue("@height", pokemon.Height);
+                    cmd.Parameters.AddWithValue("@weight", pokemon.Weight);
+                    cmd.Parameters.AddWithValue("@image", pokemon.Image);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -88,13 +95,6 @@ namespace POKEDEX_SiDi.Model
             }
         }
     }
-
-
-
-
-
-
-
 }
 
 
