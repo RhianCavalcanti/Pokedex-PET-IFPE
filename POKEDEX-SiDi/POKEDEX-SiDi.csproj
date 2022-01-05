@@ -127,9 +127,13 @@
     <Compile Include="Model\DreamWorld.cs" />
     <Compile Include="Model\Form.cs" />
     <Compile Include="Model\Home.cs" />
+    <Compile Include="Model\MethodConvert.cs" />
     <Compile Include="Model\OfficialArtwork.cs" />
     <Compile Include="Model\Other.cs" />
+    <Compile Include="Model\Pages.cs" />
     <Compile Include="Model\Pokemon.cs" />
+    <Compile Include="Model\PokemonDb.cs" />
+    <Compile Include="Model\Result.cs" />
     <Compile Include="Model\Species.cs" />
     <Compile Include="Model\Sprites.cs" />
     <Compile Include="Model\Stat.cs" />

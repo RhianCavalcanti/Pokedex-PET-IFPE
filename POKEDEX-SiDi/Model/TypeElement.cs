@@ -13,7 +13,10 @@ namespace POKEDEX_SiDi.Model
 {
     public partial class TypeElement
     {
+        [JsonProperty("slot")]
+        public long Slot { get; set; }
+
         [JsonProperty("type")]
-        public Pokemon Type { get; set; }
+        public Species Type { get; set; }
     }
 }

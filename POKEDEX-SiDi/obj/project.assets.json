@@ -9542,28 +9542,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nilo Sandes\\.nuget\\packages\\": {},
-    "E:\\Arquivos de programas\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Users\\Adan\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nilo Sandes\\source\\repos\\RhianCavalcanti\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj",
+      "projectUniqueName": "C:\\Users\\Adan\\Desktop\\pokedex\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj",
       "projectName": "POKEDEX-SiDi",
-      "projectPath": "C:\\Users\\Nilo Sandes\\source\\repos\\RhianCavalcanti\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj",
-      "packagesPath": "C:\\Users\\Nilo Sandes\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nilo Sandes\\source\\repos\\RhianCavalcanti\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\obj\\",
+      "projectPath": "C:\\Users\\Adan\\Desktop\\pokedex\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\POKEDEX-SiDi.csproj",
+      "packagesPath": "C:\\Users\\Adan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Adan\\Desktop\\pokedex\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "E:\\Arquivos de programas\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Nilo Sandes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Adan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "uap10.0.17763"

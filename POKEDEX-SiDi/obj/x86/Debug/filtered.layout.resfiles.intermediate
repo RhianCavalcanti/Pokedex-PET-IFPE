@@ -1,3 +1,4 @@
+WinMetadata\Windows.winmd
 Assets\4099.jpg
 Assets\LockScreenLogo.scale-200.png
 Assets\Pikachu-com-Fundo-Transparente-1024x919.png
@@ -19,4 +20,3 @@ Views\ListViewTest.xbf
 Views\MainPage.xbf
 Views\PokemonDetalhado.xbf
 Properties\Default.rd.xml
-WinMetadata\Windows.winmd
