@@ -28,6 +28,7 @@ namespace POKEDEX_SiDi.Views
             atkPokemon.Text = ViewModel.Operations.Choque(); //testes
             EspeciePokemon.Text = ViewModel.Operations.Spec();
             AtaqueBarra.Value = ViewModel.Operations.barraAtk();
+            ListaPokemonsD.SelectedIndex = 0;
             //var nada = IncrementalLoadingTrigger.None;
             //var incrementar = IncrementalLoadingTrigger.Edge;
             //if (incrementar == incrementar)
@@ -67,15 +68,19 @@ namespace POKEDEX_SiDi.Views
 
         private void ListaPokemonsD_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ListaPokemonsD.SelectedItem = ListaPokemonsD.ScaleTransition;
+            //if(ListaPokemonsD.SelectedItem == null)
+            //{
+            //    ListaPokemonsD.SelectedIndex = 0;
+            //}
+            //ListaPokemonsD.SelectedItem = ListaPokemonsD.ScaleTransition;
             
 
         }
 
-        private void StackPanel_PointerEntered(object sender, PointerRoutedEventArgs e)
-        {
+        //private void StackPanel_PointerEntered(object sender, PointerRoutedEventArgs e)
+        //{
         
-        }
+        //}
 
         private void PreviousPokemonImg_Click(object sender, RoutedEventArgs e)
         {
@@ -85,6 +90,23 @@ namespace POKEDEX_SiDi.Views
         private void NextPokemonImg_Click(object sender, RoutedEventArgs e)
         {
             //get() próxima imagem
+        }
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            //vai levar à página de edição
+            Frame.Navigate(typeof(Edit));
+
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            //chamar método para apagar o pokémon da lista
+        }
+
+        private void Delete_N_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteConfirm.Hide();
         }
     }
 }

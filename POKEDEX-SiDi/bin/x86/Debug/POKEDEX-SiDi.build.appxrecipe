@@ -64,6 +64,9 @@
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\4099.jpg">
       <PackagePath>Assets\4099.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\botanical-product-backdrop-with-tropical-leaves-corte.jpg">
+      <PackagePath>Assets\botanical-product-backdrop-with-tropical-leaves-corte.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\pokedex-icon-15.jpg">
       <PackagePath>Assets\pokedex-icon-15.jpg</PackagePath>
     </AppxPackagedFile>
@@ -75,6 +78,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\Pikachu-com-Fundo-Transparente-1024x919.png">
       <PackagePath>Assets\Pikachu-com-Fundo-Transparente-1024x919.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\Round-podium-3d-on-transparent-background-PNG.png">
+      <PackagePath>Assets\Round-podium-3d-on-transparent-background-PNG.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\—Pngtree—product presentation podium_6281635_cut.png">
+      <PackagePath>Assets\—Pngtree—product presentation podium_6281635_cut.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\—Pngtree—product presentation podium_6281635_cut_red.png">
+      <PackagePath>Assets\—Pngtree—product presentation podium_6281635_cut_red.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>

@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-02T18:55:06.075</Modified>
+      <Modified>2022-01-04T16:24:58.394</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\POKEDEX-SiDi.exe">
       <PackagePath>entrypoint\POKEDEX-SiDi.exe</PackagePath>
-      <Modified>2022-01-02T18:55:05.618</Modified>
+      <Modified>2022-01-04T16:24:57.891</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\.nuget\packages\microsoft.bcl.asyncinterfaces\5.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
       <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
@@ -86,6 +86,10 @@
       <PackagePath>Assets\4099.jpg</PackagePath>
       <Modified>2021-12-26T21:32:50.302</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\botanical-product-backdrop-with-tropical-leaves-corte.jpg">
+      <PackagePath>Assets\botanical-product-backdrop-with-tropical-leaves-corte.jpg</PackagePath>
+      <Modified>2022-01-04T15:41:31.158</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\pokedex-icon-15.jpg">
       <PackagePath>Assets\pokedex-icon-15.jpg</PackagePath>
       <Modified>2022-01-02T17:35:16.472</Modified>
@@ -101,6 +105,18 @@
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\Pikachu-com-Fundo-Transparente-1024x919.png">
       <PackagePath>Assets\Pikachu-com-Fundo-Transparente-1024x919.png</PackagePath>
       <Modified>2021-12-26T21:06:12.316</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\Round-podium-3d-on-transparent-background-PNG.png">
+      <PackagePath>Assets\Round-podium-3d-on-transparent-background-PNG.png</PackagePath>
+      <Modified>2022-01-04T15:31:34.362</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\—Pngtree—product presentation podium_6281635_cut.png">
+      <PackagePath>Assets\—Pngtree—product presentation podium_6281635_cut.png</PackagePath>
+      <Modified>2022-01-04T16:01:58.032</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\—Pngtree—product presentation podium_6281635_cut_red.png">
+      <PackagePath>Assets\—Pngtree—product presentation podium_6281635_cut_red.png</PackagePath>
+      <Modified>2022-01-04T16:16:21.008</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -142,35 +158,35 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\POKEDEX-SiDi.xr.xml">
       <PackagePath>POKEDEX-SiDi.xr.xml</PackagePath>
-      <Modified>2022-01-02T17:35:22.600</Modified>
+      <Modified>2022-01-04T01:28:09.933</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-01-02T18:55:05.523</Modified>
+      <Modified>2022-01-04T16:24:57.787</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-01-02T18:55:05.523</Modified>
+      <Modified>2022-01-04T16:24:57.787</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\AddPokemon.xbf">
       <PackagePath>Views\AddPokemon.xbf</PackagePath>
-      <Modified>2022-01-02T18:55:05.502</Modified>
+      <Modified>2022-01-04T16:24:57.766</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\ListaPokemons.xbf">
       <PackagePath>Views\ListaPokemons.xbf</PackagePath>
-      <Modified>2022-01-02T18:55:05.514</Modified>
+      <Modified>2022-01-04T16:24:57.778</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\ListViewTest.xbf">
       <PackagePath>Views\ListViewTest.xbf</PackagePath>
-      <Modified>2022-01-02T18:55:05.524</Modified>
+      <Modified>2022-01-04T16:24:57.788</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2022-01-02T18:55:05.524</Modified>
+      <Modified>2022-01-04T16:24:57.788</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\PokemonDetalhado.xbf">
       <PackagePath>Views\PokemonDetalhado.xbf</PackagePath>
-      <Modified>2022-01-02T18:55:05.523</Modified>
+      <Modified>2022-01-04T16:24:57.787</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -178,11 +194,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-01-02T17:26:38.555</Modified>
+      <Modified>2022-01-04T16:24:57.998</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Core\POKEDEX-SiDi.exe">
       <PackagePath>POKEDEX-SiDi.exe</PackagePath>
-      <Modified>2022-01-02T18:55:06.071</Modified>
+      <Modified>2022-01-04T16:24:58.390</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

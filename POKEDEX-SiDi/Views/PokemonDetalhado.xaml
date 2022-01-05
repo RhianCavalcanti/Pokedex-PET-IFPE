@@ -14,6 +14,11 @@
             <Setter Property="CornerRadius" Value="18"/>
             <Setter Property="Background" Value="BlanchedAlmond"/>
         </Style>
+        <Style TargetType="TextBlock" x:Key="MyTextBlocks">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
         <!--<Style TargetType="ListViewItem" x:Key="ItemStyle">
         </Style>-->
     </Page.Resources>
@@ -47,7 +52,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" MinWidth="300"/>
                 <ColumnDefinition Width="2*" MinWidth="400"/>
-                <ColumnDefinition Width="2*" MinWidth="200"/>
+                <!--<ColumnDefinition Width="2*" MinWidth="200"/>-->
             </Grid.ColumnDefinitions>
             <!--Aqui talvez seja um relative panel e dentro este stack-->
             <Button Content="&#xF0D6;"
@@ -76,16 +81,16 @@
 
                 <!--<Image />-->
                 <ListView x:Name="ListaPokemonsD" 
-                              SelectionMode="Single" 
-                              ItemsSource="0123456789"
-                              IsItemClickEnabled="True"
-                              ItemClick="ListaPokemonsD_ItemClick"
-                              ScrollViewer.HorizontalScrollMode="Enabled"
-                              ScrollViewer.HorizontalScrollBarVisibility="Hidden"
-                              ScrollViewer.IsHorizontalRailEnabled="True"
-                              ScrollViewer.VerticalScrollMode="Disabled"
-                              Margin="0,10,0,10"
-                              >
+                          SelectionMode="Single"
+                          ItemsSource="0123456789"
+                          IsItemClickEnabled="True"
+                          ItemClick="ListaPokemonsD_ItemClick"
+                          ScrollViewer.HorizontalScrollMode="Enabled"
+                          ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                          ScrollViewer.IsHorizontalRailEnabled="True"
+                          ScrollViewer.VerticalScrollMode="Disabled"
+                          Margin="0,10,0,10"
+                        >
                     <!--IncrementalLoadingTrigger="Edge"
                               IncrementalLoadingThreshold="10">-->
                     <!--Estes 2 últimos é para ativar o lazy loading e criar mais 10 itens-->
@@ -97,9 +102,9 @@
                     </ListView.ItemsPanel>
                     <ListView.ItemTemplate>
                         <DataTemplate x:DataType="Orientation">
-                            <StackPanel x:Name="ItemList" Orientation="Vertical"
-                                            PointerEntered="StackPanel_PointerEntered"
-                                            >
+                            <StackPanel x:Name="ItemList" Orientation="Vertical">
+                                <!--PointerEntered="StackPanel_PointerEntered"-->
+                                            
                                 <RelativePanel>
                                     <Rectangle Fill="DarkGray" Height="160" Width="160"/>
                                 </RelativePanel>
@@ -135,8 +140,8 @@
             </RelativePanel>
             <!--<Image x:Name="imgPokemon" Grid.Row="1" Source="/Assets/4099.jpg" Height="301" Width="350" />-->
 
-            <RelativePanel Grid.Row="1" Width="auto" Height="auto" Margin="30,30,0,30">
-                <Rectangle Fill="White"
+            <RelativePanel Grid.Row="1" Width="auto" Height="auto" Margin="30">
+                <Rectangle Fill="#FFF0F0F0"
                            Width="auto" Height="auto"
                            RelativePanel.AlignLeftWithPanel="True"
                            RelativePanel.AlignRightWithPanel="True"
@@ -152,15 +157,17 @@
                        Height="auto"
                        Width="auto"
                        Canvas.ZIndex="2"
-                       Margin="0,50,0,0"
+                       Margin="20,50,0,0"
                        />
                 <Image x:Name="basePokemon" 
-                       Source="/Assets/4099.jpg" 
+                       Source="/Assets/—Pngtree—product presentation podium_6281635_cut.png" 
                        Height="auto" Width="auto"
-                       MinWidth="200"
-                       MaxHeight="280" MaxWidth="330" 
-                       Margin="0,-40,0,0"
-                       RelativePanel.AlignVerticalCenterWithPanel="True"
+                       Stretch="Uniform"
+                       MinWidth="250"
+                       MaxWidth="450" 
+                       Margin="0,-20,0,0"
+                       RelativePanel.Below="img"
+                       RelativePanel.AlignVerticalCenterWithPanel="False"
                        RelativePanel.AlignHorizontalCenterWithPanel="True"/>
                 <!--imagem de um pedestal-->
                 
@@ -207,29 +214,46 @@
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
                         <TextBlock Name="Name" 
                                    Text="Nome:" 
-                                   FontSize="24" 
-                                   Foreground="Black" 
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource MyTextBlocks}"/>
                         <TextBlock x:Name="namePokemon" 
                                    Text="{x:Bind setNome(), Mode=OneWay}" 
-                                   TextWrapping="Wrap" 
-                                   FontSize="24" 
+                                   Style="{StaticResource MyTextBlocks}"
                                    RelativePanel.AlignLeftWith="Nome" 
                                    Margin="10,0,0,0" 
-                                   Foreground="Black"/>
+                                   />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock x:Name="Ataque" Text="Ataque:" FontSize="24" Foreground="Black"/>
-                        <TextBlock x:Name="atkPokemon" FontSize="24" RelativePanel.AlignLeftWith="Nome" TextWrapping="Wrap" Margin="10,0,0,0" Foreground="Black"/>
+                        <TextBlock x:Name="Ataque"
+                                   Text="Ataque:" 
+                                   Style="{StaticResource MyTextBlocks}"
+                                   />
+                        <TextBlock x:Name="atkPokemon" 
+                                   RelativePanel.AlignLeftWith="Nome"
+                                   Style="{StaticResource MyTextBlocks}"                                   
+                                   Margin="10,0,0,0" 
+                                   />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock x:Name="Especie" Text="Espécie: " FontSize="24" Foreground="Black" TextWrapping="Wrap"/>
-                        <TextBlock x:Name="EspeciePokemon" Text="Nome da espécie aqui" FontSize="24" RelativePanel.AlignLeftWith="Especie" Margin="10,0,0,0" Foreground="Black"/>
+                        <TextBlock x:Name="Especie" 
+                                   Text="Espécie: " 
+                                   Style="{StaticResource MyTextBlocks}"
+                                   />
+                        <TextBlock x:Name="EspeciePokemon" 
+                                   Text="Nome da espécie aqui" 
+                                   Style="{StaticResource MyTextBlocks}"
+                                   RelativePanel.AlignLeftWith="Especie" 
+                                   Margin="10,0,0,0" 
+                                   />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Mais detalhes e observações: " FontSize="24" RequestedTheme="Light"/>
+                        <TextBlock Text="Mais detalhes e observações: "
+                                   Style="{StaticResource MyTextBlocks}"
+                                   />
                     </StackPanel>
-                    <TextBlock Text="Estatísticas de Batalha: " FontSize="24"/>
+                    <TextBlock Text="Estatísticas de Batalha: "
+                               Style="{StaticResource MyTextBlocks}"
+                               />
+                    
                     <Grid Margin="50,10,20,0">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
@@ -240,7 +264,11 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="auto"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="Ataque: " FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" RequestedTheme="Light"/>
+                        <TextBlock Text="Ataque: " 
+                                   FontSize="18" 
+                                   HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center" 
+                                   RequestedTheme="Light"/>
                         <ProgressBar x:Name="AtaqueBarra"
                                          Grid.Column="1"
                                          Margin="10,5,0,5" 
@@ -277,15 +305,28 @@
                                          Style="{StaticResource MyProgressBar}"
                                          />
                     </Grid>
-                    <StackPanel Orientation="Horizontal" Margin="20,10,0,0">
-
+                    <StackPanel Orientation="Horizontal" Margin="20,10,0,0" HorizontalAlignment="Right">
+                        <Button x:Name="Edit" Content="Editar" Click="Edit_Click"/>
+                        <Button x:Name="Delete" Content="Apagar" Margin="10,0,0,0">
+                            <Button.Flyout>
+                                <Flyout x:Name="DeleteConfirm">
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock Text="Você tem certeza que deseja apagar este Pokémon da Base de dados?" Margin="20"/>
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                            <Button x:Name="Delete_Y" Content="Sim" Click="Delete_Click"/>
+                                            <Button x:Name="Delete_N" Content="Não" Click="Delete_N_Click"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Flyout>
+                            </Button.Flyout>
+                        </Button>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="20,10,0,0">
 
                     </StackPanel>
                 </StackPanel>
             </RelativePanel>
-            <RelativePanel Grid.Row="1" Grid.Column="2">
+            <!--<RelativePanel Grid.Row="1" Grid.Column="2">
                 <Rectangle x:Name="whiteBackTwo"
                            MinWidth="500" 
                            MinHeight="350" 
@@ -298,9 +339,9 @@
                            RelativePanel.AlignRightWithPanel="True"
                            RadiusX="45" RadiusY="45"/>
                 <StackPanel Orientation="Vertical" RelativePanel.AlignTopWith="whiteBackTwo" Margin="50">
-                    <TextBlock Text="olar tudo bem"/>
+                    --><!--<TextBlock Text="olar tudo bem"/>--><!--
                 </StackPanel>
-            </RelativePanel>
+            </RelativePanel>-->
         </Grid>
     </Frame>
 </Page>

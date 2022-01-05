@@ -177,7 +177,6 @@
       <RootProperty Name="Background" />
       <RootProperty Name="MinWidth" />
       <RootProperty Name="Margin" />
-      <RootEvent Name="PointerEntered" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
       <RootProperty Name="Width" />

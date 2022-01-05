@@ -25,7 +25,7 @@
                     RelativePanel.AlignVerticalCenterWithPanel="True"
                     Height="40"
                     Width="40"
-                    Margin="0,0,0,0"
+                    Margin="5,0,10,0"
                                                  
                     Background="Transparent" 
                     BorderBrush="#19FFFFFF">
@@ -34,7 +34,7 @@
                     FontFamily="Segoe MDL2 Assets" 
                     Content="&#xE0A6;" 
                     RelativePanel.AlignVerticalCenterWithPanel="True" 
-                    Margin="5,0,9,0" 
+                    Margin="0,0,0,0" 
                     RelativePanel.RightOf="HambuguerButton"
                     Height="40" 
                     Width="40" 
@@ -45,7 +45,7 @@
             <Image x:ConnectionId='10' x:Name="logo" Source="/Assets/pokedex-icon-15.jpg"
                    Stretch="Uniform"
                    Width="45"
-                   Margin="0,0,0,0" 
+                   Margin="10,0,0,0" 
                    RelativePanel.AlignVerticalCenterWithPanel="True" 
                    RelativePanel.RightOf="BackButton" 
                                               />

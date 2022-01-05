@@ -120,7 +120,7 @@
                                         <!--<Rectangle Width="400" Height="300" Fill="Gray"/>-->
                                         <RelativePanel>
                                             <Image x:Name="miniPokedex"
-                                                   Source="/Assets/pokedex-png - Cópia .png"
+                                                   Source="/Assets/pokedex-png.png"
                                                    Stretch="Uniform"/>
                                             <Ellipse RelativePanel.AlignHorizontalCenterWith="registrado"
                                                      RelativePanel.AlignVerticalCenterWith="check"
@@ -149,7 +149,7 @@
                                                        Margin="40,15,0,0"/>
                                         </RelativePanel>
                                         
-                                        <TextBlock Text="Parabéns, você registrou este Pokémon!"/>
+                                        <TextBlock Text="Parabéns, você registrou um novo Pokémon!"/>
                                         <Button Content="OK" HorizontalAlignment="Right" Click="Button_Click"/>
                                     </StackPanel>
                                 </Flyout>

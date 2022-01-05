@@ -141,6 +141,9 @@
     <Compile Include="Views\AddPokemon.xaml.cs">
       <DependentUpon>AddPokemon.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Edit.xaml.cs">
+      <DependentUpon>Edit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ListaPokemons.xaml.cs">
       <DependentUpon>ListaPokemons.xaml</DependentUpon>
     </Compile>
@@ -161,10 +164,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\4099.jpg" />
+    <Content Include="Assets\botanical-product-backdrop-with-tropical-leaves-corte.jpg" />
     <Content Include="Assets\pokedex-icon-15.jpg" />
-    <Content Include="Assets\pokedex-png - Cópia .png" />
     <Content Include="Assets\pokedex-png.png" />
     <Content Include="Assets\Pikachu-com-Fundo-Transparente-1024x919.png" />
+    <Content Include="Assets\—Pngtree—product presentation podium_6281635_cut.png" />
+    <Content Include="Assets\—Pngtree—product presentation podium_6281635_cut_red.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -184,6 +189,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\AddPokemon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Edit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
