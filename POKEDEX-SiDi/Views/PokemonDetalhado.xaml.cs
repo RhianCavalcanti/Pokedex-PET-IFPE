@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using POKEDEX_SiDi.ViewModel;
+using POKEDEX_SiDi.Model;
 
 // O modelo de item de Página em Branco está documentado em https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,9 +24,13 @@ namespace POKEDEX_SiDi.Views
     /// </summary>
     public sealed partial class PokemonDetalhado : Page
     {
+
+        
         public PokemonDetalhado()
         {
-            
+
+            this.InitializeComponent();
+            Operations.PaginacaoPositiva();
             //var nada = IncrementalLoadingTrigger.None;
             //var incrementar = IncrementalLoadingTrigger.Edge;
             //if (incrementar == incrementar)

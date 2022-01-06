@@ -106,7 +106,7 @@
                                 <!--<Image Height="130" Width="100"/>-->
                                 <!--Imagem-->
                                 <RelativePanel>
-                                    <TextBlock Text="{Binding Operations.ListPokemon.Name}" RequestedTheme="Light" FontSize="22" FontWeight="SemiBold" />
+                                    <TextBlock Text="{Binding Name}" RequestedTheme="Light" FontSize="22" FontWeight="SemiBold" />
                                 </RelativePanel>
                             </StackPanel>
                         </DataTemplate>
@@ -211,7 +211,7 @@
                                    Foreground="Black" 
                                    TextWrapping="Wrap"/>
                         <TextBlock x:Name="namePokemon" 
-                                   Text="{x:Bind Operations.ListPokemon.Name, Mode=OneWay}" 
+                                   Text="{x:Bind Name, Mode=OneWay}" 
                                    TextWrapping="Wrap" 
                                    FontSize="24" 
                                    RelativePanel.AlignLeftWith="Nome" 
