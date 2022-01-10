@@ -2,8 +2,7 @@
 <Roots >
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Name" />
-    <RootPropertyPathName Name="Operations" />
-    <RootPropertyPathName Name="ListPokemon" />
+    <RootPropertyPathName Name="listaParaATela" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />

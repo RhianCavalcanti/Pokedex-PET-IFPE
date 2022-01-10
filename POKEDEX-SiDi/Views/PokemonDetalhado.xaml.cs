@@ -24,20 +24,18 @@ namespace POKEDEX_SiDi.Views
     /// </summary>
     public sealed partial class PokemonDetalhado : Page
     {
+        List<PokemonDb> listaParaATela;
 
-        
         public PokemonDetalhado()
         {
-
+            
             this.InitializeComponent();
-            Operations.PaginacaoPositiva();
-            //var nada = IncrementalLoadingTrigger.None;
-            //var incrementar = IncrementalLoadingTrigger.Edge;
-            //if (incrementar == incrementar)
-            //{
+            DbClass.InitializeDB();
 
-            //}
-            //set valores dos campos já aqui chamando do BD
+            Operations.PaginacaoPositiva();
+
+            listaParaATela = Operations.ListaDePokemon();
+
         }
 
         

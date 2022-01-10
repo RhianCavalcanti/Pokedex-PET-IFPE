@@ -5,7 +5,7 @@
     xmlns:local="using:POKEDEX_SiDi.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:data="using:POKEDEX_SiDi.ViewModel" 
+    xmlns:data="using:POKEDEX_SiDi.Model" 
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Light">
 
@@ -77,7 +77,7 @@
                 <!--<Image />-->
                 <ListView x:ConnectionId='20' x:Name="ListaPokemonsD" 
                               SelectionMode="Single" 
-                              ItemsSource="{Binding Operations.ListPokemon}"
+                              ItemsSource="{Binding listaParaATela}"
                               IsItemClickEnabled="True"
                                                                   
                               ScrollViewer.HorizontalScrollMode="Enabled"
@@ -96,7 +96,7 @@
                         </ItemsPanelTemplate>
                     </ListView.ItemsPanel>
                     <ListView.ItemTemplate>
-                        <DataTemplate                         >
+                        <DataTemplate                            >
                             <StackPanel x:ConnectionId='22' x:Name="ItemList" Orientation="Vertical"
                                                                                       
                                             >

@@ -11,7 +11,7 @@ namespace POKEDEX_SiDi.ViewModel
     {
         static int I = -10;
         static int D = 0;
-        public static List<PokemonDb> ListPokemon = new List<PokemonDb>();
+        
 
         public static void PaginacaoPositiva()
         {
@@ -36,26 +36,29 @@ namespace POKEDEX_SiDi.ViewModel
             ListaDePokemon();
         }
 
-        public static void ListaDePokemon()
+        public static List<PokemonDb> ListaDePokemon()
         {
+            List<PokemonDb> ListPokemon = new List<PokemonDb>();
             ListPokemon.Clear();
             for (int i = 0; i < 10; i++)
             {
                 PokemonDb pokeList = new PokemonDb();
-                pokeList.Id = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[1];
-                pokeList.Name = (string)DbClass.GetPokemon(I).Rows[i].ItemArray[2];
-                pokeList.Types = (string)DbClass.GetPokemon(I).Rows[i].ItemArray[3];
-                //pokeList.Hp = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[4];
-                //pokeList.Attack = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[5];
-                //pokeList.Defense = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[6];
-                //pokeList.SpecialAttack = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[7];
-                //pokeList.SpecialDefense = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[8];
-                //pokeList.Speed = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[9];              
-                pokeList.Height = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[10];
-                pokeList.Weight = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[11];
-                pokeList.Image = (string)DbClass.GetPokemon(I).Rows[i].ItemArray[12];
+                pokeList.Id = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[0];
+                pokeList.Name = (string)DbClass.GetPokemon(I).Rows[i].ItemArray[1];
+                pokeList.Types = (string)DbClass.GetPokemon(I).Rows[i].ItemArray[2];
+                pokeList.Hp = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[3];
+                pokeList.Attack = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[4];
+                pokeList.Defense = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[5];
+                pokeList.SpecialAttack = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[6];
+                pokeList.SpecialDefense = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[7];
+                pokeList.Speed = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[8];
+                pokeList.Height = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[9];
+                pokeList.Weight = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[10];
+                pokeList.Image = (string)DbClass.GetPokemon(I).Rows[i].ItemArray[11];
                 ListPokemon.Add(pokeList);
+                
             }
+            return ListPokemon;
         }
     }
 }
