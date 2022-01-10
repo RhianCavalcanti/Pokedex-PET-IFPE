@@ -1,1 +1,1 @@
-C:\Users\Adan\Desktop\pokedex\Pokedex-PET-IFPE\POKEDEX-SiDi\POKEDEX-SiDi.csproj;x86
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\POKEDEX-SiDi.csproj;x86

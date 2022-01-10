@@ -25,10 +25,6 @@ namespace POKEDEX_SiDi.Views
         public PokemonDetalhado()
         {
             this.InitializeComponent();
-            atkPokemon.Text = ViewModel.Operations.Choque(); //testes
-            EspeciePokemon.Text = ViewModel.Operations.Spec();
-            AtaqueBarra.Value = ViewModel.Operations.barraAtk();
-            ListaPokemonsD.SelectedIndex = 0;
             //var nada = IncrementalLoadingTrigger.None;
             //var incrementar = IncrementalLoadingTrigger.Edge;
             //if (incrementar == incrementar)
@@ -38,11 +34,7 @@ namespace POKEDEX_SiDi.Views
             //set valores dos campos já aqui chamando do BD
         }
 
-        private String setNome() //teste
-        {
-            namePokemon.Text = ViewModel.Operations.Nome;
-            return namePokemon.Text;
-        }
+        
         //private void Button_Click(object sender, RoutedEventArgs e) //Botão de teste, depois será removido
         //{
         //    Frame.Navigate(typeof(MainPage));
@@ -58,11 +50,13 @@ namespace POKEDEX_SiDi.Views
 
         private void NextTenPokemon_Click(object sender, RoutedEventArgs e)
         {
+            ViewModel.Operations.PaginacaoPositiva();
             //vai chamar os próximos 10 pokémon na lista do BD (dependendo do modo de organização escolhido)
         }
 
         private void PreviousTenPokemon_Click(object sender, RoutedEventArgs e)
         {
+            ViewModel.Operations.PaginacaoNegativa();
             //vai acessar os 10 pokémon anteriores na lista do BD (dependendo do modo de organização escolhido)
         }
 

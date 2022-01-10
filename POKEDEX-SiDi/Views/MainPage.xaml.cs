@@ -120,7 +120,7 @@ namespace POKEDEX_SiDi.Views
             if (Lista.IsSelected)
             {
                 BackButton.Visibility = Visibility.Collapsed;
-                MyFrame.Navigate(typeof(ListaPokemons));
+                MyFrame.Navigate(typeof(PokemonDetalhado));
                 MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
             }
             else if (Add.IsSelected)

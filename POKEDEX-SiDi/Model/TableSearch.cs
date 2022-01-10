@@ -62,13 +62,7 @@ namespace POKEDEX_SiDi.Model
 
                 }
 
-                Console.WriteLine(DbClass.consulta(data.Results[i].Name).Rows[0].ItemArray[1]
-                    + " " + DbClass.consulta(data.Results[i].Name).Rows[0].ItemArray[2]
-                    + " " + DbClass.consulta(data.Results[i].Name).Rows[0].ItemArray[3]
-                    + " " + DbClass.consulta(data.Results[i].Name).Rows[0].ItemArray[4]
-                    + " " + DbClass.consulta(data.Results[i].Name).Rows[0].ItemArray[5]
-                    + " " + DbClass.consulta(data.Results[i].Name).Rows[0].ItemArray[6]
-                    + " \n ");
+                
 
 
             }

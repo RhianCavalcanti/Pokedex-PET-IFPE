@@ -42,5 +42,15 @@ namespace POKEDEX_SiDi.Views
         {
             //vai salvar os novos dados no BD
         }
+
+        private void PreviousPokemonImg_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NextPokemonImg_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -5,7 +5,7 @@
     xmlns:local="using:POKEDEX_SiDi.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:data="using:POKEDEX_SiDi.ViewModel" 
+    xmlns:data="using:POKEDEX_SiDi.Model" 
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Light">
 
@@ -82,7 +82,7 @@
                 <!--<Image />-->
                 <ListView x:Name="ListaPokemonsD" 
                           SelectionMode="Single"
-                          ItemsSource="{x:Bind Path=data:Operations}"
+                          ItemsSource="{x:Bind data:ListaDePokemons}"
                           IsItemClickEnabled="True"
                           ItemClick="ListaPokemonsD_ItemClick"
                           ScrollViewer.HorizontalScrollMode="Enabled"
@@ -101,7 +101,7 @@
                         </ItemsPanelTemplate>
                     </ListView.ItemsPanel>
                     <ListView.ItemTemplate>
-                        <DataTemplate >
+                        <DataTemplate x:DataType="data:PokemonDb">
                             <StackPanel x:Name="ItemList" Orientation="Vertical">
                                 <!--PointerEntered="StackPanel_PointerEntered"-->
                                             
@@ -111,7 +111,8 @@
                                 <!--<Image Height="130" Width="100"/>-->
                                 <!--Imagem-->
                                 <RelativePanel>
-                                    <TextBlock Text="{Binding Name}" RequestedTheme="Light" FontSize="22" FontWeight="SemiBold" />
+                                    <TextBlock Text="{x:Bind Name}" RequestedTheme="Light" FontSize="22" FontWeight="SemiBold" />
+                                    <!--{Binding Operations.ListPokemon.Name}-->
                                 </RelativePanel>
                             </StackPanel>
                         </DataTemplate>
@@ -212,11 +213,11 @@
                             RelativePanel.AlignHorizontalCenterWith="whiteBack" 
                             Margin="70,60,0,30">
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
-                        <TextBlock Name="Name" 
+                        <TextBlock x:Name="Name" 
                                    Text="Nome:" 
                                    Style="{StaticResource MyTextBlocks}"/>
-                        <TextBlock x:Name="namePokemon" 
-                                   Text="{x:Bind setNome(), Mode=OneWay}" 
+                        <TextBlock x:Name="namePokemon"
+                                   Text="teste" 
                                    Style="{StaticResource MyTextBlocks}"
                                    RelativePanel.AlignLeftWith="Nome" 
                                    Margin="10,0,0,0" 

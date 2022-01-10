@@ -70,7 +70,9 @@
                             Margin="0,10,6,5"
                             MinHeight="40" MinWidth="40" 
                             Height="50" Width="50"
-                            Click="PreviousPokemonImg_Click" RequestedTheme="Light" CornerRadius="15,15,15,15"/>
+                            Click="PreviousPokemonImg_Click" 
+                            RequestedTheme="Light" 
+                            CornerRadius="15,15,15,15"/>
                     <Button x:Name="NextPokemonImg" 
                             FontFamily="Segoe MDL2 Assets" 
                             Content="&#xE00f;"
@@ -78,7 +80,9 @@
                             Margin="0,10,0,5" 
                             MinHeight="40" MinWidth="40" 
                             Height="50" Width="50"
-                            Click="NextPokemonImg_Click" RequestedTheme="Light" CornerRadius="15,15,15,15"/>
+                            Click="NextPokemonImg_Click" 
+                            RequestedTheme="Light" 
+                            CornerRadius="15,15,15,15"/>
                 </StackPanel>
             </RelativePanel>
             <RelativePanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Canvas.ZIndex="3" >

@@ -127,7 +127,6 @@
     <Compile Include="Model\DreamWorld.cs" />
     <Compile Include="Model\Form.cs" />
     <Compile Include="Model\Home.cs" />
-    <Compile Include="Model\MethodConvert.cs" />
     <Compile Include="Model\OfficialArtwork.cs" />
     <Compile Include="Model\Other.cs" />
     <Compile Include="Model\Pages.cs" />
@@ -140,7 +139,7 @@
     <Compile Include="Model\TableSearch.cs" />
     <Compile Include="Model\TypeElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\Operarions.cs" />
+    <Compile Include="ViewModel\Operations.cs" />
     <Compile Include="ViewModel\PokemonApiService.cs" />
     <Compile Include="Views\AddPokemon.xaml.cs">
       <DependentUpon>AddPokemon.xaml</DependentUpon>
