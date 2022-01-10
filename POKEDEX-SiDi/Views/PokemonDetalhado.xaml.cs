@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using POKEDEX_SiDi.ViewModel;
 using POKEDEX_SiDi.Model;
+using System.Collections.ObjectModel;
 
 // O modelo de item de Página em Branco está documentado em https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -24,19 +25,20 @@ namespace POKEDEX_SiDi.Views
     /// </summary>
     public sealed partial class PokemonDetalhado : Page
     {
+        List<PokemonDb> listaParaATela;
+        ObservableCollection<PokemonDb> observable;
+        PokemonDb pokeSelected;
+        //ObservableCollection<PokemonDb> = new ObservableCollection<PokemonDb>(ListaPokemons);
 
-        List<PokemonDb> listaParaTela;
         public PokemonDetalhado()
         {
+            
             this.InitializeComponent();
-            listaParaTela = Operations.ListaDePokemon();
-            //var nada = IncrementalLoadingTrigger.None;
-            //var incrementar = IncrementalLoadingTrigger.Edge;
-            //if (incrementar == incrementar)
-            //{
+            DbClass.InitializeDB();
+            Operations.PaginacaoPositiva();
 
-            //}
-            //set valores dos campos já aqui chamando do BD
+            listaParaATela = /*(ObservableCollection<PokemonDb>)*/ Operations.ListaDePokemon();
+            ObservableCollection <PokemonDb> observable = new ObservableCollection<PokemonDb>(listaParaATela);
         }
 
         
@@ -55,30 +57,54 @@ namespace POKEDEX_SiDi.Views
 
         private void NextTenPokemon_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.Operations.PaginacaoPositiva();
+            Operations.PaginacaoPositiva();
+            listaParaATela = Operations.ListaDePokemon();
+            Frame.Navigate(typeof(PokemonDetalhado));
+            //ListaPokemonsD.ItemsSource = listaParaATela;
+
+
             //vai chamar os próximos 10 pokémon na lista do BD (dependendo do modo de organização escolhido)
         }
 
         private void PreviousTenPokemon_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.Operations.PaginacaoNegativa();
+            Operations.PaginacaoNegativa();
+            listaParaATela = Operations.ListaDePokemon();
+            Frame.Navigate(typeof(PokemonDetalhado));
             //vai acessar os 10 pokémon anteriores na lista do BD (dependendo do modo de organização escolhido)
         }
 
         private void ListaPokemonsD_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //if(ListaPokemonsD.SelectedItem == null)
+            pokeSelected = (PokemonDb)e.ClickedItem;
+            //Altera os dados que são exibidos nos campos
+            namePokemon.Text = pokeSelected.Name;
+            typePokemon.Text = pokeSelected.Types;
+            PesoPokemon.Text = pokeSelected.Weight.ToString() + "lb";
+            AltPokemon.Text = pokeSelected.Height.ToString();
+            SpeedPokemon.Text = pokeSelected.Speed.ToString();
+            HpBarra.Value = pokeSelected.Hp;
+            DefesaBarra.Value = pokeSelected.Defense;
+            AtaqueBarra.Value = pokeSelected.Attack;
+            SpAtkBarra.Value = pokeSelected.SpecialAttack;
+            SpDefBarra.Value = pokeSelected.SpecialDefense;
+
+
+            //if (ListaPokemonsD.SelectedItem == null)
             //{
             //    ListaPokemonsD.SelectedIndex = 0;
             //}
-            //ListaPokemonsD.SelectedItem = ListaPokemonsD.ScaleTransition;
-            
+            //else
+            //{
+            //    pokeSelected = (PokemonDb)e.ClickedItem;
+            //}
+
 
         }
 
         //private void StackPanel_PointerEntered(object sender, PointerRoutedEventArgs e)
         //{
-        
+
         //}
 
         private void PreviousPokemonImg_Click(object sender, RoutedEventArgs e)
@@ -106,6 +132,11 @@ namespace POKEDEX_SiDi.Views
         private void Delete_N_Click(object sender, RoutedEventArgs e)
         {
             DeleteConfirm.Hide();
+        }
+
+        private void ListaPokemonsD_DataContextChanged(FrameworkElement sender, DataContextChangedEventArgs args)
+        {
+
         }
     }
 }
