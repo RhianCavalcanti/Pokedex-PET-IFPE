@@ -280,6 +280,7 @@
       <RootEvent Name="QuerySubmitted" />
     </RootType>
     <RootType FullName="POKEDEX_SiDi.Views.MainPage" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
       <RootProperty Name="Template" />
     </RootType>

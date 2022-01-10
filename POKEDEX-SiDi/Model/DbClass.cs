@@ -17,7 +17,8 @@ namespace POKEDEX_SiDi.Model
 
         public static SQLiteConnection ConnectionDb()
         {
-            conection = new SQLiteConnection("Data Source= C:\\Users\\Adan\\Desktop\\pokedex\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\DataBase\\pokemon.db");
+            conection = new SQLiteConnection("Data Source=C:\\Users\\Adan\\source\\repos\\TesteApiPokedex\\TesteApiPokedex\\dbfortest\\db_teste.db", true );
+            //conection = new SQLiteConnection("Data Source=C:\\Users\\Adan\\Desktop\\pokedex\\Pokedex-PET-IFPE\\POKEDEX-SiDi\\DataBase\\pokemon.db");
             conection.Open();
             return conection;
         }
@@ -30,7 +31,7 @@ namespace POKEDEX_SiDi.Model
             {
                 using (var cmd = ConnectionDb().CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM pokemon LIMIT 10 OFFSET "+number;
+                    cmd.CommandText = "SELECT * FROM tb_pokemon LIMIT 10 OFFSET "+number;
                     da = new SQLiteDataAdapter(cmd.CommandText, ConnectionDb());
                     da.Fill(dt);
                     ConnectionDb().Close();
@@ -52,7 +53,7 @@ namespace POKEDEX_SiDi.Model
             {
                 using (var cmd = ConnectionDb().CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM pokemon WHERE NAME='" + sql + "'";
+                    cmd.CommandText = "SELECT * FROM tb_pokemon WHERE NAME='" + sql + "'";
                     da = new SQLiteDataAdapter(cmd.CommandText, ConnectionDb());
                     da.Fill(dt);
                     ConnectionDb().Close();
@@ -67,25 +68,88 @@ namespace POKEDEX_SiDi.Model
 
         }
 
+        //public static void Add(PokemonDb pokemon)
+        //{
+        //    try
+        //    {
+        //        using (var cmd = ConnectionDb().CreateCommand())
+        //        {
+        //            cmd.CommandText = "INSERT INTO tb_pokemon(id_pokemon, name, type, hp, attack, defense, special_attack, special_defense, speed, height, weight, image) values (@id_pokemon, @name, @type, @hp, @attack, @defense, @special_attack, @special_defense, @speed, @height, @weight, @image)";
+        //            cmd.Parameters.AddWithValue("@id_pokemon", pokemon.Id);
+        //            cmd.Parameters.AddWithValue("@name", pokemon.Name);
+        //            cmd.Parameters.AddWithValue("@type", pokemon.Types);
+        //            cmd.Parameters.AddWithValue("@hp", pokemon.Hp);
+        //            cmd.Parameters.AddWithValue("@attack", pokemon.Attack);
+        //            cmd.Parameters.AddWithValue("@defense", pokemon.Defense);
+        //            cmd.Parameters.AddWithValue("@special_attack", pokemon.SpecialAttack);
+        //            cmd.Parameters.AddWithValue("@special_defense", pokemon.SpecialDefense);
+        //            cmd.Parameters.AddWithValue("@speed", pokemon.Speed);
+        //            cmd.Parameters.AddWithValue("@height", pokemon.Height);
+        //            cmd.Parameters.AddWithValue("@weight", pokemon.Weight);
+        //            cmd.Parameters.AddWithValue("@image", pokemon.Image);
+        //            cmd.ExecuteNonQuery();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
         public static void Add(PokemonDb pokemon)
         {
             try
             {
                 using (var cmd = ConnectionDb().CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO pokemon(id_pokemon, name, type, hp, attack, defense, special_attack, special_defense, speed, height, weight, image) values (@id_pokemon, @name, @type, @hp, @attack, @defense, @special_attack, @special_defense, @speed, @height, @weight, @image)";
+                    cmd.CommandText = "INSERT INTO pokemon(id_pokemon, name, type, height, weight, image) values (@id_pokemon, @name, @type, @height, @weight, @image)";
                     cmd.Parameters.AddWithValue("@id_pokemon", pokemon.Id);
                     cmd.Parameters.AddWithValue("@name", pokemon.Name);
                     cmd.Parameters.AddWithValue("@type", pokemon.Types);
-                    cmd.Parameters.AddWithValue("@hp", pokemon.Hp);
-                    cmd.Parameters.AddWithValue("@attack", pokemon.Attack);
-                    cmd.Parameters.AddWithValue("@defense", pokemon.Defense);
-                    cmd.Parameters.AddWithValue("@special_attack", pokemon.SpecialAttack);
-                    cmd.Parameters.AddWithValue("@special_defense", pokemon.SpecialDefense);
-                    cmd.Parameters.AddWithValue("@speed", pokemon.Speed);
                     cmd.Parameters.AddWithValue("@height", pokemon.Height);
                     cmd.Parameters.AddWithValue("@weight", pokemon.Weight);
                     cmd.Parameters.AddWithValue("@image", pokemon.Image);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static void Update(PokemonDb pokemon)
+        {
+            try
+            {
+                using (var cmd = new SQLiteCommand(ConnectionDb()))
+                {
+                    if (pokemon.Id != null)
+                    {
+                        cmd.CommandText = "UPDATE tb_pokemon SET name=@name, type=@type, height=@height, weight=@weight, image=@image  WHERE id_pokemon=@id_pokemon"; 
+                        cmd.Parameters.AddWithValue("@id_pokemon", pokemon.Id);
+                        cmd.Parameters.AddWithValue("@name", pokemon.Name);
+                        cmd.Parameters.AddWithValue("@type", pokemon.Types);
+                        cmd.Parameters.AddWithValue("@height", pokemon.Height);
+                        cmd.Parameters.AddWithValue("@weight", pokemon.Weight);
+                        cmd.Parameters.AddWithValue("@image", pokemon.Image);
+                        cmd.ExecuteNonQuery();
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static void Delete(int Id)
+        {
+            try
+            {
+                using (var cmd = new SQLiteCommand(ConnectionDb()))
+                {
+                    cmd.CommandText = "DELETE FROM tb_pokemon Where id_pokemon=@Id";
+                    cmd.Parameters.AddWithValue("@Id", Id);
                     cmd.ExecuteNonQuery();
                 }
             }

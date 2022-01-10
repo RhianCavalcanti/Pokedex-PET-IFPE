@@ -89,12 +89,12 @@ namespace POKEDEX_SiDi.Model
                 Type = String.Join(", ", ListTypes.ToArray());
             }
             pokemonDb.Types = Type;
-            pokemonDb.Hp = poke.Stats[0].BaseStat;
-            pokemonDb.Attack = poke.Stats[1].BaseStat;
-            pokemonDb.Defense = poke.Stats[2].BaseStat;
-            pokemonDb.SpecialAttack = poke.Stats[3].BaseStat;
-            pokemonDb.SpecialDefense = poke.Stats[4].BaseStat;
-            pokemonDb.Speed = poke.Stats[5].BaseStat;
+            //pokemonDb.Hp = poke.Stats[0].BaseStat;
+            //pokemonDb.Attack = poke.Stats[1].BaseStat;
+            //pokemonDb.Defense = poke.Stats[2].BaseStat;
+            //pokemonDb.SpecialAttack = poke.Stats[3].BaseStat;
+            //pokemonDb.SpecialDefense = poke.Stats[4].BaseStat;
+            //pokemonDb.Speed = poke.Stats[5].BaseStat;
             pokemonDb.Height = poke.Height;
             pokemonDb.Weight = poke.Weight;
             pokemonDb.Image = poke.Sprites.FrontDefault.AbsoluteUri;

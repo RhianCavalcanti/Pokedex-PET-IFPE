@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\POKEDEX-SiDi",
-    "\\POKEDEX-SiDi\\Model"
+    "\\POKEDEX-SiDi\\Model",
+    "\\POKEDEX-SiDi\\Views"
   ],
-  "SelectedNode": "\\POKEDEX-SiDi\\Model\\TableSearch.cs",
+  "SelectedNode": "\\POKEDEX-SiDi\\Views\\PokemonDetalhado.xaml",
   "PreviewInSolutionExplorer": false
 }
