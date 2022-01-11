@@ -88,7 +88,8 @@ namespace POKEDEX_SiDi.Views
             AtaqueBarra.Value = pokeSelected.Attack;
             SpAtkBarra.Value = pokeSelected.SpecialAttack;
             SpDefBarra.Value = pokeSelected.SpecialDefense;
-
+            //ImageSource image = (ImageSource)pokeSelected.Image;
+            //img.Source = pokeSelected.Image;
 
             //if (ListaPokemonsD.SelectedItem == null)
             //{

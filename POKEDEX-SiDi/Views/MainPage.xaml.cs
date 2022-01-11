@@ -32,8 +32,6 @@ namespace POKEDEX_SiDi.Views
             BackButton.Visibility = Visibility.Collapsed;
             MySplitView.IsPaneOpen = false;
             Details.IsEnabled = false;
-
-            //Visibility_Back_Click();
         }
 
         private void Pesquisar_Click(object sender, RoutedEventArgs e)
@@ -64,9 +62,12 @@ namespace POKEDEX_SiDi.Views
                 //BackButton.IsEnabled = false;
                 MyFrame.GoBack();
                 Lista.IsSelected = true;
+                BackButton.Visibility = Visibility.Collapsed;
+                MySplitView.IsPaneOpen = false;
             }
             else
             {
+                BackButton.Visibility = Visibility.Visible;
                 //BackButton.IsEnabled = true;
             }
         }
@@ -121,19 +122,19 @@ namespace POKEDEX_SiDi.Views
             {
                 BackButton.Visibility = Visibility.Collapsed;
                 MyFrame.Navigate(typeof(PokemonDetalhado));
-                MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+                MySplitView.IsPaneOpen = false;
             }
             else if (Add.IsSelected)
             {
                 BackButton.Visibility = Visibility.Visible;
                 MyFrame.Navigate(typeof(AddPokemon));
-                MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+                MySplitView.IsPaneOpen = false;
             }
             else if (Details.IsSelected)
             {
                 BackButton.Visibility = Visibility.Visible;
                 MyFrame.Navigate(typeof(PokemonDetalhado));
-                MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+                MySplitView.IsPaneOpen = false;
             }
             //else if(Lista.IsSelected && actual frame is Pokemon detalhado){                 BackButton.Visibility = Visibility.Visible;}
         }
@@ -152,7 +153,8 @@ namespace POKEDEX_SiDi.Views
 
         private void MyAutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
         {
-
+            BackButton.Visibility = Visibility.Visible;
+            MyFrame.Navigate(typeof(BuscaNomeID));
         }
 
         private void BuscaPor_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -160,6 +162,11 @@ namespace POKEDEX_SiDi.Views
             var comboBusca = (ComboBox)sender;
             var itemBusca = (ComboBoxItem)comboBusca.SelectedItem;
             ItemBus = itemBusca.Content.ToString();
+        }
+
+        private void confirmSearchType_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -20,27 +20,26 @@ namespace POKEDEX_SiDi.Views
     /// <summary>
     /// Uma página vazia que pode ser usada isoladamente ou navegada dentro de um Quadro.
     /// </summary>
-    public sealed partial class AddPokemon : Page
+    public sealed partial class BuscaNomeID : Page
     {
-        public AddPokemon()
+        public BuscaNomeID()
         {
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Edit_Click(object sender, RoutedEventArgs e)
         {
-            saveFly.Hide();
-            //Método pra salvar pokemon
-            var NameText = NameBox.Text;
-            var atkText = Convert.ToInt32(AtkBox.Text);
 
+        }
 
-            NameBox.Text = "";
-            AtkBox.Text = "";
-            EspecieBox.Text = "";
-            file.Text = "";
-            hpValue.Text = "";
-            defValue.Text = "";
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Delete_N_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

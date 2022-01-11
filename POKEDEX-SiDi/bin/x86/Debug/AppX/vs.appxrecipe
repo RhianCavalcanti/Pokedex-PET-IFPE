@@ -30,17 +30,21 @@
     <AppXManifest Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-10T14:52:37.807</Modified>
+      <Modified>2022-01-11T01:27:55.002</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\POKEDEX-SiDi.exe">
       <PackagePath>entrypoint\POKEDEX-SiDi.exe</PackagePath>
-      <Modified>2022-01-10T14:52:36.310</Modified>
+      <Modified>2022-01-11T01:27:54.255</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\.nuget\packages\microsoft.bcl.asyncinterfaces\5.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
       <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
       <Modified>2020-10-19T18:40:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nilo Sandes\.nuget\packages\microsoft.data.sqlite.core\6.0.1\lib\netstandard2.0\Microsoft.Data.Sqlite.dll">
+      <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
+      <Modified>2021-11-17T23:22:52.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\.nuget\packages\newtonsoft.json\13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -53,6 +57,22 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-02-05T04:15:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nilo Sandes\.nuget\packages\sqlitepclraw.bundle_e_sqlite3\2.0.6\lib\netstandard2.0\SQLitePCLRaw.batteries_v2.dll">
+      <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
+      <Modified>2021-09-03T18:04:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nilo Sandes\.nuget\packages\sqlitepclraw.core\2.0.6\lib\netstandard2.0\SQLitePCLRaw.core.dll">
+      <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
+      <Modified>2021-09-03T18:04:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nilo Sandes\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.0.6\runtimes\win10-x86\nativeassets\uap10.0\e_sqlite3.dll">
+      <PackagePath>e_sqlite3.dll</PackagePath>
+      <Modified>2021-09-03T18:02:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nilo Sandes\.nuget\packages\sqlitepclraw.provider.e_sqlite3\2.0.6\lib\uap10.0\SQLitePCLRaw.provider.e_sqlite3.dll">
+      <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>
+      <Modified>2021-09-03T18:04:36.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\.nuget\packages\stub.system.data.sqlite.core.netstandard\1.0.115.5\runtimes\win-x86\native\SQLite.Interop.dll">
       <PackagePath>SQLite.Interop.dll</PackagePath>
@@ -150,39 +170,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\POKEDEX-SiDi.xr.xml">
       <PackagePath>POKEDEX-SiDi.xr.xml</PackagePath>
-      <Modified>2022-01-10T14:52:36.065</Modified>
+      <Modified>2022-01-10T23:48:12.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-01-10T14:52:36.176</Modified>
+      <Modified>2022-01-11T01:27:54.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-01-10T14:52:36.177</Modified>
+      <Modified>2022-01-11T01:27:54.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\AddPokemon.xbf">
       <PackagePath>Views\AddPokemon.xbf</PackagePath>
-      <Modified>2022-01-10T14:52:36.152</Modified>
+      <Modified>2022-01-11T01:27:54.050</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\BuscaNomeID.xbf">
+      <PackagePath>Views\BuscaNomeID.xbf</PackagePath>
+      <Modified>2022-01-11T01:27:54.057</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\Edit.xbf">
       <PackagePath>Views\Edit.xbf</PackagePath>
-      <Modified>2022-01-10T14:52:36.157</Modified>
+      <Modified>2022-01-11T01:27:54.061</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\ListaPokemons.xbf">
       <PackagePath>Views\ListaPokemons.xbf</PackagePath>
-      <Modified>2022-01-10T14:52:36.167</Modified>
+      <Modified>2022-01-11T01:27:54.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\ListViewTest.xbf">
       <PackagePath>Views\ListViewTest.xbf</PackagePath>
-      <Modified>2022-01-10T14:52:36.177</Modified>
+      <Modified>2022-01-11T01:27:54.086</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2022-01-10T14:52:36.177</Modified>
+      <Modified>2022-01-11T01:27:54.086</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\PokemonDetalhado.xbf">
       <PackagePath>Views\PokemonDetalhado.xbf</PackagePath>
-      <Modified>2022-01-10T14:52:36.176</Modified>
+      <Modified>2022-01-11T01:27:54.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -190,11 +214,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-01-10T14:52:37.054</Modified>
+      <Modified>2022-01-10T22:52:16.815</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Core\POKEDEX-SiDi.exe">
       <PackagePath>POKEDEX-SiDi.exe</PackagePath>
-      <Modified>2022-01-10T14:52:37.800</Modified>
+      <Modified>2022-01-11T01:27:54.996</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

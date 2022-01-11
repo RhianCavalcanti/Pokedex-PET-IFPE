@@ -82,7 +82,6 @@
                 <!--<Image />-->
                 <ListView x:Name="ListaPokemonsD" 
                               SelectionMode="Single" 
-                          SelectedIndex="0"
                               ItemsSource="{x:Bind listaParaATela, Mode=OneWay}"
                               IsItemClickEnabled="True"
                               ItemClick="ListaPokemonsD_ItemClick"
@@ -151,7 +150,6 @@
                            RadiusX="45"
                            RadiusY="45"/>
                 <Image x:Name="img" 
-                       Source="/Assets/Pikachu-com-Fundo-Transparente-1024x919.png" 
                        MaxHeight="330" 
                        RelativePanel.AlignHorizontalCenterWithPanel="True" 
                        MaxWidth="320" 
@@ -160,6 +158,8 @@
                        Canvas.ZIndex="2"
                        Margin="20,50,0,0"
                        />
+                <!-- Source="/Assets/Pikachu-com-Fundo-Transparente-1024x919.png" -->
+                
                 <Image x:Name="basePokemon" 
                        Source="/Assets/—Pngtree—product presentation podium_6281635_cut.png" 
                        Height="auto" Width="auto"
@@ -173,25 +173,6 @@
                 <!--imagem de um pedestal-->
                 
                 <!--<a href='https://br.freepik.com/fotos-vetores-gratis/circulo'>Círculo vetor criado por vectorpocket - br.freepik.com</a>-->
-                <StackPanel Orientation="Horizontal" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="basePokemon" Margin="20">
-                    <Button x:Name="PreviousPokemonImg"
-                            FontFamily="Segoe MDL2 Assets" 
-                            Content="&#xE00E;" 
-                            RelativePanel.AlignHorizontalCenterWithPanel="True"  
-                            RelativePanel.LeftOf="NextPokemon" 
-                            Margin="0,10,6,5"
-                            MinHeight="40" MinWidth="40" 
-                            Height="50" Width="50"
-                            Click="PreviousPokemonImg_Click" RequestedTheme="Light" CornerRadius="15,15,15,15"/>
-                    <Button x:Name="NextPokemonImg" 
-                            FontFamily="Segoe MDL2 Assets" 
-                            Content="&#xE00f;"
-                            HorizontalAlignment="Right"
-                            Margin="0,10,0,5" 
-                            MinHeight="40" MinWidth="40" 
-                            Height="50" Width="50"
-                            Click="NextPokemonImg_Click" RequestedTheme="Light" CornerRadius="15,15,15,15"/>
-                </StackPanel>
             </RelativePanel>
 
             <RelativePanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Canvas.ZIndex="3" >
@@ -298,8 +279,7 @@
                                          Margin="10,5,0,5" 
                                          Width="200"
                                          Height="30"
-                                         Maximum="300"
-                                     Value="150"
+                                         Maximum="100"
                                          Foreground="GreenYellow"
                                          Style="{StaticResource MyProgressBar}"
                                          />
@@ -311,7 +291,7 @@
                                          Margin="10,5,0,5" 
                                          Width="200"
                                          Height="30"
-                                         Maximum="300"
+                                         Maximum="100"
                                          Foreground="Red"
                                          Style="{StaticResource MyProgressBar}"
                                          />
@@ -323,8 +303,7 @@
                                          Margin="10,5,0,5" 
                                          Width="200"
                                          Height="30"
-                                         Maximum="300"
-                                         Value="225"
+                                         Maximum="100"
                                          Foreground="Purple"
                                          Style="{StaticResource MyProgressBar}"
                                          />
@@ -335,8 +314,7 @@
                                          Margin="10,5,0,5" 
                                          Width="200"
                                          Height="30"
-                                         Maximum="300"
-                                         Value="175"
+                                         Maximum="100"
                                          Foreground="ForestGreen"
                                          Style="{StaticResource MyProgressBar}"
                                          />
@@ -347,14 +325,13 @@
                                          Margin="10,5,0,5" 
                                          Width="200"
                                          Height="30"
-                                         Maximum="300"
-                                         Value="175"
+                                         Maximum="100"
                                          Foreground="Blue"
                                          Style="{StaticResource MyProgressBar}"
                                          />
                     </Grid>
                     <StackPanel Orientation="Horizontal" Margin="20,10,0,0" HorizontalAlignment="Right">
-                        <Button x:Name="Edit" Content="Editar" Click="Edit_Click"/>
+                        <!--<Button x:Name="Edit" Content="Editar" Click="Edit_Click"/>
                         <Button x:Name="Delete" Content="Apagar" Margin="10,0,0,0">
                             <Button.Flyout>
                                 <Flyout x:Name="DeleteConfirm">
@@ -367,7 +344,7 @@
                                     </StackPanel>
                                 </Flyout>
                             </Button.Flyout>
-                        </Button>
+                        </Button>-->
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="20,10,0,0">
 

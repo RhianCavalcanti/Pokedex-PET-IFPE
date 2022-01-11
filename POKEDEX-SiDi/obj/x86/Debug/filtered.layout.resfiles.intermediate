@@ -16,6 +16,7 @@ App.xbf
 MainPage.xbf
 POKEDEX-SiDi.xr.xml
 Views\AddPokemon.xbf
+Views\BuscaNomeID.xbf
 Views\Edit.xbf
 Views\ListaPokemons.xbf
 Views\ListViewTest.xbf

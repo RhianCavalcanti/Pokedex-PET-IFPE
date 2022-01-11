@@ -143,6 +143,9 @@
     <Compile Include="Views\AddPokemon.xaml.cs">
       <DependentUpon>AddPokemon.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\BuscaNomeID.xaml.cs">
+      <DependentUpon>BuscaNomeID.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Edit.xaml.cs">
       <DependentUpon>Edit.xaml</DependentUpon>
     </Compile>
@@ -191,6 +194,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\AddPokemon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BuscaNomeID.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
