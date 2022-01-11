@@ -27,19 +27,27 @@ namespace POKEDEX_SiDi.Model
 
         public static string GetJSON(string pokemon)
         {
-            var request = WebRequest.Create("https://pokeapi.co/api/v2/pokemon/" + pokemon);
-            request.Method = "GET";
-            var response = (HttpWebResponse)request.GetResponse();
-            if (response.StatusCode == HttpStatusCode.OK)
+            try
             {
-                using (var stream = response.GetResponseStream())
+                var request = WebRequest.Create("https://pokeapi.co/api/v2/pokemon/" + pokemon);
+                request.Method = "GET";
+                var response = (HttpWebResponse)request.GetResponse();
+                if (response.StatusCode == HttpStatusCode.OK)
                 {
-                    var reader = new StreamReader(stream);
-                    var json = reader.ReadToEnd();
-                    return json;
+                    using (var stream = response.GetResponseStream())
+                    {
+                        var reader = new StreamReader(stream);
+                        var json = reader.ReadToEnd();
+                        return json;
+                    }
                 }
+                return null;
             }
-            return null;
+            catch (Exception e)
+            {
+                return null;
+            }
+            
         }
 
 
@@ -64,17 +72,52 @@ namespace POKEDEX_SiDi.Model
             }
         }
 
+        public static void ShowDataPagesType(string type)
+        {
+            try
+            {
+                var json = GetJSONTypes(type);
+                var data = JsonConvert.DeserializeObject<TypePokemon>(json);
+
+                for (int i = 0; i < 10; i++)
+                {
+                    var poke = JsonConvert.DeserializeObject<Form>(GetJSON(data.TypesPokemon[i].PokemonPokemon.Name));
+
+                    if (DbClass.consulta(data.TypesPokemon[i].PokemonPokemon.Name).Rows.Count == 0)
+                    {
+                        PokemonDb pokemonDb = NewMethod(poke);
+
+                        DbClass.Add(pokemonDb);
+
+                    }
+                }
+            }catch (Exception e)
+            {
+                Operations.Modo = "default";
+                Operations.PaginacaoPositiva();
+            }
+            
+        }
+
 
         public static void cadastroUnidade(string name)
         {
-            var poke = JsonConvert.DeserializeObject<Form>(GetJSON(name));
-            if (DbClass.consulta(name).Rows.Count == 0)
+            try
             {
-                PokemonDb pokemonDb = NewMethod(poke);
+                var poke = JsonConvert.DeserializeObject<Form>(GetJSON(name));
+                if (DbClass.consulta(name).Rows.Count == 0)
+                {
+                    PokemonDb pokemonDb = NewMethod(poke);
 
-                DbClass.Add(pokemonDb);
+                    DbClass.Add(pokemonDb);
 
+                }
             }
+            catch (Exception e)
+            {
+                Operations.PokemonUnidade(name);
+            }
+            
         }
 
 
@@ -128,6 +171,31 @@ namespace POKEDEX_SiDi.Model
                 }
             }
             return null;
+        }
+
+        public static string GetJSONTypes(string type)
+        {
+            try
+            {
+                var request = WebRequest.Create("https://pokeapi.co/api/v2/type/" + type);
+                request.Method = "GET";
+                var response = (HttpWebResponse)request.GetResponse();
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    using (var stream = response.GetResponseStream())
+                    {
+                        var reader = new StreamReader(stream);
+                        var json = reader.ReadToEnd();
+                        return json;
+                    }
+                }
+                return null;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+            
         }
 
     }

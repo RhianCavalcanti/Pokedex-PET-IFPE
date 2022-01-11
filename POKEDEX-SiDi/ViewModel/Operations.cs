@@ -10,9 +10,13 @@ namespace POKEDEX_SiDi.ViewModel
     class Operations
     {
         static int I = -10;
-        static int D = 0;
+        static int D = -10;
 
-        
+        public static string especieName;
+
+        public static string Modo = "default";
+
+
 
         public static void PaginacaoPositiva()
         {
@@ -21,6 +25,7 @@ namespace POKEDEX_SiDi.ViewModel
             DbClass.GetPokemon(I);
            // ListaDePokemon();
         }
+        
 
         public static void PaginacaoNegativa()
         {
@@ -35,6 +40,55 @@ namespace POKEDEX_SiDi.ViewModel
             }
             DbClass.GetPokemon(I);
             //ListaDePokemon();
+        }
+        static int Count = 0;
+        public static void PaginacaoPositivaType()
+        {
+            D += 10;
+            TableSearch.ShowDataPagesType(especieName);
+            DbClass.GetPokemonType(D, especieName);
+            ListaDePokemonType();
+            //especieName = especieName;
+        }
+
+        public static void PaginacaoNegativaType()
+        {
+            if (D < 10)
+            {
+                D = D;
+            }
+            else
+            {
+                D -= 10;
+                TableSearch.ShowDataPagesType(especieName);
+            }
+            DbClass.GetPokemonType(D, especieName);
+            ListaDePokemonType();
+        }
+
+        public static List<PokemonDb> ListaDePokemonType()
+        {
+            List<PokemonDb> ListPokemon = new List<PokemonDb>();
+            ListPokemon.Clear();
+            for (int i = 0; i < DbClass.GetPokemonType(D, especieName).Rows.Count; i++)
+            {
+                PokemonDb pokeList = new PokemonDb();
+                pokeList.Id = (long)DbClass.GetPokemonType(D, especieName).Rows[i].ItemArray[0];
+                pokeList.Name = (string)DbClass.GetPokemonType(D, especieName).Rows[i].ItemArray[1];
+                pokeList.Types = (string)DbClass.GetPokemonType(D, especieName).Rows[i].ItemArray[2];
+                pokeList.Hp = (long)DbClass.GetPokemonType(D, especieName).Rows[i].ItemArray[3];
+                pokeList.Attack = (long)DbClass.GetPokemonType(D, especieName).Rows[i].ItemArray[4];
+                pokeList.Defense = (long)DbClass.GetPokemonType(D, especieName).Rows[i].ItemArray[5];
+                pokeList.SpecialAttack = (long)DbClass.GetPokemonType(D, especieName).Rows[i].ItemArray[6];
+                pokeList.SpecialDefense = (long)DbClass.GetPokemonType(D, especieName).Rows[i].ItemArray[7];
+                pokeList.Speed = (long)DbClass.GetPokemonType(D, especieName).Rows[i].ItemArray[8];
+                pokeList.Height = (long)DbClass.GetPokemonType(D, especieName).Rows[i].ItemArray[9];
+                pokeList.Weight = (long)DbClass.GetPokemonType(D, especieName).Rows[i].ItemArray[10];
+                pokeList.Image = (string)DbClass.GetPokemonType(D, especieName).Rows[i].ItemArray[11];
+                ListPokemon.Add(pokeList);
+                
+            }
+            return ListPokemon;
         }
 
         public static List<PokemonDb> ListaDePokemon()
@@ -57,14 +111,14 @@ namespace POKEDEX_SiDi.ViewModel
                 pokeList.Weight = (long)DbClass.GetPokemon(I).Rows[i].ItemArray[10];
                 pokeList.Image = (string)DbClass.GetPokemon(I).Rows[i].ItemArray[11];
                 ListPokemon.Add(pokeList);
-                
+
             }
             return ListPokemon;
         }
-
-        public static PokemonDb PokemonUnidade(string pokemon)
+        public static PokemonDb pokemonUnidade = new PokemonDb();
+        public static void PokemonUnidade(string pokemon)
         {
-            PokemonDb pokemonUnidade = new PokemonDb();
+            
             if (DbClass.consultaId(pokemon).Rows.Count != 0 && DbClass.consulta(pokemon).Rows.Count == 0)
             { 
                 pokemonUnidade.Id = (long)DbClass.consultaId(pokemon).Rows[0].ItemArray[0];
@@ -112,7 +166,7 @@ namespace POKEDEX_SiDi.ViewModel
 
             }
 
-            return pokemonUnidade;
+            
 
         }
 

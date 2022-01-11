@@ -66,7 +66,7 @@
                                                 
                         />
             <RelativePanel Grid.ColumnSpan="3" Background="LightYellow">
-                <Button x:ConnectionId='29' Content="&#xF0D5;"
+                <Button x:ConnectionId='22' Content="&#xF0D5;"
                         FontFamily="Segoe MDL2 Assets"
                         FontSize="20"
                         Height="50"
@@ -80,9 +80,8 @@
                 <!--Imagem do pokémon aqui-->
 
                 <!--<Image />-->
-                <ListView x:ConnectionId='30' x:Name="ListaPokemonsD" 
+                <ListView x:ConnectionId='23' x:Name="ListaPokemonsD" 
                               SelectionMode="Single" 
-                          SelectedIndex="0"
                                                                                 
                               IsItemClickEnabled="True"
                                                                   
@@ -98,21 +97,21 @@
 
                     <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <StackPanel Orientation="Horizontal" Height="200" Margin="40,0,0,0"/>
+                            <StackPanel Orientation="Horizontal" Height="140" Margin="40,0,0,0"/>
                         </ItemsPanelTemplate>
                     </ListView.ItemsPanel>
                     <ListView.ItemTemplate>
                         <DataTemplate                            >
-                            <StackPanel x:ConnectionId='32' x:Name="ItemList" Orientation="Vertical">
+                            <StackPanel x:ConnectionId='25' x:Name="ItemList" Orientation="Vertical">
                                 <!--PointerEntered="StackPanel_PointerEntered"-->
                                             
                                 <RelativePanel>
-                                    <Rectangle Fill="DarkGray" Height="160" Width="160"/>
+                                    <Image x:ConnectionId='27'                         Height="110" Width="110"/>
                                 </RelativePanel>
                                 <!--<Image Height="130" Width="100"/>-->
                                 <!--Imagem-->
                                 <RelativePanel>
-                                    <TextBlock x:ConnectionId='33'                      RequestedTheme="Light" FontSize="22" FontWeight="SemiBold" />
+                                    <TextBlock x:ConnectionId='26'                      RequestedTheme="Light" FontSize="22" FontWeight="SemiBold" />
                                 </RelativePanel>
                             </StackPanel>
                         </DataTemplate>
@@ -141,7 +140,7 @@
             </RelativePanel>
             <!--<Image x:Name="imgPokemon" Grid.Row="1" Source="/Assets/4099.jpg" Height="301" Width="350" />-->
 
-            <RelativePanel Grid.Row="1" Width="auto" Height="auto" Margin="30">
+            <RelativePanel Grid.Row="1" Width="auto" Height="auto" Margin="20">
                 <Rectangle Fill="#FFF0F0F0"
                            Width="auto" Height="auto"
                            RelativePanel.AlignLeftWithPanel="True"
@@ -150,8 +149,7 @@
                            RelativePanel.AlignBottomWithPanel="True"
                            RadiusX="45"
                            RadiusY="45"/>
-                <Image x:ConnectionId='25' x:Name="img" 
-                       Source="/Assets/Pikachu-com-Fundo-Transparente-1024x919.png" 
+                <Image x:ConnectionId='20' x:Name="img" 
                        MaxHeight="330" 
                        RelativePanel.AlignHorizontalCenterWithPanel="True" 
                        MaxWidth="320" 
@@ -160,7 +158,9 @@
                        Canvas.ZIndex="2"
                        Margin="20,50,0,0"
                        />
-                <Image x:ConnectionId='26' x:Name="basePokemon" 
+                <!-- Source="/Assets/Pikachu-com-Fundo-Transparente-1024x919.png" -->
+                
+                <Image x:ConnectionId='21' x:Name="basePokemon" 
                        Source="/Assets/—Pngtree—product presentation podium_6281635_cut.png" 
                        Height="auto" Width="auto"
                        Stretch="Uniform"
@@ -173,25 +173,6 @@
                 <!--imagem de um pedestal-->
                 
                 <!--<a href='https://br.freepik.com/fotos-vetores-gratis/circulo'>Círculo vetor criado por vectorpocket - br.freepik.com</a>-->
-                <StackPanel Orientation="Horizontal" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="basePokemon" Margin="20">
-                    <Button x:ConnectionId='27' x:Name="PreviousPokemonImg"
-                            FontFamily="Segoe MDL2 Assets" 
-                            Content="&#xE00E;" 
-                            RelativePanel.AlignHorizontalCenterWithPanel="True"  
-                            RelativePanel.LeftOf="NextPokemon" 
-                            Margin="0,10,6,5"
-                            MinHeight="40" MinWidth="40" 
-                            Height="50" Width="50"
-                                                             RequestedTheme="Light" CornerRadius="15,15,15,15"/>
-                    <Button x:ConnectionId='28' x:Name="NextPokemonImg" 
-                            FontFamily="Segoe MDL2 Assets" 
-                            Content="&#xE00f;"
-                            HorizontalAlignment="Right"
-                            Margin="0,10,0,5" 
-                            MinHeight="40" MinWidth="40" 
-                            Height="50" Width="50"
-                                                         RequestedTheme="Light" CornerRadius="15,15,15,15"/>
-                </StackPanel>
             </RelativePanel>
 
             <RelativePanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Canvas.ZIndex="3" >
@@ -200,7 +181,7 @@
                            MinHeight="350" 
                            Height="auto" 
                            Fill="White" 
-                           Margin="30,30,30,30" 
+                           Margin="20" 
                            RelativePanel.AlignTopWithPanel="True"
                            RelativePanel.AlignBottomWithPanel="True"
                            RelativePanel.AlignLeftWithPanel="True"
@@ -213,10 +194,10 @@
                             RelativePanel.AlignHorizontalCenterWith="whiteBack" 
                             Margin="70,60,0,30">
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
-                        <TextBlock x:ConnectionId='23' x:Name="Nome" 
+                        <TextBlock x:ConnectionId='18' x:Name="Nome" 
                                    Text="Nome:" 
                                    Style="{StaticResource MyTextBlocks}"/>
-                        <TextBlock x:ConnectionId='24' x:Name="namePokemon"
+                        <TextBlock x:ConnectionId='19' x:Name="namePokemon"
                                                                      
                                    Style="{StaticResource MyTextBlocks}"
                                    RelativePanel.AlignLeftWith="Nome" 
@@ -224,22 +205,22 @@
                                    />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock x:ConnectionId='21' x:Name="Type"
+                        <TextBlock x:ConnectionId='16' x:Name="Type"
                                    Text="Espécie:" 
                                    Style="{StaticResource MyTextBlocks}"
                                    />
-                        <TextBlock x:ConnectionId='22' x:Name="typePokemon" 
+                        <TextBlock x:ConnectionId='17' x:Name="typePokemon" 
                                    RelativePanel.AlignLeftWith="Nome"
                                    Style="{StaticResource MyTextBlocks}"                                   
                                    Margin="10,0,0,0" 
                                    />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock x:ConnectionId='19' x:Name="Weight" 
+                        <TextBlock x:ConnectionId='14' x:Name="Weight" 
                                    Text="Peso: " 
                                    Style="{StaticResource MyTextBlocks}"
                                    />
-                        <TextBlock x:ConnectionId='20' x:Name="PesoPokemon" 
+                        <TextBlock x:ConnectionId='15' x:Name="PesoPokemon" 
                                    Text="" 
                                    Style="{StaticResource MyTextBlocks}"
                                    RelativePanel.AlignLeftWith="Especie" 
@@ -247,11 +228,11 @@
                                    />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock x:ConnectionId='17' x:Name="Height"
+                        <TextBlock x:ConnectionId='12' x:Name="Height"
                                    Text="Altura: "
                                    Style="{StaticResource MyTextBlocks}"
                                    />
-                        <TextBlock x:ConnectionId='18' x:Name="AltPokemon" 
+                        <TextBlock x:ConnectionId='13' x:Name="AltPokemon" 
                                    Text="" 
                                    Style="{StaticResource MyTextBlocks}"
                                    RelativePanel.AlignLeftWith="Especie" 
@@ -259,11 +240,11 @@
                                    />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock x:ConnectionId='15' x:Name="Speed"
+                        <TextBlock x:ConnectionId='10' x:Name="Speed"
                                    Text="Velocidade: "
                                    Style="{StaticResource MyTextBlocks}"
                                    />
-                        <TextBlock x:ConnectionId='16' x:Name="SpeedPokemon" 
+                        <TextBlock x:ConnectionId='11' x:Name="SpeedPokemon" 
                                    Text="" 
                                    Style="{StaticResource MyTextBlocks}"
                                    RelativePanel.AlignLeftWith="Especie" 
@@ -292,82 +273,78 @@
                                    HorizontalAlignment="Center" 
                                    VerticalAlignment="Center" 
                                    RequestedTheme="Light"/>
-                        <ProgressBar x:ConnectionId='10' x:Name="AtaqueBarra"
+                        <ProgressBar x:ConnectionId='5' x:Name="AtaqueBarra"
                                      Grid.Row="2"
                                          Grid.Column="1"
                                          Margin="10,5,0,5" 
                                          Width="200"
                                          Height="30"
-                                         Maximum="300"
-                                     Value="150"
+                                         Maximum="100"
                                          Foreground="GreenYellow"
                                          Style="{StaticResource MyProgressBar}"
                                          />
 
                         <TextBlock Grid.Row="0" Text="HP: " FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" RequestedTheme="Light"/>
-                        <ProgressBar x:ConnectionId='11' x:Name="HpBarra" 
+                        <ProgressBar x:ConnectionId='6' x:Name="HpBarra" 
                                          Grid.Row="0"
                                          Grid.Column="01"
                                          Margin="10,5,0,5" 
                                          Width="200"
                                          Height="30"
-                                         Maximum="300"
+                                         Maximum="100"
                                          Foreground="Red"
                                          Style="{StaticResource MyProgressBar}"
                                          />
 
                         <TextBlock Grid.Row="1" Text="Defesa: " FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" RequestedTheme="Light"/>
-                        <ProgressBar x:ConnectionId='12' x:Name="DefesaBarra" 
+                        <ProgressBar x:ConnectionId='7' x:Name="DefesaBarra" 
                                          Grid.Row="1"
                                          Grid.Column="01"
                                          Margin="10,5,0,5" 
                                          Width="200"
                                          Height="30"
-                                         Maximum="300"
-                                         Value="225"
+                                         Maximum="100"
                                          Foreground="Purple"
                                          Style="{StaticResource MyProgressBar}"
                                          />
                         <TextBlock Grid.Row="3" Text="Ataque Especial: " FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" RequestedTheme="Light"/>
-                        <ProgressBar x:ConnectionId='13' x:Name="SpAtkBarra" 
+                        <ProgressBar x:ConnectionId='8' x:Name="SpAtkBarra" 
                                          Grid.Row="3"
                                          Grid.Column="01"
                                          Margin="10,5,0,5" 
                                          Width="200"
                                          Height="30"
-                                         Maximum="300"
-                                         Value="175"
+                                         Maximum="100"
                                          Foreground="ForestGreen"
                                          Style="{StaticResource MyProgressBar}"
                                          />
                         <TextBlock Grid.Row="4" Text="Defesa Especial: " FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" RequestedTheme="Light"/>
-                        <ProgressBar x:ConnectionId='14' x:Name="SpDefBarra" 
+                        <ProgressBar x:ConnectionId='9' x:Name="SpDefBarra" 
                                          Grid.Row="4"
                                          Grid.Column="01"
                                          Margin="10,5,0,5" 
                                          Width="200"
                                          Height="30"
-                                         Maximum="300"
-                                         Value="175"
+                                         Maximum="100"
                                          Foreground="Blue"
                                          Style="{StaticResource MyProgressBar}"
                                          />
                     </Grid>
                     <StackPanel Orientation="Horizontal" Margin="20,10,0,0" HorizontalAlignment="Right">
-                        <Button x:ConnectionId='5' x:Name="Edit" Content="Editar"                   />
-                        <Button x:ConnectionId='6' x:Name="Delete" Content="Apagar" Margin="10,0,0,0">
+                        <!--<Button x:Name="Edit" Content="Editar" Click="Edit_Click"/>
+                        <Button x:Name="Delete" Content="Apagar" Margin="10,0,0,0">
                             <Button.Flyout>
-                                <Flyout x:ConnectionId='7' x:Name="DeleteConfirm">
+                                <Flyout x:Name="DeleteConfirm">
                                     <StackPanel Orientation="Vertical">
                                         <TextBlock Text="Você tem certeza que deseja apagar este Pokémon da Base de dados?" Margin="20"/>
                                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                                            <Button x:ConnectionId='8' x:Name="Delete_Y" Content="Sim"                     />
-                                            <Button x:ConnectionId='9' x:Name="Delete_N" Content="Não"                       />
+                                            <Button x:Name="Delete_Y" Content="Sim" Click="Delete_Click"/>
+                                            <Button x:Name="Delete_N" Content="Não" Click="Delete_N_Click"/>
                                         </StackPanel>
                                     </StackPanel>
                                 </Flyout>
                             </Button.Flyout>
-                        </Button>
+                        </Button>-->
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="20,10,0,0">
 

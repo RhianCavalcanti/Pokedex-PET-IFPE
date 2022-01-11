@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
 
         <!--Barra de Navegação-->
-        <RelativePanel Grid.Row="0" Background="#FF0E6B8B" MinHeight="70">
+        <RelativePanel Grid.Row="0" Background="#FF0E6B8B" MinHeight="60">
             <!--FF256378-->
             <!--FF0E6B8B-->
             <Button x:ConnectionId='8' x:Name="HambuguerButton"
@@ -41,14 +41,24 @@
                                        
                     Background="Transparent" 
                     BorderBrush="#19FFFFFF"/>
-            <!-- FEITO: Hyperlink a logo para voltar a MainPage quando clicar nela-->
             <Image x:ConnectionId='10' x:Name="logo" Source="/Assets/pokedex-icon-15.jpg"
                    Stretch="Uniform"
                    Width="45"
                    Margin="10,0,0,0" 
                    RelativePanel.AlignVerticalCenterWithPanel="True" 
                    RelativePanel.RightOf="BackButton" 
-                                              />
+                   Visibility="Collapsed"
+                   />
+            <TextBlock x:ConnectionId='11' x:Name="logoName"
+                       Text="Pokedéx"
+                       FontFamily="Pokemon Solid"
+                       FontSize="22"
+                       Width="auto"
+                       Height="auto"
+                       Margin="10,-10,0,0" 
+                       RelativePanel.AlignVerticalCenterWithPanel="True" 
+                       RelativePanel.RightOf="BackButton"
+                                                  />
             <!--<Button x:Name="NextPokemon" 
                     FontFamily="Segoe MDL2 Assets" 
                     Content="&#xE00f;"
@@ -79,28 +89,47 @@
                      TextChanged="BarraPesquisa_TextChanged" 
                      BorderBrush="#66000000"/>-->
 
-            <TextBlock Text="Buscar por: " RelativePanel.LeftOf="BuscaPor" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,5,0"/>
-            <ComboBox x:ConnectionId='11' x:Name="BuscaPor" RelativePanel.LeftOf="MyAutoSuggestBox"                                              RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,10,0" Height="40">
-                <ComboBoxItem x:ConnectionId='13' x:Name="PorNome" Content="Nome" IsSelected="True"/>
-                <ComboBoxItem x:ConnectionId='14' x:Name="PorTipo" Content="Tipo"/>
-                <ComboBoxItem x:ConnectionId='15' x:Name="PorNumero" Content="Número"/>
-            </ComboBox>
-            <AutoSuggestBox x:ConnectionId='12' x:Name="MyAutoSuggestBox" 
+            <!--<TextBlock Text="Buscar por: " RelativePanel.LeftOf="BuscaPor" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,5,0"/>-->
+            <!--<ComboBox x:Name="BuscaPor" RelativePanel.LeftOf="MyAutoSuggestBox" SelectionChanged="BuscaPor_SelectionChanged" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,10,0" Height="40">
+                <ComboBoxItem x:Name="PorNome" Content="Nome" IsSelected="True"/>
+                <ComboBoxItem x:Name="PorTipo" Content="Tipo"/>
+                <ComboBoxItem x:Name="PorNumero" Content="Número"/>
+            </ComboBox>-->
+            <Button x:ConnectionId='12' x:Name="BuscaTipo" 
+                    Content="Busca por Tipo"
+                    RelativePanel.LeftOf="PesquisaName"
+                    RelativePanel.AlignVerticalCenterWithPanel="True"
+                    Margin="0,0,10,0">
+                <Button.Flyout>
+                    <Flyout>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox x:ConnectionId='15' x:Name="textTypeSearch"
+                                     Width="180"
+                                     Height="35"/>
+                            <Button x:ConnectionId='16' x:Name="confirmSearchType"
+                                    Content="OK"
+                                    Height="35"
+                                    HorizontalAlignment="Right"
+                                    Margin="5,0,0,0"
+                                                                   />
+                        </StackPanel>
+                    </Flyout>
+                </Button.Flyout>
+            </Button>
+            <TextBox x:ConnectionId='13' x:Name="PesquisaName" 
                             MaxWidth="280" 
                             MinWidth="180" 
                             MinHeight="40" 
                             FontSize="22" 
-                            RelativePanel.AlignVerticalCenterWithPanel="True" 
-                            RelativePanel.AlignRightWithPanel="True"
-                            Margin="0,0,20,0"
-                            QueryIcon="Find" 
-                            PlaceholderText="Procurar"
-                                                                      
-                                                                                
-                                                                            />
+                            RelativePanel.AlignVerticalCenterWithPanel="True"                         
+                            Margin="0,0,0,0" 
+                            RelativePanel.LeftOf="Pesquisar"
+                            PlaceholderText="Nome ou ID" 
+                     
+             />
             
             <!-- FEITO      Pode ser um ícone de busca-->
-            <!--<Button x:Name="Pesquisar" FontFamily="Segoe MDL2 Assets" Background="#66000000" Content="&#xE1A3;" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,10,0" MinHeight="40" MinWidth="40" BorderBrush="#01000000" Click="Pesquisar_Click" Height="42"/>-->
+            <Button x:ConnectionId='14' x:Name="Pesquisar" Canvas.ZIndex="3" FontFamily="Segoe MDL2 Assets" Background="#00000000" Content="&#xE1A3;" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,10,0" MinHeight="40" MinWidth="40" BorderBrush="#01000000"                         Height="42"/>
         </RelativePanel>
 
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">

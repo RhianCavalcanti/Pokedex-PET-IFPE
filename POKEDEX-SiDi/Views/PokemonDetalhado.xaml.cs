@@ -21,72 +21,77 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace POKEDEX_SiDi.Views
 {
-    /// <summary>
-    /// Uma página vazia que pode ser usada isoladamente ou navegada dentro de um Quadro.
-    /// </summary>
     public sealed partial class PokemonDetalhado : Page
     {
         List<PokemonDb> listaParaATela;
         ObservableCollection<PokemonDb> observable;
         PokemonDb pokeSelected;
         static int I=0;
-        //ObservableCollection<PokemonDb> = new ObservableCollection<PokemonDb>(ListaPokemons);
+
+        
 
         public PokemonDetalhado()
         {
-           // DbClass.Delete();
             this.InitializeComponent();
             DbClass.InitializeDB();
-            if (I == 0)
+            if (Operations.Modo == "default")
+            {                 
+                if (I == 0)
+                {
+                    Operations.PaginacaoPositiva();
+                    I++;
+                }
+                listaParaATela = Operations.ListaDePokemon();
+                //ObservableCollection <PokemonDb> observable = new ObservableCollection<PokemonDb>(listaParaATela);
+            }else if(Operations.Modo == "type")
             {
-                Operations.PaginacaoPositiva();
-                I++;
+                listaParaATela = Operations.ListaDePokemonType();
+                //Frame.Navigate(typeof(PokemonDetalhado));
             }
-
-
-            listaParaATela = Operations.ListaDePokemon();
-            ObservableCollection <PokemonDb> observable = new ObservableCollection<PokemonDb>(listaParaATela);
         }
 
-        
-        //private void Button_Click(object sender, RoutedEventArgs e) //Botão de teste, depois será removido
-        //{
-        //    Frame.Navigate(typeof(MainPage));
-        //}
-
-        //private void Back_Click(object sender, RoutedEventArgs e)
-        //{
-        //    if (Frame.CanGoBack)
-        //    {
-        //        Frame.GoBack();
-        //    }
-        //}
 
         private void NextTenPokemon_Click(object sender, RoutedEventArgs e)
         {
+            if(Operations.Modo == "default")
+            {
             listaParaATela.Clear();
             Operations.PaginacaoPositiva();
             listaParaATela = Operations.ListaDePokemon();
             Frame.Navigate(typeof(PokemonDetalhado));
-            //ListaPokemonsD.ItemsSource = listaParaATela;
+            }
+            else if(Operations.Modo == "type")
+            {
+                listaParaATela.Clear();
+                Operations.PaginacaoPositivaType();
+                listaParaATela = Operations.ListaDePokemonType();
+                Frame.Navigate(typeof(PokemonDetalhado));
 
-
-            //vai chamar os próximos 10 pokémon na lista do BD (dependendo do modo de organização escolhido)
+            }
         }
 
         private void PreviousTenPokemon_Click(object sender, RoutedEventArgs e)
         {
-            listaParaATela.Clear();
-            Operations.PaginacaoNegativa();
-            listaParaATela = Operations.ListaDePokemon();
-            Frame.Navigate(typeof(PokemonDetalhado));
-            //vai acessar os 10 pokémon anteriores na lista do BD (dependendo do modo de organização escolhido)
+            if(Operations.Modo == "default")
+            {
+                listaParaATela.Clear();
+                Operations.PaginacaoNegativa();
+                listaParaATela = Operations.ListaDePokemon();
+                Frame.Navigate(typeof(PokemonDetalhado));
+            }
+            else if(Operations.Modo == "type")
+            {
+                listaParaATela.Clear();
+                Operations.PaginacaoNegativaType();
+                listaParaATela = Operations.ListaDePokemonType();
+                Frame.Navigate(typeof(PokemonDetalhado));
+            }
+            
         }
 
         private void ListaPokemonsD_ItemClick(object sender, ItemClickEventArgs e)
         {
             pokeSelected = (PokemonDb)e.ClickedItem;
-            //Altera os dados que são exibidos nos campos
             namePokemon.Text = pokeSelected.Name;
             typePokemon.Text = pokeSelected.Types;
             PesoPokemon.Text = pokeSelected.Weight.ToString() + "lb";
@@ -100,53 +105,6 @@ namespace POKEDEX_SiDi.Views
             Uri uri = new Uri(pokeSelected.Image, UriKind.Absolute);
             ImageSource imgSource = new BitmapImage(uri);
             img.Source = imgSource;
-
-            //if (ListaPokemonsD.SelectedItem == null)
-            //{
-            //    ListaPokemonsD.SelectedIndex = 0;
-            //}
-            //else
-            //{
-            //    pokeSelected = (PokemonDb)e.ClickedItem;
-            //}
-
-
-        }
-
-        //private void StackPanel_PointerEntered(object sender, PointerRoutedEventArgs e)
-        //{
-
-        //}
-
-        private void PreviousPokemonImg_Click(object sender, RoutedEventArgs e)
-        {
-            //get imagem anterior
-        }
-
-        private void NextPokemonImg_Click(object sender, RoutedEventArgs e)
-        {
-            //get() próxima imagem
-        }
-
-        private void Edit_Click(object sender, RoutedEventArgs e)
-        {
-            //vai levar à página de edição
-            Frame.Navigate(typeof(Edit));
-
-        }
-
-        private void Delete_Click(object sender, RoutedEventArgs e)
-        {
-            //chamar método para apagar o pokémon da lista
-        }
-
-        private void Delete_N_Click(object sender, RoutedEventArgs e)
-        {
-            DeleteConfirm.Hide();
-        }
-
-        private void ListaPokemonsD_DataContextChanged(FrameworkElement sender, DataContextChangedEventArgs args)
-        {
 
         }
     }

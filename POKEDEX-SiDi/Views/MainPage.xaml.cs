@@ -1,4 +1,6 @@
-﻿using System;
+﻿using POKEDEX_SiDi.Model;
+using POKEDEX_SiDi.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,7 +25,7 @@ namespace POKEDEX_SiDi.Views
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private string[] selectionItems = new string[] { "Ferdinand", "Frank", "Frida", "Nigel", "Tag", "Tanya", "Tanner", "Todd", "Olaf" };
+       
         protected String ItemBus { get; set; } //provavelmente será chamado por uma Struct ou Enum em Views e lá chama o método de busca de acordo com o que foi selecionado
         public MainPage()
         {
@@ -32,30 +34,19 @@ namespace POKEDEX_SiDi.Views
             BackButton.Visibility = Visibility.Collapsed;
             MySplitView.IsPaneOpen = false;
             Details.IsEnabled = false;
-
-            //Visibility_Back_Click();
         }
-
+        
         private void Pesquisar_Click(object sender, RoutedEventArgs e)
         {
-            //String visivel = Barra_pesquisa.Visibility;
-            //if(visivel.Equals("Collapsed"))
-            //{
-            //    visivel = 
-            //}
+            
+            TableSearch.cadastroUnidade(PesquisaName.Text);
+            Operations.PokemonUnidade(PesquisaName.Text);
+            BackButton.Visibility = Visibility.Visible;
+            MyFrame.Navigate(typeof(BuscaNomeID));
+
         }
 
-        //protected void Visibility_Back_Click()
-        //{
-        //    if (!MyFrame.Content.GetType().Equals("ListaPokemon"))
-        //    {
-        //        BackButton.Visibility = Visibility.Visible;
-        //    }
-        //    else
-        //    {
-        //        BackButton.Visibility = Visibility.Collapsed;
-        //    }
-        //}
+        
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
@@ -64,9 +55,12 @@ namespace POKEDEX_SiDi.Views
                 //BackButton.IsEnabled = false;
                 MyFrame.GoBack();
                 Lista.IsSelected = true;
+                BackButton.Visibility = Visibility.Collapsed;
+                MySplitView.IsPaneOpen = false;
             }
             else
             {
+                BackButton.Visibility = Visibility.Visible;
                 //BackButton.IsEnabled = true;
             }
         }
@@ -106,6 +100,7 @@ namespace POKEDEX_SiDi.Views
 
         private void Click_Logo(object sender, PointerRoutedEventArgs e)
         {
+            Operations.Modo = "default";
             Frame.Navigate(typeof(MainPage));
             //BackButton.Visibility = Visibility.Collapsed;
         }
@@ -119,31 +114,27 @@ namespace POKEDEX_SiDi.Views
         {
             if (Lista.IsSelected)
             {
+                Operations.Modo = "default";
                 BackButton.Visibility = Visibility.Collapsed;
                 MyFrame.Navigate(typeof(PokemonDetalhado));
-                MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+                MySplitView.IsPaneOpen = false;
             }
             else if (Add.IsSelected)
             {
                 BackButton.Visibility = Visibility.Visible;
                 MyFrame.Navigate(typeof(AddPokemon));
-                MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+                MySplitView.IsPaneOpen = false;
             }
             else if (Details.IsSelected)
             {
                 BackButton.Visibility = Visibility.Visible;
                 MyFrame.Navigate(typeof(PokemonDetalhado));
-                MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+                MySplitView.IsPaneOpen = false;
             }
             //else if(Lista.IsSelected && actual frame is Pokemon detalhado){                 BackButton.Visibility = Visibility.Visible;}
         }
 
-        private void MyAutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
-        {
-            var autoSuggestBox = (AutoSuggestBox)sender;
-            var filtered = selectionItems.Where(p => p.StartsWith(autoSuggestBox.Text)).ToArray();
-            autoSuggestBox.ItemsSource = filtered;
-        }
+        
 
         private void MyAutoSuggestBox_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
         {
@@ -152,7 +143,8 @@ namespace POKEDEX_SiDi.Views
 
         private void MyAutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
         {
-
+            BackButton.Visibility = Visibility.Visible;
+            MyFrame.Navigate(typeof(BuscaNomeID));
         }
 
         private void BuscaPor_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -160,6 +152,19 @@ namespace POKEDEX_SiDi.Views
             var comboBusca = (ComboBox)sender;
             var itemBusca = (ComboBoxItem)comboBusca.SelectedItem;
             ItemBus = itemBusca.Content.ToString();
+        }
+
+        private void confirmSearchType_Click(object sender, RoutedEventArgs e)
+        {
+            Operations.especieName = textTypeSearch.Text;
+            Operations.PaginacaoPositivaType();
+            Operations.Modo = "type";
+            MyFrame.Navigate(typeof(PokemonDetalhado));
+        }
+
+        private void MyAutoSuggestBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

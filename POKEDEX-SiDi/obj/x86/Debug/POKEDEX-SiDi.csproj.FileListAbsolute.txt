@@ -118,6 +118,7 @@ C:\Users\Adan\Desktop\pokedex\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\.winmd
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\App.xbf
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\MainPage.xbf
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\AddPokemon.xbf
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\BuscaNomeID.xbf
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\Edit.xbf
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\ListaPokemons.xbf
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\ListViewTest.xbf
@@ -132,9 +133,14 @@ C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Core\POKEDEX-SiDi.exe
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\POKEDEX-SiDi.build.appxrecipe
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Microsoft.Data.Sqlite.dll
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Newtonsoft.Json.dll
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Refit.dll
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\System.Runtime.dll
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\SQLitePCLRaw.core.dll
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\e_sqlite3.dll
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\SQLite.Interop.dll
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\System.Data.SQLite.dll
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\System.Net.Http.Json.dll
@@ -148,6 +154,8 @@ C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\MainPage.g.cs
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\AddPokemon.g.i.cs
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\AddPokemon.g.cs
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\BuscaNomeID.g.i.cs
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\BuscaNomeID.g.cs
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\Edit.g.i.cs
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\Edit.g.cs
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\ListaPokemons.g.i.cs
@@ -162,6 +170,7 @@ C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\App.xaml
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\MainPage.xaml
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\AddPokemon.xaml
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\BuscaNomeID.xaml
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\Edit.xaml
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\ListaPokemons.xaml
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\ListViewTest.xaml
@@ -170,6 +179,7 @@ C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\App.xbf
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\MainPage.xbf
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\AddPokemon.xbf
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\BuscaNomeID.xbf
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\Edit.xbf
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\ListaPokemons.xbf
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\ListViewTest.xbf
@@ -182,6 +192,7 @@ C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\POKEDEX-SiDi.exe
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\POKEDEX-SiDi.pdb
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\ResourceHandlingTask.state
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Microsoft.Data.Sqlite\en-US\Microsoft.Data.Sqlite.Properties.Resources.resw
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\System.Data.SQLite\en\System.Data.SQLite.SR.resw
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\FxResources.System.Net.Http.Json.SR.resw
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\FxResources.System.Text.Encodings.Web.SR.resw
@@ -201,16 +212,17 @@ C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\qualifiers.txt
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
-C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\resources.en.resfiles
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\resources.en-us.resfiles
-C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\resources.en.resfiles.intermediate
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\resources.en.resfiles
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\resources.en-us.resfiles.intermediate
+C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\resources.en.resfiles.intermediate
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424923200000000.json
 C:\Users\Nilo Sandes\source\repos\RhianCavalcanti\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\POKEDEX-SiDi.csproj.AssemblyReference.cache
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\App.xbf
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\MainPage.xbf
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\AddPokemon.xbf
+C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\BuscaNomeID.xbf
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\Edit.xbf
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\ListaPokemons.xbf
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\ListViewTest.xbf
@@ -247,6 +259,8 @@ C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Deb
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\MainPage.g.cs
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\AddPokemon.g.i.cs
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\AddPokemon.g.cs
+C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\BuscaNomeID.g.i.cs
+C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\BuscaNomeID.g.cs
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\Edit.g.i.cs
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\Edit.g.cs
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\ListaPokemons.g.i.cs
@@ -261,6 +275,7 @@ C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Deb
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\App.xaml
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\MainPage.xaml
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\AddPokemon.xaml
+C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\BuscaNomeID.xaml
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\Edit.xaml
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\ListaPokemons.xaml
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\ListViewTest.xaml
@@ -269,6 +284,7 @@ C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Deb
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\App.xbf
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\MainPage.xbf
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\AddPokemon.xbf
+C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\BuscaNomeID.xbf
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\Edit.xbf
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\ListaPokemons.xbf
 C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\obj\x86\Debug\Views\ListViewTest.xbf

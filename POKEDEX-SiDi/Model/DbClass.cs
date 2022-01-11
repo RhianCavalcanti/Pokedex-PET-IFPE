@@ -61,15 +61,15 @@ namespace POKEDEX_SiDi.Model
             }
         }
 
-        public static DataTable GetPokemonType(int number)
+        public static DataTable GetPokemonType(int number, string especie)
         {
             DataTable dt = new DataTable();
             try
             {
                 ConnectionDb();
-                string selectCmd = "SELECT * FROM tb_pokemon LIMIT 10 OFFSET " + number;
+                string selectCmd = "SELECT * FROM tb_pokemon WHERE type LIKE '%" + especie + "%' LIMIT 10 OFFSET " +number;
                 SqliteCommand cmd_getRec = new SqliteCommand(selectCmd, ConnectionDb());
-                SqliteDataReader reader = cmd_getRec.ExecuteReader();
+                SqliteDataReader reader = cmd_getRec.ExecuteReader(); 
                 ConnectionDb().Close();
                 dt.Load(reader);
                 return dt;
@@ -80,6 +80,8 @@ namespace POKEDEX_SiDi.Model
                 throw ex;
             }
         }
+
+
 
         public static DataTable consulta(string sql)
         {
@@ -129,16 +131,14 @@ namespace POKEDEX_SiDi.Model
 
         public static int Count()
         {
-            int number = new int();
             try
             {
                 using (var cmd = ConnectionDb().CreateCommand())
                 {
-                    cmd.CommandText = "DELETE FROM tb_pokemon";
+                    cmd.CommandText = "SELECT COUNT(*) FROM tb_pokemon WHERE name LIKE '%" + "User"+"%'";
                     cmd.ExecuteNonQuery();
-                    SqliteDataReader numberSql = cmd.ExecuteReader();
                     ConnectionDb().Close();
-                    number = numberSql.GetInt32(0);
+                    int number = Convert.ToInt32(cmd.ExecuteScalar());
                     return number;
                 }
             }

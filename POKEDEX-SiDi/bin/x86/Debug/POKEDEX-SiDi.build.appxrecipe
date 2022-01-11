@@ -139,6 +139,9 @@
     <AppxPackagedFile Include="C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\AddPokemon.xbf">
       <PackagePath>Views\AddPokemon.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\BuscaNomeID.xbf">
+      <PackagePath>Views\BuscaNomeID.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Adan\Desktop\ProjetoFinalSiDi\Pokedex-PET-IFPE\POKEDEX-SiDi\bin\x86\Debug\Views\Edit.xbf">
       <PackagePath>Views\Edit.xbf</PackagePath>
     </AppxPackagedFile>

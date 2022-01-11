@@ -30,21 +30,58 @@ namespace POKEDEX_SiDi.Views
         static int I = 898;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            saveFly.Hide();
-            
+            try
+            {
 
+                saveFly.Hide();
             
-            
-            PokemonDb NovoPokemon = new PokemonDb();
-            int number = DbClass.Count();
-            NovoPokemon.Id = 899 + number;
-            NovoPokemon.Name = NameBox.Text;
-            NovoPokemon.Types = EspecieBox.Text;
-            NovoPokemon.Attack = int.Parse(AtkBox.Text);
-            NovoPokemon.Defense = int.Parse(defValue.Text);
-
-            DbClass.Add(NovoPokemon);
+                PokemonDb NovoPokemon = new PokemonDb();
+                int number = 0;
+                if (DbClass.Count() == 0)
+                {
+                    number = number;
+                }
+                else
+                {
+                    number = DbClass.Count();
+                }              
+                NovoPokemon.Id = 899 + number;
+                NovoPokemon.Name = NameBox.Text + " User";
+                NovoPokemon.Types = EspecieBox.Text;
+                NovoPokemon.Hp = int.Parse(hpValue.Text);
+                NovoPokemon.Attack = int.Parse(AtkBox.Text);
+                NovoPokemon.Defense = int.Parse(defValue.Text);
+                NovoPokemon.SpecialAttack = int.Parse(SPAtkValue.Text);
+                NovoPokemon.SpecialDefense = int.Parse(SPdefValue.Text);
+                NovoPokemon.Speed = int.Parse(speedValue.Text);
+                NovoPokemon.Weight = int.Parse(pesoValue.Text);
+                NovoPokemon.Height = int.Parse(heightValue.Text);
+                NovoPokemon.Image = file.Text;
+                DbClass.Add(NovoPokemon);
+                Clear();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
+
+        public void Clear()
+        {
+            NameBox.Text = "";
+            EspecieBox.Text = "";
+            hpValue.Text = "";
+            AtkBox.Text = "";
+            defValue.Text = "";
+            SPAtkValue.Text = "";
+            SPdefValue.Text = "";
+            speedValue.Text = "";
+            pesoValue.Text = "";
+            heightValue.Text = "";
+            file.Text = "";
+
+        }
+
 
         //public static void CadastrarNovoPokemon()
         //{
