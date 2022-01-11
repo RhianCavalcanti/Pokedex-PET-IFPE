@@ -197,9 +197,9 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="Maximum" />
+      <RootProperty Name="Value" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Style" />
-      <RootProperty Name="Value" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Slider">
       <RootProperty Name="Margin" />
@@ -219,6 +219,7 @@
       <RootProperty Name="SelectionMode" />
       <RootProperty Name="IsItemClickEnabled" />
       <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="SelectedIndex" />
       <RootProperty Name="Margin" />
       <RootProperty Name="ItemsPanel" />
       <RootEvent Name="ItemClick" />
@@ -280,7 +281,9 @@
       <RootEvent Name="QuerySubmitted" />
     </RootType>
     <RootType FullName="POKEDEX_SiDi.Views.MainPage" />
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
+      <RootProperty Name="Mode" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
       <RootProperty Name="Template" />
     </RootType>

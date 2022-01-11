@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POKEDEX_SiDi.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,17 +27,34 @@ namespace POKEDEX_SiDi.Views
         {
             this.InitializeComponent();
         }
-
+        static int I = 898;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             saveFly.Hide();
-            //Método pra salvar pokemon
+            
 
-            NameBox.Text = "";
-            AtkBox.Text = "";
-            EspecieBox.Text = "";
-            hpValue.Text = "";
-            defValue.Text = "";
+            
+            
+            PokemonDb NovoPokemon = new PokemonDb();
+            int number = DbClass.Count();
+            NovoPokemon.Id = 899 + number;
+            NovoPokemon.Name = NameBox.Text;
+            NovoPokemon.Types = EspecieBox.Text;
+            NovoPokemon.Attack = int.Parse(AtkBox.Text);
+            NovoPokemon.Defense = int.Parse(defValue.Text);
+
+            DbClass.Add(NovoPokemon);
         }
+
+        //public static void CadastrarNovoPokemon()
+        //{
+        //    string name = NameBox.Text;
+        //    PokemonDb NovoPokemon = new PokemonDb();
+        //    NovoPokemon.Name = 
+
+
+        //    DbClass.Add(NovoPokemon);
+
+        //}
     }
 }

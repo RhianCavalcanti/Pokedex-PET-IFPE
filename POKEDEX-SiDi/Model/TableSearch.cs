@@ -61,14 +61,26 @@ namespace POKEDEX_SiDi.Model
                     DbClass.Add(pokemonDb);
 
                 }
+            }
+        }
 
-                
 
+        public static void cadastroUnidade(string name)
+        {
+            var poke = JsonConvert.DeserializeObject<Form>(GetJSON(name));
+            if (DbClass.consulta(name).Rows.Count == 0)
+            {
+                PokemonDb pokemonDb = NewMethod(poke);
+
+                DbClass.Add(pokemonDb);
 
             }
         }
-        static List<string> ListTypes = new List<string>();
 
+
+
+       
+        static List<string> ListTypes = new List<string>();
         private static PokemonDb NewMethod(Form poke)
         {
             ListTypes.Clear();
@@ -97,7 +109,7 @@ namespace POKEDEX_SiDi.Model
             pokemonDb.Speed = poke.Stats[5].BaseStat;
             pokemonDb.Height = poke.Height;
             pokemonDb.Weight = poke.Weight;
-            pokemonDb.Image = poke.Sprites.FrontDefault.AbsoluteUri;
+            pokemonDb.Image = poke.Sprites.Other.Home.FrontDefault.AbsoluteUri;
             return pokemonDb;
         }
 

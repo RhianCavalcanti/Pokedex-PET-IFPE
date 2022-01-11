@@ -1,4 +1,12 @@
+WinMetadata\Windows.winmd
+Assets\4099.jpg
+Assets\botanical-product-backdrop-with-tropical-leaves-corte.jpg
 Assets\LockScreenLogo.scale-200.png
+Assets\Pikachu-com-Fundo-Transparente-1024x919.png
+Assets\—Pngtree—product presentation podium_6281635_cut.png
+Assets\—Pngtree—product presentation podium_6281635_cut_red.png
+Assets\pokedex-icon-15.jpg
+Assets\pokedex-png.png
 Assets\SplashScreen.scale-200.png
 Assets\Square150x150Logo.scale-200.png
 Assets\Square44x44Logo.scale-200.png
@@ -8,7 +16,10 @@ Assets\Wide310x150Logo.scale-200.png
 App.xbf
 MainPage.xbf
 POKEDEX-SiDi.xr.xml
+Views\AddPokemon.xbf
+Views\Edit.xbf
+Views\ListaPokemons.xbf
+Views\ListViewTest.xbf
 Views\MainPage.xbf
 Views\PokemonDetalhado.xbf
 Properties\Default.rd.xml
-WinMetadata\Windows.winmd

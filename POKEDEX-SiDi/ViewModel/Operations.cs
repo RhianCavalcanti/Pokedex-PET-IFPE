@@ -11,6 +11,7 @@ namespace POKEDEX_SiDi.ViewModel
     {
         static int I = -10;
         static int D = 0;
+
         
 
         public static void PaginacaoPositiva()
@@ -18,7 +19,7 @@ namespace POKEDEX_SiDi.ViewModel
             I += 10;
             TableSearch.ShowDataPages(I.ToString());
             DbClass.GetPokemon(I);
-            ListaDePokemon();
+           // ListaDePokemon();
         }
 
         public static void PaginacaoNegativa()
@@ -33,7 +34,7 @@ namespace POKEDEX_SiDi.ViewModel
                 TableSearch.ShowDataPages(I.ToString());
             }
             DbClass.GetPokemon(I);
-            ListaDePokemon();
+            //ListaDePokemon();
         }
 
         public static List<PokemonDb> ListaDePokemon()
@@ -60,6 +61,61 @@ namespace POKEDEX_SiDi.ViewModel
             }
             return ListPokemon;
         }
+
+        public static PokemonDb PokemonUnidade(string pokemon)
+        {
+            PokemonDb pokemonUnidade = new PokemonDb();
+            if (DbClass.consultaId(pokemon).Rows.Count != 0 && DbClass.consulta(pokemon).Rows.Count == 0)
+            { 
+                pokemonUnidade.Id = (long)DbClass.consultaId(pokemon).Rows[0].ItemArray[0];
+                pokemonUnidade.Name = (string)DbClass.consultaId(pokemon).Rows[0].ItemArray[1];
+                pokemonUnidade.Types = (string)DbClass.consultaId(pokemon).Rows[0].ItemArray[2];
+                pokemonUnidade.Hp = (long)DbClass.consultaId(pokemon).Rows[0].ItemArray[3];
+                pokemonUnidade.Attack = (long)DbClass.consultaId(pokemon).Rows[0].ItemArray[4];
+                pokemonUnidade.Defense = (long)DbClass.consultaId(pokemon).Rows[0].ItemArray[5];
+                pokemonUnidade.SpecialAttack = (long)DbClass.consultaId(pokemon).Rows[0].ItemArray[6];
+                pokemonUnidade.SpecialDefense = (long)DbClass.consultaId(pokemon).Rows[0].ItemArray[7];
+                pokemonUnidade.Speed = (long)DbClass.consultaId(pokemon).Rows[0].ItemArray[8];
+                pokemonUnidade.Height = (long)DbClass.consultaId(pokemon).Rows[0].ItemArray[9];
+                pokemonUnidade.Weight = (long)DbClass.consultaId(pokemon).Rows[0].ItemArray[10];
+                pokemonUnidade.Image = (string)DbClass.consultaId(pokemon).Rows[0].ItemArray[11];
+            }
+            else if(DbClass.consultaId(pokemon).Rows.Count == 0 && DbClass.consulta(pokemon).Rows.Count != 0)
+            {
+                pokemonUnidade.Id = (long)DbClass.consulta(pokemon).Rows[0].ItemArray[0];
+                pokemonUnidade.Name = (string)DbClass.consulta(pokemon).Rows[0].ItemArray[1];
+                pokemonUnidade.Types = (string)DbClass.consulta(pokemon).Rows[0].ItemArray[2];
+                pokemonUnidade.Hp = (long)DbClass.consulta(pokemon).Rows[0].ItemArray[3];
+                pokemonUnidade.Attack = (long)DbClass.consulta(pokemon).Rows[0].ItemArray[4];
+                pokemonUnidade.Defense = (long)DbClass.consulta(pokemon).Rows[0].ItemArray[5];
+                pokemonUnidade.SpecialAttack = (long)DbClass.consulta(pokemon).Rows[0].ItemArray[6];
+                pokemonUnidade.SpecialDefense = (long)DbClass.consulta(pokemon).Rows[0].ItemArray[7];
+                pokemonUnidade.Speed = (long)DbClass.consulta(pokemon).Rows[0].ItemArray[8];
+                pokemonUnidade.Height = (long)DbClass.consulta(pokemon).Rows[0].ItemArray[9];
+                pokemonUnidade.Weight = (long)DbClass.consulta(pokemon).Rows[0].ItemArray[10];
+                pokemonUnidade.Image = (string)DbClass.consulta(pokemon).Rows[0].ItemArray[11];
+            }
+            else if(DbClass.consultaId(pokemon).Rows.Count == 0 && DbClass.consulta(pokemon).Rows.Count == 0)
+            {
+                pokemonUnidade.Id = 0;
+                pokemonUnidade.Name = "Pokemon não encontrado";
+                pokemonUnidade.Types = "---";
+                pokemonUnidade.Hp = 0;
+                pokemonUnidade.Attack = 0;
+                pokemonUnidade.Defense = 0;
+                pokemonUnidade.SpecialAttack =  0;
+                pokemonUnidade.SpecialDefense = 0;
+                pokemonUnidade.Speed = 0;
+                pokemonUnidade.Height = 0;
+                pokemonUnidade.Weight = 0;
+                pokemonUnidade.Image = (string) "https://img2.gratispng.com/20180219/hbq/kisspng-error-message-clip-art-precaution-cliparts-5a8b1cb062e216.398494751519066288405.jpg";
+
+            }
+
+            return pokemonUnidade;
+
+        }
+
     }
 }
  

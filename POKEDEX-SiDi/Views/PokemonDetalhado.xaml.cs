@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using POKEDEX_SiDi.ViewModel;
 using POKEDEX_SiDi.Model;
 using System.Collections.ObjectModel;
+using Windows.UI.Xaml.Media.Imaging;
 
 // O modelo de item de Página em Branco está documentado em https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -28,16 +29,22 @@ namespace POKEDEX_SiDi.Views
         List<PokemonDb> listaParaATela;
         ObservableCollection<PokemonDb> observable;
         PokemonDb pokeSelected;
+        static int I=0;
         //ObservableCollection<PokemonDb> = new ObservableCollection<PokemonDb>(ListaPokemons);
 
         public PokemonDetalhado()
         {
-            
+           // DbClass.Delete();
             this.InitializeComponent();
             DbClass.InitializeDB();
-            Operations.PaginacaoPositiva();
+            if (I == 0)
+            {
+                Operations.PaginacaoPositiva();
+                I++;
+            }
 
-            listaParaATela = /*(ObservableCollection<PokemonDb>)*/ Operations.ListaDePokemon();
+
+            listaParaATela = Operations.ListaDePokemon();
             ObservableCollection <PokemonDb> observable = new ObservableCollection<PokemonDb>(listaParaATela);
         }
 
@@ -57,6 +64,7 @@ namespace POKEDEX_SiDi.Views
 
         private void NextTenPokemon_Click(object sender, RoutedEventArgs e)
         {
+            listaParaATela.Clear();
             Operations.PaginacaoPositiva();
             listaParaATela = Operations.ListaDePokemon();
             Frame.Navigate(typeof(PokemonDetalhado));
@@ -68,6 +76,7 @@ namespace POKEDEX_SiDi.Views
 
         private void PreviousTenPokemon_Click(object sender, RoutedEventArgs e)
         {
+            listaParaATela.Clear();
             Operations.PaginacaoNegativa();
             listaParaATela = Operations.ListaDePokemon();
             Frame.Navigate(typeof(PokemonDetalhado));
@@ -88,7 +97,9 @@ namespace POKEDEX_SiDi.Views
             AtaqueBarra.Value = pokeSelected.Attack;
             SpAtkBarra.Value = pokeSelected.SpecialAttack;
             SpDefBarra.Value = pokeSelected.SpecialDefense;
-
+            Uri uri = new Uri(pokeSelected.Image, UriKind.Absolute);
+            ImageSource imgSource = new BitmapImage(uri);
+            img.Source = imgSource;
 
             //if (ListaPokemonsD.SelectedItem == null)
             //{

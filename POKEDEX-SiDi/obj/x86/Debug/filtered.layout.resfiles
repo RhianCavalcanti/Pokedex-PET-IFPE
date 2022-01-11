@@ -1,3 +1,4 @@
+WinMetadata\Windows.winmd
 Assets\4099.jpg
 Assets\botanical-product-backdrop-with-tropical-leaves-corte.jpg
 Assets\LockScreenLogo.scale-200.png
@@ -22,4 +23,3 @@ Views\ListViewTest.xbf
 Views\MainPage.xbf
 Views\PokemonDetalhado.xbf
 Properties\Default.rd.xml
-WinMetadata\Windows.winmd

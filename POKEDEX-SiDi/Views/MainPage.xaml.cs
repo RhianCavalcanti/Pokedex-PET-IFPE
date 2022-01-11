@@ -28,7 +28,7 @@ namespace POKEDEX_SiDi.Views
         public MainPage()
         {
             this.InitializeComponent();
-            MyFrame.Navigate(typeof(PokemonDetalhado));
+            //MyFrame.Navigate(typeof(PokemonDetalhado));
             BackButton.Visibility = Visibility.Collapsed;
             MySplitView.IsPaneOpen = false;
             Details.IsEnabled = false;
